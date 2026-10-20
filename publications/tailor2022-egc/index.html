@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <script src="/camlsys-preview/assets/theme.js"></script>
+  
+  <title>Do We Need Anisotropic Graph Neural Networks? | CaMLSys</title>
+  <meta name="description" content="Do We Need Anisotropic Graph Neural Networks?">
+  <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/tailor2022-egc/">
+  <meta property="og:title" content="Do We Need Anisotropic Graph Neural Networks?">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/tailor2022-egc/">
+  
+  
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1792512551">
+  
+  <link rel="icon" href="/camlsys-preview/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="CaMLSys news" href="/camlsys-preview/feed.xml">
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+</head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="wrapper header-inner">
+    <a class="site-title" href="/camlsys-preview/">
+      <img class="site-logo" src="/camlsys-preview/assets/dodo_svetla.png" alt="" width="50" height="50">
+      <span class="site-wordmark">CaMLSys<span class="site-subtitle">University of Cambridge</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      
+        
+        <a href="/camlsys-preview/">Home</a>
+      
+        
+        <a href="/camlsys-preview/people/">People</a>
+      
+        
+        <a href="/camlsys-preview/publications/" aria-current="page">Publications</a>
+      
+        
+        <a href="/camlsys-preview/projects/">Projects</a>
+      
+        
+        <a href="/camlsys-preview/contact/">Contact</a>
+      
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+      <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg>
+      <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    </button>
+  </div>
+</header>
+
+    <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
+  <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
+  <h1>Do We Need Anisotropic Graph Neural Networks?</h1>
+  <p class="authors">Shyam A. Tailor, Felix L. Opolka, Pietro Liò, and Nicholas D. Lane</p>
+  <p class="meta"><span class="publication-venue">International Conference on Learning Representations (ICLR)</span></p>
+  <div class="publication-links"><a href="https://arxiv.org/abs/2104.01481">Paper</a>
+  <a href="https://github.com/shyam196/egc">Code</a>
+  
+  <a href="/camlsys-preview/publications/tailor2022-egc/#article">Article</a></div>
+
+  
+  
+  <h2 id="article">Adaptive Filters and Aggregator Fusion for Efficient Graph Convolutions</h2>
+  <div class="post-content"><p>This paper develops Efficient Graph Convolution (EGC), an isotropic graph neural network designed to reduce memory use and latency. The article below describes the original 2021 version, before its publication under the title above at ICLR 2022.</p>
+
+<p class="research-author">Shyam A. Tailor, 6th April 2021</p>
+<p style="text-align: center;"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <a href="https://twitter.com/satailor96?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @satailor96</a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><img src="/camlsys-preview/assets/egc/filtering.png" alt="Visualization of Adaptive Filtering" width="80%" style="display:block;margin:0 auto;" /></p>
+
+<h2 id="overview">Overview</h2>
+<p><a href="https://arxiv.org/abs/2104.01481">Paper Link</a> and <a href="https://github.com/shyam196/egc">Code &amp; Pretrained Models</a></p>
+
+<p>Graph neural networks (GNNs) have emerged as an effective way to build models over arbitrarily structured data. These approaches are commonly described in terms of the “message passing” paradigm (<a href="https://arxiv.org/abs/1704.01212">Gilmer et al. 2017</a>) in which nodes send messages to each other to calculate the representation at the next layer. Although early work focused on semi-supervised learning on citation networks, more recent works have demonstrated that there are numerous possible application areas, including (but certainly not limited to):</p>
+
+<ol>
+  <li><strong>Computer Vision</strong>: GNNs are often paired with the output of CNNs to aid in applications where high-level scene understanding is required. Examples include homography estimation (<a href="https://psarlin.com/superglue/">Sarlin et al. 2020</a>), or activity recognition from videos (<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhang_Context_Aware_Graph_Convolution_for_Skeleton-Based_Action_Recognition_CVPR_2020_paper.pdf">Zhang et al. 2020</a>, <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Cheng_Skeleton-Based_Action_Recognition_With_Shift_Graph_Convolutional_Network_CVPR_2020_paper.pdf">Cheng et al. 2020</a>).</li>
+  <li><strong>Natural Language Processing</strong>: GNNs have been applied to tasks such as <a href="https://en.wikipedia.org/wiki/Fabula_AI">fake news detection and automated fact verification</a>.</li>
+  <li><strong>Code Analysis</strong>: Early work by <a href="https://arxiv.org/abs/1711.00740">Allamanis et al.</a> demonstrated that GNNs could be applied to problems such as predicting variable misuse: whether a developer used a variable that type-checks, but actually isn’t what they intended.</li>
+  <li><strong>Point Clouds</strong>: Many state of the art techniques for point cloud analysis involve constructing graphs from point clouds, and applying GNN architectures (<a href="https://arxiv.org/abs/1706.02413">Qi et al. 2018</a>, <a href="https://arxiv.org/abs/1801.07829">Wang et al. 2018</a>).</li>
+  <li><strong>Recommender Systems</strong>: <a href="https://arxiv.org/abs/1806.01973">Ying et al.</a> described Pinterest’s recommendation system which achieved higher performance than traditional methods by taking advantage of the graph structure.</li>
+</ol>
+
+<p>Inspired by these applications, we ask how we can make GNN architectures more efficient to enable larger problems to be studied, and to allow for these techniques to be deployed to more resource constrained devices. Our work specifically approaches this problem from the perspective of efficient architecture design, and is analogous to approaches like MobileNet in computer vision, or the numerous attempts to make more efficient Transformer models. It is the second in a series of works by our lab investigating efficient GNNs: <a href="https://openreview.net/forum?id=NSBrFgJAHg">we have previously investigated quantization for GNNs in a paper to appear at ICLR 21</a>.</p>
+
+<p>We address two issues at the same time: hardware efficiency, while also not sacrificing expressivity. We find a good balance between these two alternative goals, and achieve state of the art accuracy with an implementation that explicitly accounts for trends in accelerator design. Our results have interesting implications for the community, and imply that flexible architectures are not necessarily required to achieve the best results.</p>
+
+<h2 id="what-do-we-mean-by-efficiency">What Do We Mean By Efficiency?</h2>
+
+<p>When we talk about “efficiency” for neural networks, we are usually referring to concepts such as runtime memory consumption, inference latency, and model size. Ideally, we would like to minimize all three. In this work we originally set out to handle the first two problems, but inadvertently also discovered our approach is also more parameter-efficient than competing architectures.</p>
+
+<p>Ideally, we would like our memory consumption to be proportional to the number of vertices (\(\mathcal{O}(V)\)): this is as good as we can do. A (very) popular architecture, GCN (<a href="https://arxiv.org/abs/1609.02907">Kipf and Welling 2017</a>), can achieve this goal since messages between nodes do not have to be materialized explicitly: everything can be implemented using sparse matrix multiplication (SpMM), including the backwards pass. GCN has since been surpassed accuracy-wise by other approaches, with the best performing architectures relying on explicit message construction between nodes; examples using this approach include GAT (<a href="https://arxiv.org/abs/1710.10903">Velickovic et al. 2018</a>), MPNNs (<a href="https://arxiv.org/abs/1704.01212">Gilmer et al. 2017</a>), and the recently proposed PNA model (<a href="https://arxiv.org/abs/2004.05718">Corso et al. 2020</a>). These techniques enable a form of anisotropy as the messages are now a function of both the source and target nodes’ representations.</p>
+
+<h2 id="the-hardware-big-picture">The Hardware Big Picture</h2>
+
+<p>While these approaches do boost accuracy, they have highly undesirable properties from a hardware perspective. They have memory consumption proportional to the number of edges (\(\mathcal{O}(E)\)) because of explicit message materialization. And while you may be able to fuse your message and aggregation operations at inference time in some cases, this is not an ideal situation, as it implies a complicated accelerator design. As Amdahl’s Law tells us, this is to be avoided where possible as we can get better results in terms of energy, latency and silicon area by optimizing for the common case.</p>
+
+<p>Even ignoring the reality imposed by Amdahl’s Law, there is also the big picture to consider: given the great success of pruning in other areas of deep learning, we expect that there will be in-built support for SpMM in upcoming accelerators. We are already beginning to see this with Nvidia’s limited support for <a href="https://blogs.nvidia.com/blog/2020/05/14/sparsity-ai-inference/">sparsity in the A100 tensor cores</a>; the <a href="https://www.anandtech.com/show/16584/arm-announces-armv9-architecture">ARMv9 roadmap</a> also specifically calls out sparsity support. This reason, among many others, is why we believe that targeting SpMM is the most plausible way to ensure that we see improvements in training and inference latency in the real world, and not just on paper<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<h2 id="how-can-you-have-vertex-wise-adaptation-without-message-materialization">How Can You Have Vertex-Wise Adaptation Without Message Materialization?</h2>
+
+<p>The core of our work is centered around the concept of adaptive filters. Our approach involves using a set of basis filters, and creating linear combinations of them at each node. We use symmetric normalization, which is justified in the paper, to obtain our <strong>EGC-S</strong> layer:</p>
+
+\[\mathbf{w}^{(i)} = \mathbf{\Phi} \mathbf{x}^{(i)} + \mathbf{b}\]
+
+\[\mathbf{y}^{(i)} = {\LARGE \|}_{h=1}^H \sum_{b = 1}^B w_{h,b}^{(i)} \; \sum_{j \in \mathcal{N}(i) \cup \{i\}} \quad\frac{1}{\sqrt{\text{deg}(i)\text{deg}(j)}} \mathbf{\Theta}_b \mathbf{x}^{(j)}\]
+
+<p>The simplest interpretation of this approach is that we have effectively given each vertex its own weight matrix: you can spot this by factorising out the \(\mathbf{\Theta}_b\) term. This enables us to have some kind of adaptivity at the granularity of vertices. This approach can be implemented using SpMM and requires only \(\mathcal{O}(V)\) memory when training–fulfilling our original motivation. To the best of our knowledge, this approach has not been applied in the modern neural network literature.</p>
+
+<p>Our approach is directly inspired by my experience applying digital signal processing techniques in highly resource constrained scenarios—my background is in mobile &amp; wearable technology. Our method is a technique for cheaply computing adaptive signal filters, and is not related to attention from an implementation perspective, although the end result obtained is similar. Adaptive filters are useful when the noise or signal characteristics vary with time or space, and are widely applied in applications such as noise cancellation. Of course, you can also view attention mechanisms through the “adaptive filtering” lens: this is easiest to see in Transformers (<a href="https://arxiv.org/abs/1706.03762">Vaswani et al. 2017</a>). Attention in Transformers effectively involves calculating a convolutional filter dynamically at each node. One work proposing an alternative to a Transformer even explicitly predicts what the convolutional filter should be based on the local node representation, with no noticeable decrease in accuracy (<a href="https://arxiv.org/abs/1901.10430">Wu et al. 2019</a>). We have effectively taken a different route to a similar end result, motivated by efficiency concerns. In practice, our approach does not seem detrimental on any of the 5 large real-world datasets we evaluated on—in fact, it seems to be better for graphs.</p>
+
+<p>It’s worth noting that we don’t apply a softmax transformation to our combination coefficients. We did experiment with this, and we discovered that it actually harmed performance. One possible explanation is that by applying a softmax transformation to our combination coefficients we are effectively constraining each weight in the resulting combined matrix to a hyperplane. An alternative explanation is rooted in numerical issues: you can sometimes see this with GAT, where a small number of seeds perform badly just due to an unlucky initialization resulting in a vanishing gradient. Regardless, it’s worth pointing out that avoiding softmax is a good idea anyway when we’re deploying quantized models: softmaxed coefficients are tricky to quantize, therefore necessitating the shuffling of data between integer and floating point representations.</p>
+
+<p>We find that this EGC-S variant is highly competitive with approaches such as GAT or MPNN based on our experiments on 5 varied and challenging graph datasets. There is no experiment where GAT outperforms EGC-S. We find that MPNN can sometimes outperform EGC-S when using a different aggregator, max, which provides stronger inductive biases for certain tasks.</p>
+
+<h2 id="sota-accuracy-with-little-latency-overhead-through-aggregator-fusion">SOTA Accuracy With Little Latency Overhead Through Aggregator Fusion</h2>
+
+<p>Inspired by the work on PNA, we can also integrate multiple aggregation functions, such as addition, maximum, standard deviation and others into our model, resulting in the EGC-M variant defined using generalised aggregation functions \(\oplus\). Perhaps surprisingly, we find that this minor modification is sufficient to obtain state of the art performance, often beating PNA by large margins. We did not find it necessary to search over multiple aggregator choices, with the limited choices assessed yielding roughly similar results. We note that it may be possible to obtain better results than we report through a larger grid search, or through automated techniques (NAS).</p>
+
+<p>At first glance it would seem that we have to trade a large increase in latency to obtain improved accuracy. However, by paying attention to hardware implementation we can discover that this is false in many cases. The key observation is that sparse operations are memory-bound: most of the latency is not due to computation, but because we spend a lot of time waiting for data to arrive from memory. This is a pretty well understood phenomenon: unstructured sparsity results in difficult to optimize memory access patterns. We confirmed this observation by profiling SpMM on a GTX 1080Ti, and discovered that the overwhelming reason for instruction issue stalls was due to unmet memory dependencies. We propose aggregator fusion as a result of this observation. The technique essentially boils down to applying all aggregators to items that have arrived from memory, rather than fetching them multiple times. It is worth noting that this observation has implications for energy efficiency, in addition to the latency benefits: data movement is one of the largest drivers of energy consumption. According to a 2014 paper (<a href="https://ieeexplore.ieee.org/document/6757323">Horowitz 2014</a>), a 32-bit floating point add costs 0.9pJ, but the cost of the corresponding DRAM read is 640pJ—and the situation has likely become more extreme since then. Aggregator fusion eliminates multiple fetches, thereby significantly reducing data movement.</p>
+
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+
+<p>We have proposed EGC, a new GNN architecture that achieves state of the art performance while also extensively accommodating hardware considerations. Our approach delivers greater memory efficiency, lower latency, and higher accuracy than competing approaches by incorporating adaptive filters and aggregator fusion. In the future, we hope to extend our work to enable features applying to edges to be efficiently used.</p>
+
+<p>Our paper is on <a href="https://arxiv.org/abs/2104.01481">Arxiv</a>, and code and pre-trained models for our work can be found on <a href="https://github.com/shyam196/egc">GitHub</a>. Please feel welcome to contact us if you have any thoughts or questions.</p>
+
+<h3 id="citing-this-work">Citing This Work</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@misc{tailor2021adaptive,
+      title={Adaptive Filters and Aggregator Fusion for Efficient Graph Convolutions}, 
+      author={Shyam A. Tailor and Felix L. Opolka and Pietro Liò and Nicholas D. Lane},
+      year={2021},
+      eprint={2104.01481},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      note={GNNSys Workshop, MLSys '21 and HAET Workshop, ICLR '21}
+}
+</code></pre></div></div>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>This work was supported by Samsung AI and by the UK’s Engineering and Physical Sciences Research Council (EPSRC) with grants EP/M50659X/1 and EP/S001530/1 (the MOA project) and the European Research Council via the REDIAL project (Grant Agreement ID: 805194). FLO acknowledges funding from the Huawei Studentship at the Department of Computer Science and Technology of the University of Cambridge.</p>
+
+<p>The authors would like to thank Ben Day, Javier Fernandez-Marques, Chaitanya Joshi, Titouan Parcollet and the anonymous reviewers who have provided comments on earlier versions of this work.</p>
+
+<h3 id="footnotes">Footnotes</h3>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>In addition, the vast majority of works proposing GNN accelerators focus on accelerating <em>GCN</em>, and not arbitrary GNNs; our approach can re-use this hardware. It remains an open research question to design accelerators that can handle a wide variety of sparsity levels, which is desirable if we intend to run arbitrary graph tasks and other deep learning workloads on the same silicon. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+  
+  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{tailor2022egc,
+  title = {{Do We Need Anisotropic Graph Neural Networks?}},
+  author = {Tailor, Shyam A. and Opolka, Felix L. and Liò, Pietro and Lane, Nicholas D.},
+  year = {2022},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  url = {https://arxiv.org/abs/2104.01481},
+  date = {2022-04-25},
+  eprint = {2104.01481},
+  archiveprefix = {arXiv},
+}</code></pre></details>
+</article>
+</main>
+    <footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <div><strong>Cambridge Machine Learning Systems Group</strong><br><a href="https://www.cst.cam.ac.uk/">Department of Computer Science and Technology</a><br><a href="https://www.cam.ac.uk/">University of Cambridge</a></div>
+    <div class="footer-links"><a href="/camlsys-preview/contact/">Contact</a><a href="/camlsys-preview/news/">News archive</a><a href="/camlsys-preview/resources/">Articles &amp; resources</a><a href="https://github.com/camlsys">GitHub</a></div>
+  </div>
+</footer>
+
+  </body>
+</html>

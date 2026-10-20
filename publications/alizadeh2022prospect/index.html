@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <script src="/camlsys-preview/assets/theme.js"></script>
+  
+  <title>Prospect Pruning: Finding Trainable Weights at Initialization using Meta-Gradients | CaMLSys</title>
+  <meta name="description" content="Pruning neural networks at initialization would enable us to find sparse models that retain the accuracy of the original network while consuming fewer computational resources for training and inference. However, current methods are insufficient to enable this optimization and lead to a large degradation in model performance. In this paper, we identify a fundamental limitation in the formulation of current methods, namely that their saliency criteria look at a single step at the start of training without taking into account the trainability of the network. While pruning iteratively and gradually has been shown to improve pruning performance, explicit consideration of the training stage that will immediately follow pruning has so far been absent from the computation of the saliency criterion. To overcome the short-sightedness of existing methods, we propose Prospect Pruning (ProsPr), which uses meta-gradients through the first few steps of optimization to determine which weights to prune. ProsPr combines an estimate of the higher-order effects of pruning on the loss and the optimization trajectory to identify the trainable sub-network. Our method achieves state-of-the-art pruning performance on a variety of vision classification tasks, with less data and in a single shot compared to existing pruning-at-initialization methods.
+">
+  <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/alizadeh2022prospect/">
+  <meta property="og:title" content="Prospect Pruning: Finding Trainable Weights at Initialization using Meta-Gradients">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/alizadeh2022prospect/">
+  
+  
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1792512551">
+  
+  <link rel="icon" href="/camlsys-preview/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="CaMLSys news" href="/camlsys-preview/feed.xml">
+  
+</head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="wrapper header-inner">
+    <a class="site-title" href="/camlsys-preview/">
+      <img class="site-logo" src="/camlsys-preview/assets/dodo_svetla.png" alt="" width="50" height="50">
+      <span class="site-wordmark">CaMLSys<span class="site-subtitle">University of Cambridge</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      
+        
+        <a href="/camlsys-preview/">Home</a>
+      
+        
+        <a href="/camlsys-preview/people/">People</a>
+      
+        
+        <a href="/camlsys-preview/publications/" aria-current="page">Publications</a>
+      
+        
+        <a href="/camlsys-preview/projects/">Projects</a>
+      
+        
+        <a href="/camlsys-preview/contact/">Contact</a>
+      
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+      <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg>
+      <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    </button>
+  </div>
+</header>
+
+    <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
+  <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
+  <h1>Prospect Pruning: Finding Trainable Weights at Initialization using Meta-Gradients</h1>
+  <p class="authors">Milad Alizadeh, Shyam A. Tailor, Luisa M Zintgraf, Joost van Amersfoort, Sebastian Farquhar, Nicholas Donald Lane, and Yarin Gal</p>
+  <p class="meta"><span class="publication-venue">International Conference on Learning Representations (ICLR)</span></p>
+  <div class="publication-links"><a href="https://arxiv.org/abs/2202.08132">Paper</a></div>
+
+  
+  <section class="abstract"><h2>Abstract</h2><p>Pruning neural networks at initialization would enable us to find sparse models that retain the accuracy of the original network while consuming fewer computational resources for training and inference. However, current methods are insufficient to enable this optimization and lead to a large degradation in model performance. In this paper, we identify a fundamental limitation in the formulation of current methods, namely that their saliency criteria look at a single step at the start of training without taking into account the trainability of the network. While pruning iteratively and gradually has been shown to improve pruning performance, explicit consideration of the training stage that will immediately follow pruning has so far been absent from the computation of the saliency criterion. To overcome the short-sightedness of existing methods, we propose Prospect Pruning (ProsPr), which uses meta-gradients through the first few steps of optimization to determine which weights to prune. ProsPr combines an estimate of the higher-order effects of pruning on the loss and the optimization trajectory to identify the trainable sub-network. Our method achieves state-of-the-art pruning performance on a variety of vision classification tasks, with less data and in a single shot compared to existing pruning-at-initialization methods.</p>
+</section>
+  
+  <div class="post-content">
+</div>
+  
+  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{alizadeh2022prospect,
+  title = {{Prospect Pruning: Finding Trainable Weights at Initialization using Meta-Gradients}},
+  author = {Alizadeh, Milad and Tailor, Shyam A. and Zintgraf, Luisa M and van Amersfoort, Joost and Farquhar, Sebastian and Lane, Nicholas Donald and Gal, Yarin},
+  year = {2022},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  url = {https://arxiv.org/abs/2202.08132},
+  archiveprefix = {arXiv},
+  eprint = {2202.08132},
+  date = {2022-04-25},
+}</code></pre></details>
+</article>
+</main>
+    <footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <div><strong>Cambridge Machine Learning Systems Group</strong><br><a href="https://www.cst.cam.ac.uk/">Department of Computer Science and Technology</a><br><a href="https://www.cam.ac.uk/">University of Cambridge</a></div>
+    <div class="footer-links"><a href="/camlsys-preview/contact/">Contact</a><a href="/camlsys-preview/news/">News archive</a><a href="/camlsys-preview/resources/">Articles &amp; resources</a><a href="https://github.com/camlsys">GitHub</a></div>
+  </div>
+</footer>
+
+  </body>
+</html>

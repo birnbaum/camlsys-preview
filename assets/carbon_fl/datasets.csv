@@ -1,0 +1,4 @@
+dataset,size_mbytes
+CIFAR10,41.96
+ImageNet,41.96
+Speech Commands,20.34

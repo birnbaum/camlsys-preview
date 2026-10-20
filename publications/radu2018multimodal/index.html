@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <script src="/camlsys-preview/assets/theme.js"></script>
+  
+  <title>Multimodal Deep Learning for Activity and Context Recognition | CaMLSys</title>
+  <meta name="description" content="Wearables and mobile devices see the world through the lens of half a dozen low-power sensors, such as, barometers, accelerometers, microphones and proximity detectors. But differences between sensors ranging from sampling rates, discrete and continuous data or even the data type itself make principled approaches to integrating these streams challenging. How, for example, is barometric pressure best combined with an audio sample to infer if a user is in a car, plane or bike? Critically for applications, how successfully sensor devices are able to maximize the information contained across these multi-modal sensor streams often dictates the fidelity at which they can track user behaviors and context changes. This paper studies the benefits of adopting deep learning algorithms for interpreting user activity and context as captured by multi-sensor systems. Specifically, we focus on four variations of deep neural networks that are based either on fully-connected Deep Neural Networks (DNNs) or Convolutional Neural Networks (CNNs). Two of these architectures follow conventional deep models by performing feature representation learning from a concatenation of sensor types. This classic approach is contrasted with a promising deep model variant characterized by modality-specific partitions of the architecture to maximize intra-modality learning. Our exploration represents the first time these architectures have been evaluated for multimodal deep learning under wearable data -- and for convolutional layers within this architecture, it represents a novel architecture entirely. Experiments show these generic multimodal neural network models compete well with a rich variety of conventional hand-designed shallow methods (including feature extraction and classifier construction) and task-specific modeling pipelines, across a wide-range of sensor types and inference tasks (four different datasets). Although the training and inference overhead of these multimodal deep approaches is in some cases appreciable, we also demonstrate the feasibility of on-device mobile and wearable execution is not a barrier to adoption. This study is carefully constructed to focus on multimodal aspects of wearable data modeling for deep learning by providing a wide range of empirical observations, which we expect to have considerable value in the community. We summarize our observations into a series of practitioner rules-of-thumb and lessons learned that can guide the usage of multimodal deep learning for activity and context detection.
+">
+  <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/radu2018multimodal/">
+  <meta property="og:title" content="Multimodal Deep Learning for Activity and Context Recognition">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/radu2018multimodal/">
+  
+  
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1792512551">
+  
+  <link rel="icon" href="/camlsys-preview/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="CaMLSys news" href="/camlsys-preview/feed.xml">
+  
+</head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="wrapper header-inner">
+    <a class="site-title" href="/camlsys-preview/">
+      <img class="site-logo" src="/camlsys-preview/assets/dodo_svetla.png" alt="" width="50" height="50">
+      <span class="site-wordmark">CaMLSys<span class="site-subtitle">University of Cambridge</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      
+        
+        <a href="/camlsys-preview/">Home</a>
+      
+        
+        <a href="/camlsys-preview/people/">People</a>
+      
+        
+        <a href="/camlsys-preview/publications/" aria-current="page">Publications</a>
+      
+        
+        <a href="/camlsys-preview/projects/">Projects</a>
+      
+        
+        <a href="/camlsys-preview/contact/">Contact</a>
+      
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+      <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg>
+      <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    </button>
+  </div>
+</header>
+
+    <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
+  <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
+  <h1>Multimodal Deep Learning for Activity and Context Recognition</h1>
+  <p class="authors">Valentin Radu, Catherine Tong, Sourav Bhattacharya, Nicholas D. Lane, Cecilia Mascolo, Mahesh K. Marina, and Fahim Kawsar</p>
+  <p class="meta"><span class="publication-venue">Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT)</span></p>
+  <div class="publication-links"><a href="https://doi.org/10.1145/3161174">Paper</a></div>
+
+  
+  <section class="abstract"><h2>Abstract</h2><p>Wearables and mobile devices see the world through the lens of half a dozen low-power sensors, such as, barometers, accelerometers, microphones and proximity detectors. But differences between sensors ranging from sampling rates, discrete and continuous data or even the data type itself make principled approaches to integrating these streams challenging. How, for example, is barometric pressure best combined with an audio sample to infer if a user is in a car, plane or bike? Critically for applications, how successfully sensor devices are able to maximize the information contained across these multi-modal sensor streams often dictates the fidelity at which they can track user behaviors and context changes. This paper studies the benefits of adopting deep learning algorithms for interpreting user activity and context as captured by multi-sensor systems. Specifically, we focus on four variations of deep neural networks that are based either on fully-connected Deep Neural Networks (DNNs) or Convolutional Neural Networks (CNNs). Two of these architectures follow conventional deep models by performing feature representation learning from a concatenation of sensor types. This classic approach is contrasted with a promising deep model variant characterized by modality-specific partitions of the architecture to maximize intra-modality learning. Our exploration represents the first time these architectures have been evaluated for multimodal deep learning under wearable data – and for convolutional layers within this architecture, it represents a novel architecture entirely. Experiments show these generic multimodal neural network models compete well with a rich variety of conventional hand-designed shallow methods (including feature extraction and classifier construction) and task-specific modeling pipelines, across a wide-range of sensor types and inference tasks (four different datasets). Although the training and inference overhead of these multimodal deep approaches is in some cases appreciable, we also demonstrate the feasibility of on-device mobile and wearable execution is not a barrier to adoption. This study is carefully constructed to focus on multimodal aspects of wearable data modeling for deep learning by providing a wide range of empirical observations, which we expect to have considerable value in the community. We summarize our observations into a series of practitioner rules-of-thumb and lessons learned that can guide the usage of multimodal deep learning for activity and context detection.</p>
+</section>
+  
+  <div class="post-content">
+</div>
+  
+  <details id="bibtex"><summary>BibTeX</summary><pre><code>@article{radu2018multimodal,
+  title = {{Multimodal Deep Learning for Activity and Context Recognition}},
+  author = {Radu, Valentin and Tong, Catherine and Bhattacharya, Sourav and Lane, Nicholas D. and Mascolo, Cecilia and Marina, Mahesh K. and Kawsar, Fahim},
+  year = {2018},
+  journal = {Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT)},
+  url = {https://doi.org/10.1145/3161174},
+  volume = {1},
+  number = {4},
+  pages = {1-27},
+  publisher = {Association for Computing Machinery (ACM)},
+  doi = {10.1145/3161174},
+  date = {2018-01-08},
+}</code></pre></details>
+</article>
+</main>
+    <footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <div><strong>Cambridge Machine Learning Systems Group</strong><br><a href="https://www.cst.cam.ac.uk/">Department of Computer Science and Technology</a><br><a href="https://www.cam.ac.uk/">University of Cambridge</a></div>
+    <div class="footer-links"><a href="/camlsys-preview/contact/">Contact</a><a href="/camlsys-preview/news/">News archive</a><a href="/camlsys-preview/resources/">Articles &amp; resources</a><a href="https://github.com/camlsys">GitHub</a></div>
+  </div>
+</footer>
+
+  </body>
+</html>

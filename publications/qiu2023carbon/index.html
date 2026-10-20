@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <script src="/camlsys-preview/assets/theme.js"></script>
+  
+  <title>A First Look into the Carbon Footprint of Federated Learning | CaMLSys</title>
+  <meta name="description" content="Despite impressive results, deep learning-based technologies also raise severe privacy and environmental concerns induced by the training procedure often conducted in data centers. In response, alternatives to centralized training such as Federated Learning (FL) have emerged. FL is now starting to be deployed at a global scale by companies that must adhere to new legal demands and policies originating from governments and social groups advocating for privacy protection. However, the potential environmental impact related to FL remains unclear and unexplored. This article offers the first-ever systematic study of the carbon footprint of FL. We propose a rigorous model to quantify the carbon footprint, hence facilitating the investigation of the relationship between FL design and carbon emissions. We also compare the carbon footprint of FL to traditional centralized learning. Our findings show that, depending on the configuration, FL can emit up to two orders of magnitude more carbon than centralized training. However, in certain settings, it can be comparable to centralized learning due to the reduced energy consumption of embedded devices. Finally, we highlight and connect the results to the future challenges and trends in FL to reduce its environmental impact, including algorithms efficiency, hardware capabilities, and stronger industry transparency.
+">
+  <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/qiu2023carbon/">
+  <meta property="og:title" content="A First Look into the Carbon Footprint of Federated Learning">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/qiu2023carbon/">
+  
+  
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1792512551">
+  <link rel="stylesheet" href="/camlsys-preview/assets/carbon-legacy.css?v=1792512551">
+  <link rel="icon" href="/camlsys-preview/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="CaMLSys news" href="/camlsys-preview/feed.xml">
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+</head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="wrapper header-inner">
+    <a class="site-title" href="/camlsys-preview/">
+      <img class="site-logo" src="/camlsys-preview/assets/dodo_svetla.png" alt="" width="50" height="50">
+      <span class="site-wordmark">CaMLSys<span class="site-subtitle">University of Cambridge</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      
+        
+        <a href="/camlsys-preview/">Home</a>
+      
+        
+        <a href="/camlsys-preview/people/">People</a>
+      
+        
+        <a href="/camlsys-preview/publications/" aria-current="page">Publications</a>
+      
+        
+        <a href="/camlsys-preview/projects/">Projects</a>
+      
+        
+        <a href="/camlsys-preview/contact/">Contact</a>
+      
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+      <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg>
+      <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    </button>
+  </div>
+</header>
+
+    <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
+  <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
+  <h1>A First Look into the Carbon Footprint of Federated Learning</h1>
+  <p class="authors">Xinchi Qiu, Titouan Parcollet, Javier Fernandez-Marques, Pedro P. B. Gusmao, Yan Gao, Daniel J. Beutel, Taner Topal, Akhil Mathur, and Nicholas D. Lane</p>
+  <p class="meta"><span class="publication-venue">Journal of Machine Learning Research (JMLR)</span></p>
+  <div class="publication-links"><a href="https://jmlr.org/papers/v24/21-0445.html">Paper</a>
+  
+  
+  <a href="/camlsys-preview/publications/qiu2023carbon/#article">Article</a></div>
+
+  
+  <section class="abstract"><h2>Abstract</h2><p>Despite impressive results, deep learning-based technologies also raise severe privacy and environmental concerns induced by the training procedure often conducted in data centers. In response, alternatives to centralized training such as Federated Learning (FL) have emerged. FL is now starting to be deployed at a global scale by companies that must adhere to new legal demands and policies originating from governments and social groups advocating for privacy protection. However, the potential environmental impact related to FL remains unclear and unexplored. This article offers the first-ever systematic study of the carbon footprint of FL. We propose a rigorous model to quantify the carbon footprint, hence facilitating the investigation of the relationship between FL design and carbon emissions. We also compare the carbon footprint of FL to traditional centralized learning. Our findings show that, depending on the configuration, FL can emit up to two orders of magnitude more carbon than centralized training. However, in certain settings, it can be comparable to centralized learning due to the reduced energy consumption of embedded devices. Finally, we highlight and connect the results to the future challenges and trends in FL to reduce its environmental impact, including algorithms efficiency, hardware capabilities, and stronger industry transparency.</p>
+</section>
+  <h2 id="article">Carbon Dioxide in Federated Learning</h2>
+  <div class="post-content"><script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.0/papaparse.min.js"></script>
+
+<div style="text-align: justify;">
+<p>
+  For the better part of a decade, Deep Learning has been defining the state of the art in various machine learning tasks.
+Ranging from Computer Vision <a class="citation" href="#krizhevsky2012imagenet">[1]</a> to Natural Language Processing <a class="citation" href="#brown2020language">[2]</a>, models have achieved remarkable results at the cost of doubling computation resources
+every 3.4 months <a class="citation" href="#openai">[3]</a>.
+
+As hardware efficiency struggles to keep up with the exponential growth in architecture complexity, a similar trend in energy consumption is created as more hardware and cooling systems are required to train modern models. 
+
+In fact, recent studies <a class="citation" href="#lacoste1910quantifying">[4]</a><a class="citation" href="#strubell2019energy">[5]</a> have shown that training large models in conventional data centres, a sector that already amounts for 0.3% of the world’s carbon emission <a class="citation" href="#jones2018stop">[6]</a>, can cause significant increase in CO<sub>2</sub>eq production.
+</p>
+
+<h2> How Green is Federated Learning? </h2>
+
+<div id="root_carbon">
+  <div id="parent">
+    <div class="images">
+      <a href="https://arxiv.org/pdf/2102.07627.pdf" target="_blank">
+       <img class="paper_image" src="/camlsys-preview/assets/carbon_fl/carbon_paper.png" alt="A First Look into the Carbon Footprint of Federated Learning" />
+      </a>
+      <a href="https://arxiv.org/pdf/2010.06537.pdf" target="_blank">
+       <img class="paper_image" src="/camlsys-preview/assets/carbon_fl/carbon_paper2.png" alt="Can Federated Learning Save the Planet?" />
+      </a>
+    </div>
+    <p>Fortunately, not all hope is lost and a more carbon-friendly way to train neural networks exists. In Federated Learning (FL), training is performed not inside large data centres, but distributed over thousands of mobile devices, such as smartphones, where data is usually collected by the end-users themselves.
+    </p>
+    <p> An example of an application currently using FL is the next-word prediction in mobile phones <a class="citation" href="#google_keyboard">[7]</a>. In this application, each smartphone (client) trains a local network (model) to predict which word the user will type next based on their previous text messages. Trained local models are then sent to a server to perform a much simpler task called <i>aggregation</i> in which a final model will be generated and sent back to all users.
+    </p>
+    <p> Besides the privacy-related gains of not having to send user-data to a centralised server, in our recent work <a class="citation" href="#carbon_footprint">[8], [9]</a> we show that FL can also have a positive impact in reducing carbon emissions derived from Deep Learning. Although mobile devices are much less powerful than server GPUs, FL benefits from not needing any cooling and from having wide pools of devices for training.
+    </p>
+  </div>
+</div>
+
+<h2> The Federated Learning Carbon Calculator </h2>
+
+<p>So how much carbon does Federated Learning produce? The following calculator allows you to estimate how much CO<sub>2</sub>eq is produced by a given pool of devices.</p>
+<p>To help you define your training scenario here are a few definitions and hyperparameters used in FL, followed by realistic input values.</p>
+<ul>
+  <li> <b>Devices:</b> Selects the hardware profile being used.</li>
+  <li> <b>Country:</b> Defines the energy mix and Internet Upload/Download speeds of a given pool of devices. The former parameter defines the electricity/carbon conversion rate while the latter parameters help estimate emissions due to client-server communication.</li>
+  <li> <b>Dataset:</b> Defines the balanced, non-IID dataset being used.</li>
+  <li> <b>Number of rounds:</b> Total number of times the server will aggregate results from clients (10-100).</li>
+  <li> <b>Number of local epochs:</b> Number of times each client will train on their on their local data before sending their model for aggregation (1-5).</li>
+  <li> <b>Number of active devices:</b> Number of devices participating in each round. This should be a small fraction of the total number of devices available (10-1000).</li>
+</ul>
+
+For centralised training emissions, we invite you to check out the <a href="https://mlco2.github.io/impact/">ML CO<sub>2</sub> Impact</a> calculator.
+
+<div class="calculator__pool">
+  <div class="calculator">
+    <div class="calculator__display">0</div>
+    <div class="calculator__subdisplay">g CO<sub>2</sub>eq</div>
+    <div class="calculator__buttons">
+      <div class="left_column">
+        <div class="fl_variable">
+          <div class="label">Devices type:</div>
+          <div class="choice">
+            <select id="devices" dir="rtl" onchange="load_device_csv();">
+              <option value="nx">Nvidia NX</option>
+              <option value="tx2">Nvidia TX2</option>
+            </select>
+          </div>
+        </div>
+        <div class="fl_variable">
+          <div class="label">Country:</div>
+          <div class="choice">
+            <select id="countries" dir="rtl">
+              
+              <option value="Argentina">Argentina</option>
+              
+              <option value="Brazil">Brazil</option>
+              
+              <option value="Canada">Canada</option>
+              
+              <option value="China">China</option>
+              
+              <option value="France">France</option>
+              
+              <option value="Germany">Germany</option>
+              
+              <option value="India">India</option>
+              
+              <option value="Italy">Italy</option>
+              
+              <option value="NZ">New Zealand</option>
+              
+              <option value="SA">South Africa</option>
+              
+              <option value="Spain">Spain</option>
+              
+              <option value="UK">United Kingdom</option>
+              
+              <option value="USA">United States</option>
+              
+            </select>
+          </div>
+        </div>
+        <div class="fl_variable">
+          <div class="label">Dataset:</div>
+          <div class="choice">
+            <select id="datasets" dir="rtl">
+              
+              <option value="CIFAR10">CIFAR10</option>
+              
+              <option value="ImageNet">ImageNet</option>
+              
+              <option value="Speech Commands">Speech Commands</option>
+              
+            </select>
+          </div>
+        </div>
+        <p></p>
+        <div class="fl_variable">
+          <span style="float:left;">Number of active devices: </span>
+          <span style="float:right;">
+            <input type="number" id="num_devices" name="num_devices" min="1" max="10000" size="6" value="1" />
+          </span>
+        </div>
+        <div class="fl_variable">
+          <span style="float:left;">Number of local epochs:</span>
+          <span style="float:right;">
+            <input type="number" id="local_epochs" name="local_epochs" min="1" max="1000" size="6" value="1" />
+          </span>
+        </div>
+        <div class="fl_variable">
+          <span style="float:left;">Number of rounds: </span>
+          <span style="float:right;">
+            <input type="number" id="num_rounds" name="num_rounds" min="1" max="10000" size="6" value="1" />
+          </span>
+        </div>
+      </div>
+      <!-- Right buttons-->
+      <div class="right_column">
+        <div class="calculator__keys">
+          <button class="key--operator" data-action="add">+</button>
+          <button class="key--operator" data-action="clear">AC</button>
+          <button class="key--equal" data-action="calculate">=</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- End calculator -->
+  <div class="pool">
+    <p style="color:rgba(100,100,100,1.0);font-size:24px;">Device pool:</p>
+    <p style="color:rgba(100,100,100,1.0);font-size:10px;">(#Devices, Type, Country, Download(Mbps),
+        Upload(Mbps), #Epochs, #Rounds)</p>
+    <textarea id="pool" name="pool of devices" rows="10" cols="45" style="resize: none; text-align: right; font-size:11px" readonly=""></textarea>
+  </div>
+</div>
+
+<div class="calculator__pool">
+  <div id="result_quotes">
+    <figure>
+      <blockquote cite="https://howbadarebananas.com/">
+        <p style="font-size:30px;"> Wow! Your FL setup produces: <span id="fl_result" style="font-weight:bold;"> </span>g CO<sub>2</sub>eq.</p>
+        <p>To put this into perspective...</p>
+        <ul>
+          <li>Sending an email from laptop to laptop generates <b>0.3g</b> CO<sub>2</sub>eq[1].</li>
+          <li>Making a Zoom call from a regular laptop generates <b>10g</b> CO<sub>2</sub>eq[1].</li>
+          <li>Training a neural network in a data centre in China to reach 70% of accuracy on the Speech Commands dataset may produce <b>17.5g</b> CO<sub>2</sub>eq[2].</li>
+          <li>Training a neural network in a data centre in the US to reach 50% of accuracy on the ImageNet dataset may produce <b>889g</b> CO<sub>2</sub>eq[2].</li>
+        </ul>
+      </blockquote>
+      <figcaption> Sources: 
+        <p>
+          [1] <cite>"How Bad Are Bananas? The carbon footprint of everything"</cite> by Mike Berners-Lee.
+        </p>
+        <p>
+          [2] <cite>"A first look into the Carbon footprint of Federated Learning"</cite> by Qiu <i>et al.</i>.
+        </p>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+
+<h2> References </h2>
+
+<ul.no-bullet class="bibliography"><li><span id="qiu2020can">[1]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Can Federated Learning Save the Planet?</b></div><div class="csl-block csl-author">By Qiu, X., Parcollet, T., Beutel, D., Topal, T., Mathur, A. and Lane, N.</div><div class="csl-block csl-event">In <i>NeurIPS-Tackling Climate Change with Machine Learning</i>2020.</div></div></span>
+<details id="qiu2020can-bibtex"><summary>BibTeX</summary><pre>@inproceedings{qiu2020can,
+  title = {Can Federated Learning Save the Planet?},
+  author = {Qiu, Xinchi and Parcollet, Titouan and Beutel, Daniel and Topal, Taner and Mathur, Akhil and Lane, Nicholas},
+  booktitle = {NeurIPS-Tackling Climate Change with Machine Learning},
+  year = {2020}
+}
+</pre></details>
+
+
+
+</li>
+<li><span id="strubell2019energy">[2]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Energy and policy considerations for deep learning in NLP</b>. </div><div class="csl-block csl-author">By Strubell, E., Ganesh, A. and McCallum, A.</div><div class="csl-block csl-event">In <i>arXiv preprint arXiv:1906.02243</i>, 2019.</div></div></span>
+<details id="strubell2019energy-bibtex"><summary>BibTeX</summary><pre>@article{strubell2019energy,
+  title = {Energy and policy considerations for deep learning in NLP},
+  author = {Strubell, Emma and Ganesh, Ananya and McCallum, Andrew},
+  journal = {arXiv preprint arXiv:1906.02243},
+  year = {2019}
+}
+</pre></details>
+
+
+
+</li>
+<li><span id="carbon_footprint">[3]<b>A first look into the carbon footprint of federated learning</b>. 2021</span>
+<details id="carbon_footprint-bibtex"><summary>BibTeX</summary><pre>@misc{carbon_footprint,
+  author = {Qiu, Xinchi and Parcollet, Titouan and Fernandez-Marques, Javier and de Gusmao, Pedro Porto Buarque and Beutel, Daniel J. and Topal, Taner and Mathur, Akhil and Lane, Nicholas D.},
+  title = {A first look into the carbon footprint of federated learning},
+  year = {2021},
+  eprint = {arXiv:2102.07627}
+}
+</pre></details>
+
+
+
+</li>
+<li><span id="brown2020language">[4]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Language models are few-shot learners</b>. </div><div class="csl-block csl-author">By Brown, T.B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A. and others.</div><div class="csl-block csl-event">In <i>arXiv preprint arXiv:2005.14165</i>, 2020.</div></div></span>
+<details id="brown2020language-bibtex"><summary>BibTeX</summary><pre>@article{brown2020language,
+  title = {Language models are few-shot learners},
+  author = {Brown, Tom B and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and others},
+  journal = {arXiv preprint arXiv:2005.14165},
+  year = {2020}
+}
+</pre></details>
+
+
+
+</li>
+<li><span id="krizhevsky2012imagenet">[5]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Imagenet classification with deep convolutional neural networks</b>. </div><div class="csl-block csl-author">By Krizhevsky, A., Sutskever, I. and Hinton, G.E.</div><div class="csl-block csl-event">In <i>Advances in neural information processing systems</i>, vol. 25, pp. 1097–1105, 2012.</div></div></span>
+<details id="krizhevsky2012imagenet-bibtex"><summary>BibTeX</summary><pre>@article{krizhevsky2012imagenet,
+  title = {Imagenet classification with deep convolutional neural networks},
+  author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+  journal = {Advances in neural information processing systems},
+  volume = {25},
+  pages = {1097--1105},
+  year = {2012}
+}
+</pre></details>
+
+
+
+</li>
+<li><span id="lacoste1910quantifying">[6]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Quantifying the Carbon Emissions of Machine Learning. arXiv 2019</b>. </div><div class="csl-block csl-author">By Lacoste, A., Luccioni, A., Schmidt, V. and Dandres, T.</div><div class="csl-block csl-event">In <i>arXiv preprint arXiv:1910.09700</i>, 2019.</div></div></span>
+<details id="lacoste1910quantifying-bibtex"><summary>BibTeX</summary><pre>@article{lacoste1910quantifying,
+  title = {Quantifying the Carbon Emissions of Machine Learning. arXiv 2019},
+  author = {Lacoste, A and Luccioni, A and Schmidt, V and Dandres, T},
+  journal = {arXiv preprint arXiv:1910.09700},
+  year = {2019}
+}
+</pre></details>
+
+
+
+</li>
+<li><span id="jones2018stop">[7]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>How to stop data centres from gobbling up the world’s electricity.</b> </div><div class="csl-block csl-author">By Jones, N.</div><div class="csl-block csl-event">In <i>Nature</i>, vol. 561, no. 7722, pp. 163–167, 2018.</div></div></span>
+<details id="jones2018stop-bibtex"><summary>BibTeX</summary><pre>@article{jones2018stop,
+  title = {How to stop data centres from gobbling up the world&#39;s electricity.},
+  author = {Jones, Nicola},
+  journal = {Nature},
+  volume = {561},
+  number = {7722},
+  pages = {163--167},
+  year = {2018},
+  publisher = {Nature Publishing Group}
+}
+</pre></details>
+
+
+
+</li>
+<li><span id="google_keyboard">[8]<b>Federated Learning for Mobile Keyboard Prediction</b>. 2018</span>
+<details id="google_keyboard-bibtex"><summary>BibTeX</summary><pre>@misc{google_keyboard,
+  title = {Federated Learning for Mobile Keyboard Prediction},
+  author = {Hard, Andrew and Kiddon, Chloé M and Ramage, Daniel and Beaufays, Francoise and Eichner, Hubert and Rao, Kanishka and Mathews, Rajiv and Augenstein, Sean},
+  year = {2018},
+  url = {https://arxiv.org/abs/1811.03604}
+}
+</pre></details>
+<a href="https://arxiv.org/abs/1811.03604">Paper</a>
+
+
+</li>
+<li><span id="openai">[9]<b>AI and Compute</b>. 2019</span>
+<details id="openai-bibtex"><summary>BibTeX</summary><pre>@online{openai,
+  title = {AI and Compute},
+  author = {Amodei, Dario and Hernandez, Danny and Sastry, Girish and Clark, Jack and Brockman, Greg and Sutskever, Ilya},
+  year = {2019},
+  addendum = {(accessed: 25.02.2021)},
+  url = {https://openai.com/blog/ai-and-compute/}
+}
+</pre></details>
+<a href="https://openai.com/blog/ai-and-compute/">Paper</a>
+
+
+</li></ul.no-bullet>
+
+<script>
+  //Load CSV files
+  function getData(csvfile, save_id) {
+    var myRequest = new Request("/camlsys-preview/assets/carbon_fl/" + csvfile + '.csv');
+    fetch(myRequest).then(function (response) {
+      return response.text().then(function (text) {
+        document.getElementById(save_id).dataset.csv = text;
+      });
+    });
+  }
+
+  // Initiate
+  getData('countries', 'countries');
+  getData('datasets', 'datasets');
+  getData('nx', 'devices');
+
+  function load_device_csv() {
+    const device_id = document.getElementById("devices").value;
+    getData(device_id, 'devices');
+  }
+
+  const addToPool = () => {
+    let current_pool = document.getElementById("pool").value;
+
+    // Parse country with download/upload times
+    const country = document.getElementById("countries");
+    const country_code = country.value;
+    const country_csv = Papa.parse(country.dataset.csv, { header: true }).data;
+    const download = country_csv.filter(data => data.country_code === country_code)[0].download;
+    const upload = country_csv.filter(data => data.country_code === country_code)[0].upload;
+    const kgco2_div_kwh = country_csv.filter(data => data.country_code === country_code)[0].kgco2_div_kwh;
+
+    // Parse dataset and size
+    const datasets = document.getElementById("datasets");
+    const datasets_csv = Papa.parse(datasets.dataset.csv, { header: true }).data;
+    const size_mbytes = datasets_csv.filter(data => data.dataset === datasets.value)[0].size_mbytes;
+
+    // Parse device 
+    const device = document.getElementById("devices");
+    const device_name = device.options[device.selectedIndex].text;
+    const device_csv = Papa.parse(device.dataset.csv, { header: true }).data;
+    const time_per_epoch = device_csv.filter(data => data.dataset === datasets.value)[0].time_per_epoch;
+    const watt = device_csv.filter(data => data.dataset === datasets.value)[0].watt;
+
+
+    const num_devices = document.getElementById("num_devices").value;
+    const local_epochs = document.getElementById("local_epochs").value;
+    const num_rounds = document.getElementById("num_rounds").value;
+
+    current_pool = current_pool.concat('(', num_devices, ', ', device_name, ', ', country.value, ',', download, ', ', upload, ', ', datasets.value, ', ', local_epochs, ', ', num_rounds, ')\n');
+
+    document.getElementById("pool").value = current_pool;
+
+  }
+  const clearPool = () => {
+    document.getElementById("pool").value = '';
+  }
+
+  const clearAll = () => {
+    clearPool()
+    document.getElementById("local_epochs").value = 1;
+    document.getElementById("num_devices").value = 1;
+    document.getElementById("num_rounds").value = 1;
+  }
+
+  const getCO2 = () => {
+
+    let result = 0
+
+    // Parse country with download/upload times
+    const country = document.getElementById("countries");
+    const country_code = country.value;
+    const country_csv = Papa.parse(country.dataset.csv, { header: true }).data;
+    const download = parseFloat(country_csv.filter(data => data.country_code === country_code)[0].download);
+    const upload = parseFloat(country_csv.filter(data => data.country_code === country_code)[0].upload);
+    const kgco2_div_kwh = parseFloat(country_csv.filter(data => data.country_code === country_code)[0].kgco2_div_kwh);
+
+
+    // Parse dataset and size
+    const datasets = document.getElementById("datasets");
+    const datasets_csv = Papa.parse(datasets.dataset.csv, { header: true }).data;
+    const size_mbytes = parseFloat(datasets_csv.filter(data => data.dataset === datasets.value)[0].size_mbytes);
+
+    // Parse device 
+    const device = document.getElementById("devices");
+    const device_name = device.options[device.selectedIndex].text;
+    const device_csv = Papa.parse(device.dataset.csv, { header: true }).data;
+
+    const time_per_epoch = parseFloat(device_csv.filter(data => data.dataset === datasets.value)[0].time_per_epoch);
+    const watt = parseFloat(device_csv.filter(data => data.dataset === datasets.value)[0].watt);
+    const idle_watt = parseFloat(device_csv.filter(data => data.dataset === datasets.value)[0].idle_watt);
+
+    const num_devices = parseFloat(document.getElementById("num_devices").value);
+    const local_epochs = parseFloat(document.getElementById("local_epochs").value);
+    const num_rounds = parseFloat(document.getElementById("num_rounds").value);
+
+    const training_co2 = local_epochs * num_devices * num_rounds * (time_per_epoch / 3600) * (watt / 1000) * kgco2_div_kwh*1000;//grams
+    const transmitting_co2 = num_devices * num_rounds * ((size_mbytes * 8) * (1.0 / download + 1.0 / upload) / 3600) * ((idle_watt + 6.4) / 1000) * kgco2_div_kwh*1000;//grams
+    //console.log((size_mbytes*8)*(1.0/download + 1.0/upload))
+    //console.log(training_co2)
+    //console.log(transmitting_co2)
+
+
+    result = training_co2 + transmitting_co2;
+
+    return result
+  }
+
+  const calculate = (n1, operator, n2) => {
+    let result = ''
+    if (operator === 'add') {
+      result = parseFloat(n1) + parseFloat(n2)
+    } else if (operator === 'subtract') {
+      result = parseFloat(n1) - parseFloat(n2)
+    } else if (operator === 'multiply') {
+      result = parseFloat(n1) * parseFloat(n2)
+    } else if (operator === 'divide') {
+      result = parseFloat(n1) / parseFloat(n2)
+    }
+
+    return result
+  }
+
+  const calculator = document.querySelector('.calculator')
+  calculator.dataset.firstValue = 0
+  const display = calculator.querySelector('.calculator__display')
+  const keys = calculator.querySelector('.calculator__keys')
+
+  keys.addEventListener('click', e => {
+    if (e.target.matches('button')) {
+      const key = e.target
+      const action = key.dataset.action
+      const keyContent = key.textContent
+      const displayedNum = display.textContent
+      const previousKeyType = calculator.dataset.previousKeyType
+
+      Array.from(key.parentNode.children)
+        .forEach(k => k.classList.remove('is-depressed'))
+
+      if (!action) {
+        if (displayedNum === '0' || previousKeyType === 'operator') {
+          display.textContent = keyContent
+        } else {
+          display.textContent = displayedNum + keyContent
+        }
+      }
+
+      if (
+        action === 'add' ||
+        action === 'subtract' ||
+        action === 'multiply' ||
+        action === 'divide'
+      ) {
+        //key.classList.add('is-depressed')
+        calculator.dataset.previousKeyType = 'operator'
+
+        calculator.dataset.operator = action
+        const operator = calculator.dataset.operator
+        const firstValue = calculator.dataset.firstValue
+        const secondValue = getCO2()
+
+        const result = calculate(firstValue, operator, secondValue)
+        calculator.dataset.firstValue = result
+
+        addToPool()
+        display.textContent = secondValue.toFixed(2)
+      }
+
+      if (action === 'clear') {
+        clearAll()
+        display.textContent = '0'
+        calculator.dataset.firstValue = 0.00
+      }
+
+      if (action === 'calculate') {
+        const firstValue = calculator.dataset.firstValue
+        display.textContent = parseFloat(firstValue).toFixed(2)
+
+        // Show text below
+        document.getElementById("fl_result").innerHTML = parseFloat(firstValue).toFixed(2);
+        document.getElementById("result_quotes").style.display = "block";
+      }
+    }
+  })
+
+</script>
+</div>
+</div>
+  
+  <details id="bibtex"><summary>BibTeX</summary><pre><code>@article{qiu2023carbon,
+  title = {{A First Look into the Carbon Footprint of Federated Learning}},
+  author = {Qiu, Xinchi and Parcollet, Titouan and Fernandez-Marques, Javier and Gusmao, Pedro P. B. and Gao, Yan and Beutel, Daniel J. and Topal, Taner and Mathur, Akhil and Lane, Nicholas D.},
+  year = {2023},
+  journal = {Journal of Machine Learning Research (JMLR)},
+  url = {https://jmlr.org/papers/v24/21-0445.html},
+  volume = {24},
+  pages = {1--23},
+  number = {129},
+}</code></pre></details>
+</article>
+</main>
+    <footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <div><strong>Cambridge Machine Learning Systems Group</strong><br><a href="https://www.cst.cam.ac.uk/">Department of Computer Science and Technology</a><br><a href="https://www.cam.ac.uk/">University of Cambridge</a></div>
+    <div class="footer-links"><a href="/camlsys-preview/contact/">Contact</a><a href="/camlsys-preview/news/">News archive</a><a href="/camlsys-preview/resources/">Articles &amp; resources</a><a href="https://github.com/camlsys">GitHub</a></div>
+  </div>
+</footer>
+
+  </body>
+</html>

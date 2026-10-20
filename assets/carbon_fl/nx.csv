@@ -1,0 +1,4 @@
+dataset,time_per_epoch,watt,idle_watt
+CIFAR10,0.6,6.3,2.25
+ImageNet,273,9.7,2.25
+Speech Commands,0.9,7.9,2.25

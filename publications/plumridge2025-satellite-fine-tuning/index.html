@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <script src="/camlsys-preview/assets/theme.js"></script>
+  
+  <title>Rapid Distributed Fine-tuning of a Segmentation Model Onboard Satellites | CaMLSys</title>
+  <meta name="description" content="Segmentation of Earth observation (EO) satellite data is critical for natural hazard analysis and disaster response. However, processing EO data at ground stations introduces delays due to data transmission bottlenecks and communication windows. Using segmentation models capable of near-real-time data analysis onboard satellites can therefore improve response times. This study presents a proof-of-concept using MobileSAM, a lightweight, pre-trained segmentation model, onboard Unibap iX10-100 satellite hardware. We demonstrate the segmentation of water bodies from Sentinel-2 satellite imagery and integrate MobileSAM with PASEOS, an open-source Python module that simulates satellite operations. This integration allows us to evaluate MobileSAM&#39;s performance under simulated conditions of a satellite constellation. Our research investigates the potential of fine-tuning MobileSAM in a decentralised way onboard multiple satellites in rapid response to a disaster. Our findings show that MobileSAM can be rapidly fine-tuned and benefits from decentralised learning, considering the constraints imposed by the simulated orbital environment. We observe improvements in segmentation performance with minimal training data and fast fine-tuning when satellites frequently communicate model updates. This study contributes to the field of onboard AI by emphasising the benefits of decentralised learning and fine-tuning pre-trained models for rapid response scenarios. Our work builds on recent related research at a critical time; as extreme weather events increase in frequency and magnitude, rapid response with onboard data analysis is essential.
+">
+  <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/plumridge2025-satellite-fine-tuning/">
+  <meta property="og:title" content="Rapid Distributed Fine-tuning of a Segmentation Model Onboard Satellites">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/plumridge2025-satellite-fine-tuning/">
+  
+  
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1792512551">
+  
+  <link rel="icon" href="/camlsys-preview/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="CaMLSys news" href="/camlsys-preview/feed.xml">
+  
+</head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="wrapper header-inner">
+    <a class="site-title" href="/camlsys-preview/">
+      <img class="site-logo" src="/camlsys-preview/assets/dodo_svetla.png" alt="" width="50" height="50">
+      <span class="site-wordmark">CaMLSys<span class="site-subtitle">University of Cambridge</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      
+        
+        <a href="/camlsys-preview/">Home</a>
+      
+        
+        <a href="/camlsys-preview/people/">People</a>
+      
+        
+        <a href="/camlsys-preview/publications/" aria-current="page">Publications</a>
+      
+        
+        <a href="/camlsys-preview/projects/">Projects</a>
+      
+        
+        <a href="/camlsys-preview/contact/">Contact</a>
+      
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+      <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg>
+      <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    </button>
+  </div>
+</header>
+
+    <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
+  <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
+  <h1>Rapid Distributed Fine-tuning of a Segmentation Model Onboard Satellites</h1>
+  <p class="authors">Meghan Plumridge, Rasmus Maråk, Chiara Ceccobello, Pablo Gómez, Gabriele Meoni, Filip Svoboda, and Nicholas D. Lane</p>
+  <p class="meta"><span class="publication-venue">IEEE International Conference on Image Processing Applications and Systems (IPAS)</span></p>
+  <div class="publication-links"><a href="https://arxiv.org/abs/2411.17831">Paper</a></div>
+
+  
+  <section class="abstract"><h2>Abstract</h2><p>Segmentation of Earth observation (EO) satellite data is critical for natural hazard analysis and disaster response. However, processing EO data at ground stations introduces delays due to data transmission bottlenecks and communication windows. Using segmentation models capable of near-real-time data analysis onboard satellites can therefore improve response times. This study presents a proof-of-concept using MobileSAM, a lightweight, pre-trained segmentation model, onboard Unibap iX10-100 satellite hardware. We demonstrate the segmentation of water bodies from Sentinel-2 satellite imagery and integrate MobileSAM with PASEOS, an open-source Python module that simulates satellite operations. This integration allows us to evaluate MobileSAM’s performance under simulated conditions of a satellite constellation. Our research investigates the potential of fine-tuning MobileSAM in a decentralised way onboard multiple satellites in rapid response to a disaster. Our findings show that MobileSAM can be rapidly fine-tuned and benefits from decentralised learning, considering the constraints imposed by the simulated orbital environment. We observe improvements in segmentation performance with minimal training data and fast fine-tuning when satellites frequently communicate model updates. This study contributes to the field of onboard AI by emphasising the benefits of decentralised learning and fine-tuning pre-trained models for rapid response scenarios. Our work builds on recent related research at a critical time; as extreme weather events increase in frequency and magnitude, rapid response with onboard data analysis is essential.</p>
+</section>
+  
+  <div class="post-content">
+</div>
+  
+  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{plumridge2025satellitefinetuning,
+  title = {{Rapid Distributed Fine-tuning of a Segmentation Model Onboard Satellites}},
+  author = {Plumridge, Meghan and Maråk, Rasmus and Ceccobello, Chiara and Gómez, Pablo and Meoni, Gabriele and Svoboda, Filip and Lane, Nicholas D.},
+  year = {2025},
+  booktitle = {IEEE International Conference on Image Processing Applications and Systems (IPAS)},
+  url = {https://arxiv.org/abs/2411.17831},
+  archiveprefix = {arXiv},
+  eprint = {2411.17831},
+  date = {2025-01-09},
+}</code></pre></details>
+</article>
+</main>
+    <footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <div><strong>Cambridge Machine Learning Systems Group</strong><br><a href="https://www.cst.cam.ac.uk/">Department of Computer Science and Technology</a><br><a href="https://www.cam.ac.uk/">University of Cambridge</a></div>
+    <div class="footer-links"><a href="/camlsys-preview/contact/">Contact</a><a href="/camlsys-preview/news/">News archive</a><a href="/camlsys-preview/resources/">Articles &amp; resources</a><a href="https://github.com/camlsys">GitHub</a></div>
+  </div>
+</footer>
+
+  </body>
+</html>

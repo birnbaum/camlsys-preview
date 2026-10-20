@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <script src="/camlsys-preview/assets/theme.js"></script>
+  
+  <title>Photon: Federated LLM Pre-Training | CaMLSys</title>
+  <meta name="description" content="Scaling large language models (LLMs) demands extensive data and computing resources, which are traditionally constrained to data centers by the high-bandwidth requirements of distributed training. Low-bandwidth methods like federated learning (FL) could enable collaborative training of larger models across weakly connected GPUs or weakly connected clusters of GPUs if they can effectively be used for pre-training. Building robust low-bandwidth training systems can: (a) significantly reduce communication infrastructure costs, (b) minimize the impact of hardware failures, (c) widen the pool of usable GPUs, (d) enable collaborative training over the internet, and (e) allow dynamic compute sourcing based on factors like electricity prices. Such advancements would lessen the dependence on specialized data centers, making large-scale AI training more accessible, cost-effective, and adaptable to real-time demands. To achieve this, we introduce Photon, the first complete system for federated end-to-end LLM training, leveraging cross-silo FL for global-scale training with minimal communication overheads. Using Photon, we train the first federated family of decoder-only LLMs from scratch.
+We show that: (1) Photon can train model sizes up to $7$B in a federated fashion while reaching an even better perplexity than centralized pre-training; (2) Photon model training time decreases with available compute, achieving a similar compute-time trade-off to centralized; and (3) Photon outperforms the wall-time of baseline distributed training methods by $35\%$ via communicating $64\times$–$512\times$ less. Our proposal is robust to data heterogeneity and converges twice as fast as previous methods like DiLoCo. This surprising data efficiency stems from a unique approach combining small client batch sizes with extremely high learning rates, enabled by federated averaging&#39;s robustness to hyperparameters. Photon thus represents the first economical system for global internet-wide LLM pre-training.
+">
+  <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/sani2025-photon/">
+  <meta property="og:title" content="Photon: Federated LLM Pre-Training">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/sani2025-photon/">
+  
+  
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1792512551">
+  
+  <link rel="icon" href="/camlsys-preview/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="CaMLSys news" href="/camlsys-preview/feed.xml">
+  
+</head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="wrapper header-inner">
+    <a class="site-title" href="/camlsys-preview/">
+      <img class="site-logo" src="/camlsys-preview/assets/dodo_svetla.png" alt="" width="50" height="50">
+      <span class="site-wordmark">CaMLSys<span class="site-subtitle">University of Cambridge</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      
+        
+        <a href="/camlsys-preview/">Home</a>
+      
+        
+        <a href="/camlsys-preview/people/">People</a>
+      
+        
+        <a href="/camlsys-preview/publications/" aria-current="page">Publications</a>
+      
+        
+        <a href="/camlsys-preview/projects/">Projects</a>
+      
+        
+        <a href="/camlsys-preview/contact/">Contact</a>
+      
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+      <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg>
+      <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    </button>
+  </div>
+</header>
+
+    <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
+  <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
+  <h1>Photon: Federated LLM Pre-Training</h1>
+  <p class="authors">Lorenzo Sani, Alex Iacob, Zeyu Cao, Royson Lee, Bill Marino, Yan Gao, Wanru Zhao, Dongqi Cai, Zexi Li, Xinchi Qiu, and Nicholas D. Lane</p>
+  <p class="meta"><span class="publication-venue">Conference on Machine Learning and Systems (MLSys)</span></p>
+  <div class="publication-links"><a href="https://proceedings.mlsys.org/paper_files/paper/2025/hash/185087ea328b4f03ea8fd0c8aa96f747-Abstract-Conference.html">Paper</a>
+  
+  
+  
+  <a href="/camlsys-preview/publications/sani2025-photon/#videos">Video</a></div>
+
+  
+  <section class="abstract"><h2>Abstract</h2><p>Scaling large language models (LLMs) demands extensive data and computing resources, which are traditionally constrained to data centers by the high-bandwidth requirements of distributed training. Low-bandwidth methods like federated learning (FL) could enable collaborative training of larger models across weakly connected GPUs or weakly connected clusters of GPUs if they can effectively be used for pre-training. Building robust low-bandwidth training systems can: (a) significantly reduce communication infrastructure costs, (b) minimize the impact of hardware failures, (c) widen the pool of usable GPUs, (d) enable collaborative training over the internet, and (e) allow dynamic compute sourcing based on factors like electricity prices. Such advancements would lessen the dependence on specialized data centers, making large-scale AI training more accessible, cost-effective, and adaptable to real-time demands. To achieve this, we introduce Photon, the first complete system for federated end-to-end LLM training, leveraging cross-silo FL for global-scale training with minimal communication overheads. Using Photon, we train the first federated family of decoder-only LLMs from scratch.
+We show that: (1) Photon can train model sizes up to $7$B in a federated fashion while reaching an even better perplexity than centralized pre-training; (2) Photon model training time decreases with available compute, achieving a similar compute-time trade-off to centralized; and (3) Photon outperforms the wall-time of baseline distributed training methods by $35\%$ via communicating $64\times$–$512\times$ less. Our proposal is robust to data heterogeneity and converges twice as fast as previous methods like DiLoCo. This surprising data efficiency stems from a unique approach combining small client batch sizes with extremely high learning rates, enabled by federated averaging’s robustness to hyperparameters. Photon thus represents the first economical system for global internet-wide LLM pre-training.</p>
+</section>
+  
+  <div class="post-content">
+</div>
+  
+  <section class="publication-videos" id="videos" aria-labelledby="videos-heading">
+    <h2 id="videos-heading">Videos</h2>
+    
+
+
+
+
+<figure class="video">
+  <iframe class="video-frame" src="https://www.youtube-nocookie.com/embed/219kviGMU40" title="Photon: Federated LLM Pre-Training — EfficientML Reading Group" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+  <figcaption><a href="https://www.youtube.com/watch?v=219kviGMU40">Photon: Federated LLM Pre-Training — EfficientML Reading Group</a></figcaption>
+</figure>
+
+  </section>
+  
+  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{sani2025photon,
+  title = {{Photon: Federated LLM Pre-Training}},
+  author = {Sani, Lorenzo and Iacob, Alex and Cao, Zeyu and Lee, Royson and Marino, Bill and Gao, Yan and Zhao, Wanru and Cai, Dongqi and Li, Zexi and Qiu, Xinchi and Lane, Nicholas D.},
+  year = {2025},
+  booktitle = {Conference on Machine Learning and Systems (MLSys)},
+  url = {https://proceedings.mlsys.org/paper_files/paper/2025/hash/185087ea328b4f03ea8fd0c8aa96f747-Abstract-Conference.html},
+  archiveprefix = {arXiv},
+  eprint = {2411.02908},
+  volume = {7},
+  publisher = {MLSys},
+  date = {2025-05-12},
+}</code></pre></details>
+</article>
+</main>
+    <footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <div><strong>Cambridge Machine Learning Systems Group</strong><br><a href="https://www.cst.cam.ac.uk/">Department of Computer Science and Technology</a><br><a href="https://www.cam.ac.uk/">University of Cambridge</a></div>
+    <div class="footer-links"><a href="/camlsys-preview/contact/">Contact</a><a href="/camlsys-preview/news/">News archive</a><a href="/camlsys-preview/resources/">Articles &amp; resources</a><a href="https://github.com/camlsys">GitHub</a></div>
+  </div>
+</footer>
+
+  </body>
+</html>

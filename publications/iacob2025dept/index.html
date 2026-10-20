@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <script src="/camlsys-preview/assets/theme.js"></script>
+  
+  <title>DEPT: Decoupled Embeddings for Pre-training Language Models | CaMLSys</title>
+  <meta name="description" content="Language Model pre-training uses broad data mixtures to enhance performance across domains and languages. However, training on such heterogeneous text corpora requires extensive and expensive efforts. Since these data sources vary significantly in lexical, syntactic, and semantic aspects, they cause negative interference or the ``curse of multilinguality&#39;&#39;. To address these challenges we propose a communication-efficient pre-training framework, DEPT. Our method decouples embeddings from the transformer body while simultaneously training the latter on multiple data sources without requiring a shared vocabulary. DEPT can: (1) train robustly and effectively under significant data heterogeneity, (2) minimize token embedding parameters to only what the data source vocabulary requires, while cutting communication costs in direct proportion to both the communication frequency and the reduction in parameters, (3) enhance transformer body plasticity and generalization, improving both average perplexity (up to 20%) and downstream task performance, and (4) enable training with custom optimized vocabularies per data source. We demonstrate DEPT&#39;s potential via the first vocabulary-agnostic federated pre-training of billion-scale models, reducing communication costs by orders of magnitude and embedding memory by 4-5x.
+">
+  <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/iacob2025dept/">
+  <meta property="og:title" content="DEPT: Decoupled Embeddings for Pre-training Language Models">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/iacob2025dept/">
+  
+  
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1792512551">
+  
+  <link rel="icon" href="/camlsys-preview/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="CaMLSys news" href="/camlsys-preview/feed.xml">
+  
+</head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="wrapper header-inner">
+    <a class="site-title" href="/camlsys-preview/">
+      <img class="site-logo" src="/camlsys-preview/assets/dodo_svetla.png" alt="" width="50" height="50">
+      <span class="site-wordmark">CaMLSys<span class="site-subtitle">University of Cambridge</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      
+        
+        <a href="/camlsys-preview/">Home</a>
+      
+        
+        <a href="/camlsys-preview/people/">People</a>
+      
+        
+        <a href="/camlsys-preview/publications/" aria-current="page">Publications</a>
+      
+        
+        <a href="/camlsys-preview/projects/">Projects</a>
+      
+        
+        <a href="/camlsys-preview/contact/">Contact</a>
+      
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+      <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg>
+      <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    </button>
+  </div>
+</header>
+
+    <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
+  <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
+  <h1>DEPT: Decoupled Embeddings for Pre-training Language Models</h1>
+  <p class="authors">Alex Iacob, Lorenzo Sani, Meghdad Kurmanji, William F. Shen, Xinchi Qiu, Dongqi Cai, Yan Gao, and Nicholas D. Lane</p>
+  <p class="meta"><span class="publication-venue">International Conference on Learning Representations (ICLR)</span> · Oral</p>
+  <div class="publication-links"><a href="https://openreview.net/forum?id=vf5aUZT0Fz">Paper</a></div>
+
+  
+  <section class="abstract"><h2>Abstract</h2><p>Language Model pre-training uses broad data mixtures to enhance performance across domains and languages. However, training on such heterogeneous text corpora requires extensive and expensive efforts. Since these data sources vary significantly in lexical, syntactic, and semantic aspects, they cause negative interference or the ``curse of multilinguality’’. To address these challenges we propose a communication-efficient pre-training framework, DEPT. Our method decouples embeddings from the transformer body while simultaneously training the latter on multiple data sources without requiring a shared vocabulary. DEPT can: (1) train robustly and effectively under significant data heterogeneity, (2) minimize token embedding parameters to only what the data source vocabulary requires, while cutting communication costs in direct proportion to both the communication frequency and the reduction in parameters, (3) enhance transformer body plasticity and generalization, improving both average perplexity (up to 20%) and downstream task performance, and (4) enable training with custom optimized vocabularies per data source. We demonstrate DEPT’s potential via the first vocabulary-agnostic federated pre-training of billion-scale models, reducing communication costs by orders of magnitude and embedding memory by 4-5x.</p>
+</section>
+  
+  <div class="post-content">
+</div>
+  
+  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{iacob2025dept,
+  title = {{DEPT: Decoupled Embeddings for Pre-training Language Models}},
+  author = {Iacob, Alex and Sani, Lorenzo and Kurmanji, Meghdad and Shen, William F. and Qiu, Xinchi and Cai, Dongqi and Gao, Yan and Lane, Nicholas D.},
+  year = {2025},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  url = {https://openreview.net/forum?id=vf5aUZT0Fz},
+  note = {Oral},
+  archiveprefix = {arXiv},
+  eprint = {2410.05021},
+  date = {2025-04-24},
+}</code></pre></details>
+</article>
+</main>
+    <footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <div><strong>Cambridge Machine Learning Systems Group</strong><br><a href="https://www.cst.cam.ac.uk/">Department of Computer Science and Technology</a><br><a href="https://www.cam.ac.uk/">University of Cambridge</a></div>
+    <div class="footer-links"><a href="/camlsys-preview/contact/">Contact</a><a href="/camlsys-preview/news/">News archive</a><a href="/camlsys-preview/resources/">Articles &amp; resources</a><a href="https://github.com/camlsys">GitHub</a></div>
+  </div>
+</footer>
+
+  </body>
+</html>

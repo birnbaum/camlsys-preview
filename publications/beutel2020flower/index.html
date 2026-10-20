@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <script src="/camlsys-preview/assets/theme.js"></script>
+  
+  <title>Flower: A Friendly Federated Learning Research Framework | CaMLSys</title>
+  <meta name="description" content="Federated Learning (FL) has emerged as a promising technique for edge devices to collaboratively learn a shared prediction model, while keeping their training data on the device, thereby decoupling the ability to do machine learning from the need to store the data in the cloud. However, FL is difficult to implement realistically, both in terms of scale and systems heterogeneity. Although there are a number of research frameworks available to simulate FL algorithms, they do not support the study of scalable FL workloads on heterogeneous edge devices. In this paper, we present Flower -- a comprehensive FL framework that distinguishes itself from existing platforms by offering new facilities to execute large-scale FL experiments and consider richly heterogeneous FL device scenarios. Our experiments show Flower can perform FL experiments up to 15M in client size using only a pair of high-end GPUs. Researchers can then seamlessly migrate experiments to real devices to examine other parts of the design space. We believe Flower provides the community with a critical new tool for FL study and development.
+">
+  <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/beutel2020flower/">
+  <meta property="og:title" content="Flower: A Friendly Federated Learning Research Framework">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/beutel2020flower/">
+  <meta property="og:image" content="https://philippwiesner.org/camlsys-preview/assets/flower-logo.png">
+  
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1792512551">
+  
+  <link rel="icon" href="/camlsys-preview/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="CaMLSys news" href="/camlsys-preview/feed.xml">
+  
+</head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="wrapper header-inner">
+    <a class="site-title" href="/camlsys-preview/">
+      <img class="site-logo" src="/camlsys-preview/assets/dodo_svetla.png" alt="" width="50" height="50">
+      <span class="site-wordmark">CaMLSys<span class="site-subtitle">University of Cambridge</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      
+        
+        <a href="/camlsys-preview/">Home</a>
+      
+        
+        <a href="/camlsys-preview/people/">People</a>
+      
+        
+        <a href="/camlsys-preview/publications/" aria-current="page">Publications</a>
+      
+        
+        <a href="/camlsys-preview/projects/">Projects</a>
+      
+        
+        <a href="/camlsys-preview/contact/">Contact</a>
+      
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+      <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg>
+      <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    </button>
+  </div>
+</header>
+
+    <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
+  <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
+  <h1>Flower: A Friendly Federated Learning Research Framework</h1>
+  <p class="authors">Daniel J. Beutel, Taner Topal, Akhil Mathur, Xinchi Qiu, Javier Fernandez-Marques, Yan Gao, Lorenzo Sani, Kwing Hei Li, Titouan Parcollet, Pedro Porto Buarque de Gusmão, and Nicholas D. Lane</p>
+  <p class="meta"><span class="publication-badge">Preprint</span> <span class="publication-venue">arXiv</span></p>
+  <div class="publication-links"><a href="https://arxiv.org/abs/2007.14390">Paper</a>
+  <a href="https://github.com/adap/flower">Code</a>
+  <a href="https://flower.dev">Project</a>
+  
+  <a href="/camlsys-preview/publications/beutel2020flower/#videos">Video</a></div>
+
+  
+  <figure class="publication-figure">
+    <img src="/camlsys-preview/assets/flower-logo.png" alt="Flower federated learning framework logo">
+    
+  </figure>
+  
+  <section class="abstract"><h2>Abstract</h2><p>Federated Learning (FL) has emerged as a promising technique for edge devices to collaboratively learn a shared prediction model, while keeping their training data on the device, thereby decoupling the ability to do machine learning from the need to store the data in the cloud. However, FL is difficult to implement realistically, both in terms of scale and systems heterogeneity. Although there are a number of research frameworks available to simulate FL algorithms, they do not support the study of scalable FL workloads on heterogeneous edge devices. In this paper, we present Flower – a comprehensive FL framework that distinguishes itself from existing platforms by offering new facilities to execute large-scale FL experiments and consider richly heterogeneous FL device scenarios. Our experiments show Flower can perform FL experiments up to 15M in client size using only a pair of high-end GPUs. Researchers can then seamlessly migrate experiments to real devices to examine other parts of the design space. We believe Flower provides the community with a critical new tool for FL study and development.</p>
+</section>
+  
+  <div class="post-content"><h2 id="code">Code</h2>
+
+<h3>Flower<img src="/camlsys-preview/assets/flower-logo.png" style="float:right;height:30px;" alt="Flower Framework"/></h3>
+
+<p><a href="http://flower.dev">Flower</a> is our friendly federated learning research framework. It makes it simple to introduce real-world system factors such as heterogeneous compute, memory and networking/wireless conditions. The paper is available <a href="https://arxiv.org/pdf/2007.14390">on arxiv</a>.</p>
+</div>
+  
+  <section class="publication-videos" id="videos" aria-labelledby="videos-heading">
+    <h2 id="videos-heading">Videos</h2>
+    
+
+
+
+
+<figure class="video">
+  <iframe class="video-frame" src="https://drive.google.com/file/d/1GZJX24qQTffTEeIlmRSDEXIgQZH0kPDU/preview" title="Flower — 2020 Google Workshop on Federated Learning and Analytics" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+  <figcaption><a href="https://drive.google.com/file/d/1GZJX24qQTffTEeIlmRSDEXIgQZH0kPDU/view">Flower — 2020 Google Workshop on Federated Learning and Analytics</a></figcaption>
+</figure>
+
+  </section>
+  
+  <details id="bibtex"><summary>BibTeX</summary><pre><code>@misc{beutel2020flower,
+  title = {{Flower: A Friendly Federated Learning Research Framework}},
+  author = {Beutel, Daniel J. and Topal, Taner and Mathur, Akhil and Qiu, Xinchi and Fernandez-Marques, Javier and Gao, Yan and Sani, Lorenzo and Li, Kwing Hei and Parcollet, Titouan and de Gusmão, Pedro Porto Buarque and Lane, Nicholas D.},
+  year = {2020},
+  journal = {arXiv preprint},
+  url = {https://arxiv.org/abs/2007.14390},
+  volume = {abs/2007.14390},
+  archiveprefix = {arXiv},
+  eprint = {2007.14390},
+  date = {2020-07-28},
+}</code></pre></details>
+</article>
+</main>
+    <footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <div><strong>Cambridge Machine Learning Systems Group</strong><br><a href="https://www.cst.cam.ac.uk/">Department of Computer Science and Technology</a><br><a href="https://www.cam.ac.uk/">University of Cambridge</a></div>
+    <div class="footer-links"><a href="/camlsys-preview/contact/">Contact</a><a href="/camlsys-preview/news/">News archive</a><a href="/camlsys-preview/resources/">Articles &amp; resources</a><a href="https://github.com/camlsys">GitHub</a></div>
+  </div>
+</footer>
+
+  </body>
+</html>

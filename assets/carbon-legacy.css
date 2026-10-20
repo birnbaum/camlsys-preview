@@ -1,0 +1,186 @@
+/* Retained styles for the historical carbon calculator. */
+.calculator__pool {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.pool{
+  border-radius: 12px;
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  padding: 2em;
+  max-width: 25em; 
+  overflow: hidden;
+}
+
+#result_quotes{
+  display: none;
+  border-radius: 12px;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  width: 100em; 
+  overflow: hidden;
+}
+
+.paper_image{
+  box-sizing: border-box; 
+  line-height: 22.5px;
+  color: black;
+  border: 1px solid #555;
+}
+
+.right_column:hover .paper_image {
+  opacity: 0.3;
+}
+
+.pool{
+  border-radius: 12px;
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  padding: 2em;
+  max-width: 25em; 
+  overflow: hidden;
+}
+
+.calculator {
+  border-radius: 12px;
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  max-width: 25em; 
+  overflow: hidden;
+}
+
+.calculator__display {
+  background-color: #222222;
+  color: #fff;
+  font-size: 1.714285714em;
+  padding: 0.5em 0.75em 0.0em 0.75em;
+  text-align: right;
+}
+.calculator__subdisplay {
+  background-color: #222222;
+  color: #fff;
+  font-size: 0.75em;
+  padding: 0.1em 0.75em;
+  text-align: right;
+}
+
+.calculator__buttons {
+  display: flex;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.fl_variable{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 0.15em;
+  margin-bottom: 0.15em;
+  margin-right: 0.3em;
+}
+
+.fl_variable.label{
+  display: inline-block;
+}
+.fl_variable.choice{
+  display: inline-block;
+}
+
+.calculator__keys {
+  background-color: #fff;
+  display: grid;
+  gap: 1px;
+  grid-template-rows: 2fr 2fr 5fr;
+}
+
+.calculator__keys > * {
+  background-color: #fff;
+  padding: 0.5em 1.25em;
+  position: relative;
+  text-align: center;
+  border-style:solid;
+  border-width:1px;
+  border-radius: 12px;
+  margin: 0.1em;
+}
+
+.calculator__keys > *:active::before,
+.calculator__keys > .is-depressed::before {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  bottom: 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+  content: "";
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.key--operator {
+  background-color: #eee;
+}
+
+.key--equal {
+  background-color: var(--line);
+  height: 100%;
+}
+
+.left_column {
+  flex-basis: 80%;
+  margin-right: 0.4em;
+}
+
+.right_column {
+  align-self: center;
+  flex-basis: auto;
+}
+#root_carbon {
+  display: flow-root;
+  margin-bottom: 20px;
+}
+
+#parent {
+  float: left;
+  width: 100%;
+}
+
+#parent::after {
+  clear: both;
+  display: block;
+}
+
+.paper_image {
+  max-width: 150px;
+  float: right;
+  margin-left:1em;
+  box-sizing: border-box; 
+  line-height: 22.5px;
+  color: black;
+  border: 1px solid #555;
+}
+
+.calculator, .pool, #result_quotes { max-width: 100%; box-shadow: none; border: 1px solid var(--line); }
+.pool textarea { max-width: 100%; }
+.calculator button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }

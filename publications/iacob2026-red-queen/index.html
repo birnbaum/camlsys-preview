@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <script src="/camlsys-preview/assets/theme.js"></script>
+  
+  <title>The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators | CaMLSys</title>
+  <meta name="description" content="Self-improving agents are state-of-the-art on agentic coding benchmarks, yet their search methods assume a stationary evaluation criterion. This ignores a central feature of evolution: species adapt as their environments change with them. We introduce the Red Queen G\&quot;odel Machine (RQGM), an evolutionary framework for recursive self-improvement under non-stationary utilities. This allows learned evaluators to improve alongside the agents they guide. On DeepSWE, the RQGM improves over its fixed-evaluator baseline by adding a complementary agent-as-a-judge code-review signal: a co-evolved reviewer grades coder patches to guide search. At low reasoning effort, the RQGM coder passes 82.1% of held-out tasks against the baseline&#39;s 75.0%, and nearly matches the GPT-6 Astra model at high effort. In scientific paper writing and reviewing, and Olympiad-level proof writing and grading, co-evolved evaluators provide an evaluation criterion. Anchored to human IMO grades, a co-evolved grader writes its own milestone rubric and exceeds static baselines at a 3x lower search cost, driving the prover to the best mean score. Since the RQGM can modify the search objective across epochs, it can regularize the search. For example, the RQGM reduces self-preference bias via an additional adversarial objective to discover reviewers equally stringent on AI and human work. Guided by these calibrated reviewers, co-evolved writers reach 1.78x-1.86x higher acceptance rates than the baseline under an agent-as-a-judge panel. The RQGM enables self-improving systems where agents and evaluators recursively bootstrap each other beyond static evaluation.
+">
+  <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/iacob2026-red-queen/">
+  <meta property="og:title" content="The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/iacob2026-red-queen/">
+  
+  
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1792512551">
+  
+  <link rel="icon" href="/camlsys-preview/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="CaMLSys news" href="/camlsys-preview/feed.xml">
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+</head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="wrapper header-inner">
+    <a class="site-title" href="/camlsys-preview/">
+      <img class="site-logo" src="/camlsys-preview/assets/dodo_svetla.png" alt="" width="50" height="50">
+      <span class="site-wordmark">CaMLSys<span class="site-subtitle">University of Cambridge</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      
+        
+        <a href="/camlsys-preview/">Home</a>
+      
+        
+        <a href="/camlsys-preview/people/">People</a>
+      
+        
+        <a href="/camlsys-preview/publications/" aria-current="page">Publications</a>
+      
+        
+        <a href="/camlsys-preview/projects/">Projects</a>
+      
+        
+        <a href="/camlsys-preview/contact/">Contact</a>
+      
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+      <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg>
+      <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    </button>
+  </div>
+</header>
+
+    <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
+  <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
+  <h1>The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators</h1>
+  <p class="authors">Alex Iacob, Andrej Jovanović, William F. Shen, Daniel Burkhardt, Meghdad Kurmanji, Nurbek Tastan, Lorenzo Sani, Niccolò Alberto Elia Venanzi, Jiayi Nie, Ambroise Odonnat, Zeyu Cao, Bill Marino, Xinchi Qiu, Rika Antonova, and Nicholas D. Lane</p>
+  <p class="meta"><span class="publication-badge">Preprint</span> <span class="publication-venue">arXiv</span></p>
+  <div class="publication-links"><a href="https://arxiv.org/abs/2606.26294">Paper</a>
+  
+  
+  <a href="/camlsys-preview/publications/iacob2026-red-queen/#article">Article</a></div>
+
+  
+  <section class="abstract"><h2>Abstract</h2><p>Self-improving agents are state-of-the-art on agentic coding benchmarks, yet their search methods assume a stationary evaluation criterion. This ignores a central feature of evolution: species adapt as their environments change with them. We introduce the Red Queen G"odel Machine (RQGM), an evolutionary framework for recursive self-improvement under non-stationary utilities. This allows learned evaluators to improve alongside the agents they guide. On DeepSWE, the RQGM improves over its fixed-evaluator baseline by adding a complementary agent-as-a-judge code-review signal: a co-evolved reviewer grades coder patches to guide search. At low reasoning effort, the RQGM coder passes 82.1% of held-out tasks against the baseline’s 75.0%, and nearly matches the GPT-6 Astra model at high effort. In scientific paper writing and reviewing, and Olympiad-level proof writing and grading, co-evolved evaluators provide an evaluation criterion. Anchored to human IMO grades, a co-evolved grader writes its own milestone rubric and exceeds static baselines at a 3x lower search cost, driving the prover to the best mean score. Since the RQGM can modify the search objective across epochs, it can regularize the search. For example, the RQGM reduces self-preference bias via an additional adversarial objective to discover reviewers equally stringent on AI and human work. Guided by these calibrated reviewers, co-evolved writers reach 1.78x-1.86x higher acceptance rates than the baseline under an agent-as-a-judge panel. The RQGM enables self-improving systems where agents and evaluators recursively bootstrap each other beyond static evaluation.</p>
+</section>
+  <h2 id="article">Who Evaluates the Evaluator?: The Red Queen Gödel Machine</h2>
+  <div class="post-content"><p><strong>Authors:</strong> Alex Iacob<sup>1,*</sup>, Andrej Jovanović<sup>1,3,*</sup>, William F. Shen<sup>1,*</sup>, Daniel Burkhardt<sup>2</sup>, Meghdad Kurmanji<sup>1</sup>, Nurbek Tastan<sup>4</sup>, Lorenzo Sani<sup>1,3</sup>, Niccolò Alberto Elia Venanzi<sup>2</sup>, Ambroise Odonnat<sup>5</sup>, Zeyu Cao<sup>1</sup>, Bill Marino<sup>1</sup>, Xinchi Qiu<sup>1</sup>, Nicholas D. Lane<sup>1,3</sup>.</p>
+
+<p><small><sup>1</sup> University of Cambridge · <sup>2</sup> NVIDIA · <sup>3</sup> Flower Labs · <sup>4</sup> MBZUAI · <sup>5</sup> Inria<br /><sup>*</sup> Equal contribution.</small></p>
+
+<p>Recursively self-improving AI systems have recently crossed over into mainstream conversation (e.g., these articles in the <a href="https://www.economist.com/science-and-technology/2026/06/07/how-artificial-intelligence-got-better-at-building-itself">The Economist</a> and <a href="https://www.wsj.com/tech/ai/anthropic-veterans-startup-seeks-to-help-scientists-develop-their-own-ai-09e2f3e5">WSJ</a>)</p>
+
+<p>At a first glance, one might assume that such systems would be able to bootstrap themselves indefinitely. If you have ever run one, however, you know that they tend to improve for a while before ultimately plateauing, and that where they plateau is generally determined by two factors: (a) how good the system is and (b) how well you measure “improvement.”</p>
+
+<p>Take coding. An agent edits its own code, runs the test suite using the number of passed tests as a score, keeps the version that passes more tests, and repeats. The recent systems that do this, the <a href="https://arxiv.org/abs/2505.22954">Darwin</a>- and <a href="https://arxiv.org/abs/2510.21614">Huxley-Gödel</a> Machines, set the open-source state of the art on agentic coding exactly this way. <a href="https://arxiv.org/abs/2603.19461">HyperAgents</a>, meanwhile, pushed the same idea past coding into other domains by having a meta coding agent responsible for editing domain agents. All in all, boils down to: if you give the self-improvement loop a clear test and enough compute then it gets better.</p>
+
+<blockquote>
+  <p>A self-improving agent can only get <strong>as good as the test that scores it</strong>. The test does not merely measure progress, it defines it, so the efficacy of the test becomes a ceiling the agent cannot climb past.</p>
+</blockquote>
+
+<p>Why? The loop only keeps what scores higher, so the agent becomes a student who studies only for a particular exam: if the exam is easy, it aces it and stops, because acing it was all “improvement” ever meant. We see this time and time again at the frontier of AI development, where each new benchmark from the big labs saturates within months and the scores pile up at the top, and the field spends real effort building harder benchmarks because the old ones can no longer tell the best models apart.</p>
+
+<p>As an example: OpenAI’s GPT-5 line and Anthropic’s Claude are nearly tied on the standard coding benchmarks, and the community’s feelings about which is the better service is equally as mixed. Two new, harder benchmarks were built this year to separate these SOTA AI systems: <a href="https://arxiv.org/pdf/2507.14453">DeepSWE</a>, which rewrites tasks so they cannot be memorized, favors GPT-5.5, while <a href="https://cognition.ai/blog/frontier-code?utm_source=chatgpt.com">FrontierCode</a>, which asks whether the code is mergeable rather than just passing, favors Claude. Which model is better for you comes down to which benchmark you deem to be superior.</p>
+
+<p>This is what we saw in our own experiments too. When we held on a fixed evaluation procedure, letting the search run long, it stalled. Once the population is strong enough, every candidate looks about the same. Who is the best? No useful signal.</p>
+
+<p>This led us to the core question of this work: what if the thing doing the measuring improved too?</p>
+
+<p>We will now commit the cardinal sin common to all Computer Scientists and bring previous findings of the natural sciences into this discussion via analogy. In 1973, Leigh Van Valen noticed that species do not evolve toward some fixed standard of fitness. They evolve against each other. A predator gets faster, so its prey gets faster, so the predator has to get faster again. He called it the <a href="https://www.mn.uio.no/cees/english/services/van-valen/evolutionary-theory/volume-1/vol-1-no-1-pages-1-30-l-van-valen-a-new-evolutionary-law.pdf">Red Queen hypothesis</a>, after the line in Through the Looking-Glass: “it takes all the running you can do to keep in the same place”.</p>
+
+<p>Hence, why we built and named our system the <strong>Red Queen Gödel Machine (‘RQGM’)</strong>. Instead of improving an agent against a fixed test, we let the <strong>evaluation evolve alongside the agent</strong>. As the agent gets better, the evaluation also gets <strong>harder</strong>, and the bar keeps rising.</p>
+
+<p>Stated like that, the nonchalant nature of the proposal should worry you. The whole reason the fixed-test loop works is that the target sits still long enough for “improvement” to mean something. Let the target wander and “improvement” stops meaning anything. And in following the evolutionary analogy to its logical conclusion, you have traded a evolutionary ceiling for a system with no floor. Poor Pink Panther.</p>
+
+<p>
+  <a href="https://makeagif.com/gif/pink-panther-cuts-tree-XaxcSr" rel="noopener noreferrer">
+    <img src="https://i.makeagif.com/media/11-28-2016/XaxcSr.gif" alt="Pink Panther" />
+  </a>
+</p>
+<p><small>Source: <a href="https://makeagif.com/gif/pink-panther-cuts-tree-XaxcSr" rel="noopener noreferrer">MakeAGif</a>.</small></p>
+
+<p>Now, the problem is not whether to let the evaluation move, but how to move it without losing the floor. What we have settled on as our answer to this question is inspired by <a href="https://en.wikipedia.org/wiki/Curriculum_learning">curriculum learning</a>. Think about how you would teach someone. You do not hand a beginner the final exam on the first day. You give them a level they can make progress on, hold it steady while they climb it, and only then raise the difficulty once they have mastered the lesson. The raising is the point, but so is the holding. This is the basis of many models in skill mastery and education, for example <a href="https://files.eric.ed.gov/fulltext/ED053419.pdf">Bloom’s Mastery Learning</a>.</p>
+
+<p>We will now go into the technical details of the implementation. If you choose to stop here the message you should walk away with is that:</p>
+
+<blockquote>
+  <p>The evaluation of any self-improving system should be systematically and automatically improved to keep up with the capabilities of said system.</p>
+</blockquote>
+
+<p>Now for the technical explanation, here is a diagram generally showcasing the ‘RQGM’ system:</p>
+
+<p><img src="/camlsys-preview/assets/blog/who-evaluates-the-evaluator/rqgm-overview.png" alt="RQGM overview showing multi-agent workspace search, evaluator anchoring, and checkpoint replacement." /></p>
+
+<p>And here is the whole loop in about as much Python as fits neatly on a screen, most of which is building directly upon the previous algorithm from the Huxley Gödel Machine. The real system has more moving parts, primarily to handle concurrency and generality, but nothing essential is missing from this. Starting with the outer structure, whose entire purpose is to co-evolve evaluators, agents that produce a score, together with actual agents that perform tasks.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">seed</span><span class="p">,</span> <span class="n">budget</span><span class="p">,</span> <span class="n">checkpoints</span><span class="p">):</span>
+    <span class="n">archive</span><span class="p">,</span> <span class="n">evaluators</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="n">seed</span><span class="p">],</span> <span class="nf">freeze_incumbents</span><span class="p">(),</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">budget</span><span class="p">:</span>
+        <span class="n">stop</span> <span class="o">=</span> <span class="nf">min</span><span class="p">([</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">checkpoints</span> <span class="k">if</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">budget</span><span class="p">])</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nf">run_epoch</span><span class="p">(</span><span class="n">archive</span><span class="p">,</span> <span class="n">evaluators</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">stop</span><span class="p">)</span>    <span class="c1"># evaluators stay fixed inside
+</span>        <span class="nf">maybe_replace_evaluators</span><span class="p">(</span><span class="n">archive</span><span class="p">,</span> <span class="n">evaluators</span><span class="p">)</span>        <span class="c1"># the only place they change
+</span>    <span class="k">return</span> <span class="nf">best_belief_node</span><span class="p">(</span><span class="n">archive</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">freeze_incumbents</code> determines the set of evaluators that will not change until the next checkpoint. <code class="language-plaintext highlighter-rouge">run_epoch</code> does the actual search against those frozen evaluators, looping the <code class="language-plaintext highlighter-rouge">step</code> function below until it reaches the checkpoint. <code class="language-plaintext highlighter-rouge">maybe_replace_evaluators</code> is the only place an evaluator can change. At the end, we return the agent we trust most, which I will come back to.</p>
+
+<p>A single step either grows the tree or tests a node already in it.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="n">archive</span><span class="p">,</span> <span class="n">evaluators</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nf">expand_gate</span><span class="p">(</span><span class="n">archive</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>               <span class="c1"># explore: grow the tree
+</span>        <span class="n">parent</span> <span class="o">=</span> <span class="nf">sample_by_cmp</span><span class="p">(</span><span class="n">archive</span><span class="p">)</span>       <span class="c1"># Thompson sampling over clade scores
+</span>        <span class="n">child</span> <span class="o">=</span> <span class="nf">edit_workspace</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>        <span class="c1"># an agent edits its own code into a variant
+</span>        <span class="k">if</span> <span class="nf">valid</span><span class="p">(</span><span class="n">child</span><span class="p">):</span> <span class="n">archive</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="nf">sample_by_cmp</span><span class="p">(</span><span class="n">archive</span><span class="p">)</span>             <span class="c1"># exploit: pick a node to test
+</span>    <span class="n">role</span><span class="p">,</span> <span class="n">task</span> <span class="o">=</span> <span class="nf">least_measured</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>         <span class="c1"># balance attention across roles and tasks
+</span>    <span class="nf">record</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">role</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">evaluators</span><span class="p">))</span>   <span class="c1"># the frozen evaluator scores the node
+</span></code></pre></div></div>
+
+<p>Two components are doing the critical work here. The first is how we pick nodes. Following the Huxley-Gödel Machine, we do not score an agent by how well it does on its own, but by how well its whole subtree of descendants does, thus accounting for self-improvement edits that do not immediately raise benchmark scores. The technical term used in the paper for this score (also borrowed from Huxley-Gödel Machine) is Clade Metaproductivity (CMP). <code class="language-plaintext highlighter-rouge">sample_by_cmp</code> then picks nodes roughly in proportion to how good they look under that score, using Thompson sampling, which is a principled way to spend most of the budget on the promising branches via exploitation while still occasionally checking the rest for exploration. We then introduce the second component: whatever score comes back is produced by the frozen evaluator for this epoch, so within an epoch the target never moves and we can provide per-epoch convergence guarantees.</p>
+
+<p>Now, let’s focus on the part that makes it a curriculum and not a single fixed search: replacing the evaluator.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">maybe_replace_evaluators</span><span class="p">(</span><span class="n">archive</span><span class="p">,</span> <span class="n">evaluators</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">evaluators</span><span class="p">:</span>                       <span class="c1"># one slot per learned evaluator
+</span>        <span class="n">field</span> <span class="o">=</span> <span class="p">[</span><span class="n">slot</span><span class="p">.</span><span class="n">current</span><span class="p">]</span> <span class="o">+</span> <span class="nf">challengers</span><span class="p">(</span><span class="n">archive</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>
+        <span class="n">winner</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="nf">best_belief</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">slot</span><span class="p">.</span><span class="n">ground_truth</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">winner</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">slot</span><span class="p">.</span><span class="n">current</span><span class="p">:</span>            <span class="c1"># ties keep the incumbent
+</span>            <span class="n">slot</span><span class="p">.</span><span class="n">current</span> <span class="o">=</span> <span class="nf">freeze</span><span class="p">(</span><span class="n">winner</span><span class="p">)</span>
+            <span class="nf">erase_records</span><span class="p">(</span><span class="n">archive</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>          <span class="c1"># drop every score the old one gave
+</span>            <span class="nf">recompute_clade_scores</span><span class="p">(</span><span class="n">archive</span><span class="p">)</span>       <span class="c1"># let the new ranking take hold
+</span></code></pre></div></div>
+
+<p>For each evaluator, we line up the current one against challengers the search has bred, and score them all on the ground-truth anchor, a fixed held-out set of real examples with known answers. <code class="language-plaintext highlighter-rouge">best_belief</code> is a deliberately cautious selection mechanism: instead of a candidate’s raw accuracy on the anchor, it takes a lower confidence bound, so a challenger is promoted only when we are fairly sure it is statistically better. The anchor is the metaphorical floor we discussed when opening this blog post. Of course, one can imagine a variety of composite objectives here, including ones that drop the benchmark as the sole target (for example, adversarial objectives); however, we believe that the ground truth must remain, providing part of the selection criterion to stop the system from diverging.</p>
+
+<p>If a challenger wins, we do the step that turned out to matter most: we <strong>erase every score the old evaluator produced</strong>. Keeping them would leave the search ranking agents by judgments the new evaluator never made. For example, in a control experiment that kept the old scores, a new evaluator barely moved the ranking, while erasing the dependent scores let each new evaluator re-rank the population and change the search trajectory. Crucially, one winning lineage still persisted across replacements, so a stricter evaluator sharpens the search rather than restarting it under an unrelated objective.</p>
+
+<p><img src="/camlsys-preview/assets/blog/who-evaluates-the-evaluator/lineage-continuity.png" alt="Archive lineage after evaluator replacement, with the winning lineage preserved while other top nodes are re-ranked." /></p>
+
+<p>This mechanism, while necessary for our convergence guarantees to hold, brings significant costs. Every replacement forces some old nodes to be re-evaluated under the new evaluator to bring them back to the same level of information they had prior to the replacement. If you allowed a swap after every single evaluation, those re-evaluations would pile up quadratically. So swaps happen only at checkpoints, and the checkpoints are spaced out exponentially with the following <code class="language-plaintext highlighter-rouge">exponential_checkpoints</code> function producing the <code class="language-plaintext highlighter-rouge">checkpoints</code> list which goes into the main algorithm.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">exponential_checkpoints</span><span class="p">(</span><span class="n">budget</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">points</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">start</span>
+    <span class="k">while</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">budget</span><span class="p">:</span>
+        <span class="n">points</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">c</span> <span class="o">*</span> <span class="n">ratio</span><span class="p">)</span>      <span class="c1"># gaps grow, so swaps get rarer as the run goes on
+</span>    <span class="k">return</span> <span class="n">points</span>
+</code></pre></div></div>
+
+<p>The frequency at which evaluators are swapped reduces as the run goes on, which keeps the total re-scoring work linear in the budget instead of quadratic. This also has a side benefit that the later, better evaluators get to shape the search for longer.</p>
+
+<p>Three things follow from all this that a static benchmark cannot give you.</p>
+
+<p>The <strong>first</strong> surprised us, because it shows up even where verification already exists. On coding, you already have a perfectly good test suite, and adding a cheap learned reviewer on top still helps. Running the tests is expensive, because it means the full multi-turn loop of editing and performing tool calls; asking the reviewer is a single query by default. So the reviewer is a cheap second opinion that catches quality the tests miss, exactly the maintainability that a benchmark like FrontierCode was built to measure, and the search reaches a higher pass rate while spending 1.35 to 1.72 times fewer tokens than the best prior method.  What we did not expect was when we looked at where the agent was actually editing its own code, nine in ten of the accepted edits changed machinery shared by both the coder and the reviewer, not code specific to one of them. What does this mean? Co-evolving two roles is not twice the work, because a single good edit tends to improve both at once.</p>
+
+<p><img src="/camlsys-preview/assets/blog/who-evaluates-the-evaluator/polyglot-token-efficiency.png" alt="Polyglot held-out pass rate versus search tokens, showing RQGM token efficiency relative to the baseline." /></p>
+
+<p><img src="/camlsys-preview/assets/blog/who-evaluates-the-evaluator/shared-patch-surfaces.png" alt="Accepted edit distribution across shared, infrastructure, role-specific, meta-agent, and note surfaces." /></p>
+
+<p>The <strong>second</strong> is that you can improve on tasks that were never verifiable to begin with. Generally speaking, most tasks that we would want to automate do not some with a simple unit test. No script tells you whether prose is well-written. Under a fixed benchmark, those tasks are closed to self-improvement, because there is nothing to improve on. While you could construct some model or agent to serve as the evaluator by training it on the ground-truth, this just moves the problem one level higher, since that evaluator becomes inadequate as agent ability grows. With an evaluation that co-evolves and stays anchored to ground truth, you can simultaneously hill-climb on your task while making your hills harder to climb, and this is where we see the largest gains.</p>
+
+<p>The table below scores papers from each writer against a fixed panel of four separate reviewers. The co-evolved writers get accepted far more often across the panel, 1.78 times more at the point where the fixed-evaluator baseline runs out of budget, and 1.86 times more for the best writer the search ever finds. We show writers at multiple search token costs in order to enable easy comparisons to the baseline. Generally, we find that previous static-benchmark methods plateau earlier, and thus do not benefit from longer searches.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Writer</th>
+      <th>Search tokens</th>
+      <th><a href="https://arxiv.org/abs/2504.08066"><code class="language-plaintext highlighter-rouge">Sakana</code></a></th>
+      <th><a href="https://arxiv.org/abs/2603.19461"><code class="language-plaintext highlighter-rouge">DGM-H</code></a></th>
+      <th><code class="language-plaintext highlighter-rouge">HGM-H</code></th>
+      <th><code class="language-plaintext highlighter-rouge">RQGM</code> (adversarial)</th>
+      <th>Mean acceptance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">HGM-H</code> writer</td>
+      <td>42.5M</td>
+      <td>1.0</td>
+      <td>12.0</td>
+      <td>64.0</td>
+      <td>10.0</td>
+      <td>21.8</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">RQGM</code> writer 1</td>
+      <td>44.6M</td>
+      <td>2.0</td>
+      <td><strong>43.0</strong></td>
+      <td>81.0</td>
+      <td>29.0</td>
+      <td>38.8 (1.78×)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">RQGM</code> writer 2</td>
+      <td>221.8M</td>
+      <td><strong>5.0</strong></td>
+      <td>40.0</td>
+      <td><strong>86.0</strong></td>
+      <td><strong>31.0</strong></td>
+      <td><strong>40.5</strong> (1.86×)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Each of the four middle columns is one reviewer’s acceptance rate, as a percentage, for that writer’s papers. The last column averages across the panel. The ‘RQGM’ (adversarial) column is our own co-evolved reviewer, regularized to be harsh on machine-written text, which is why its acceptances are low across the board. This is exactly the point, which we will elaborate on later. The <code class="language-plaintext highlighter-rouge">HGM-H</code> row refers to a version of Hyperagents running with the Huxley Gödel Machine as the search algorithm.</p>
+
+<p>Proof writing is the hard case, and it is worth showing honestly because it does not all go our way. The grader is harder to fool than the reviewer, and the gains arrive only at longer horizons, and the wins are narrow.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prover</th>
+      <th>Search tokens</th>
+      <th>Score (0–7)</th>
+      <th>Pass@6</th>
+      <th>Pass@7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Static ImoCode</code> prover</td>
+      <td>N/A</td>
+      <td>4.07</td>
+      <td>55.0%</td>
+      <td><strong>55.0%</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">HGM-H</code> prover</td>
+      <td>21.5M</td>
+      <td>3.73</td>
+      <td>51.7%</td>
+      <td>45.0%</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">RQGM</code> prover 1</td>
+      <td>37.9M</td>
+      <td>3.73</td>
+      <td>51.7%</td>
+      <td>45.0%</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">RQGM</code> prover 2</td>
+      <td>88.0M</td>
+      <td><strong>4.33</strong></td>
+      <td><strong>61.7%</strong></td>
+      <td>48.3%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The best ‘RQGM’ prover the search finds takes the best mean score and the most near-complete proofs. However, the hand-built <a href="https://arxiv.org/abs/2507.15855?s=09"><code class="language-plaintext highlighter-rouge">Static ImoCode</code></a> baselines still leads on full-credit proofs. One of our provers only matches the fixed-evaluator <code class="language-plaintext highlighter-rouge">HGM-H</code> baseline while the other exceeds it only at the longest horizons we ran. The slow improvement with search horizon indicates to us that outperforming the <code class="language-plaintext highlighter-rouge">Static ImoCode</code> prover is likely within reach by just elongating search. As a caveat, the <code class="language-plaintext highlighter-rouge">Static ImoCode</code> pipeline uses many handcrafted rules that are generated by human expertise, something that our system does not leverage explicitly.</p>
+
+<p>The <strong>third</strong> use is how we guide the search for evaluation. If the evaluation’s job is to get harder, you can re-use your agents’ outputs adversarially to harden the decision boundary. We did this to fix a known failure of language-model reviewers: they wave AI-written papers through more readily than human ones. In our setup, this occurred at up to 1.91 times. The fix falls out of the epoch structure almost for free. At an epoch boundary, take the AI-written papers the old reviewer accepted, and in the next epoch reward the new reviewer for catching them. Since blindly rejecting everything would reduce efficacy on the ground-truth data, the search settles on a reviewer that holds AI and human work to a similar standard, which is the harsh ‘RQGM’ (adversarial) column in the writer table.</p>
+
+<p>So far the focus has been on what a co-evolving evaluation can do. It is worth being honest that doing it is expensive, and almost all of that cost is the evaluations rather than the search itself. That points at an obvious lever: run the expensive part on a cheaper model. We tried the split on the paper-reviewing task, using a frontier model, GPT-5.5, only for the meta-agent that proposes edits, and a fast, efficient one, NVIDIA’s Nemotron 3 Ultra, for the agents doing the actual reviewing. It held up. Performance stayed close to running GPT-5.5 everywhere, at 13 times lower search cost in terms of tokens. Of course, this particular saving is specific to paper reviewing, and whether it holds on harder tasks like coding or proofs is something we still need to test.</p>
+
+<p>These are early results, from short search runs, and we want to be careful not to oversell them. The premise of the whole framework is that a longer curriculum compounds the effect, each generation of agents facing a stricter and more discerning evaluator, and that is exactly what we have not yet run at scale. If you are curious about how far we can push this, check back around mid-Autumn as we make our pre-print submission ready.</p>
+
+<p>There is also a limit built into the design of the ‘RQGM’. Holding every replacement to fixed ground truth is what keeps the evaluation from drifting, but it also pins the evaluation to whatever that ground truth can already measure. The way past it is not to climb the anchor harder but to layer richer objectives on top of it, with the anchor demoted from target to guardrail, there only to keep you from wandering off. The adversarial reviewer is the first small example: it roughly holds its ground-truth accuracy while finding a human-versus-machine line the benchmark never drew. How far that goes is the open question, and it is the one we are spending a significant amount of time looking to answer.</p>
+
+<p>That question is the part we would want you to keep, more than any single number. Most of the public conversation about self-improving AI is about the improving: agents that rewrite themselves, loops with no human in them, the runaway staircase. The improving turns out to be the easy half. The hard half is the evaluation: deciding what “improvement” means, and holding that honest while the thing you are measuring does everything it can to look like it is improving.</p>
+
+<hr />
+
+<p>The paper: <a href="https://arxiv.org/abs/2606.26294">https://arxiv.org/abs/2606.26294</a></p>
+</div>
+  
+  <details id="bibtex"><summary>BibTeX</summary><pre><code>@misc{iacob2026redqueen,
+  title = {{The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators}},
+  author = {Iacob, Alex and Jovanović, Andrej and Shen, William F. and Burkhardt, Daniel and Kurmanji, Meghdad and Tastan, Nurbek and Sani, Lorenzo and Venanzi, Niccolò Alberto Elia and Nie, Jiayi and Odonnat, Ambroise and Cao, Zeyu and Marino, Bill and Qiu, Xinchi and Antonova, Rika and Lane, Nicholas D.},
+  year = {2026},
+  booktitle = {arXiv preprint},
+  url = {https://arxiv.org/abs/2606.26294},
+  archiveprefix = {arXiv},
+  eprint = {2606.26294},
+  date = {2026-06-24},
+}</code></pre></details>
+</article>
+</main>
+    <footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <div><strong>Cambridge Machine Learning Systems Group</strong><br><a href="https://www.cst.cam.ac.uk/">Department of Computer Science and Technology</a><br><a href="https://www.cam.ac.uk/">University of Cambridge</a></div>
+    <div class="footer-links"><a href="/camlsys-preview/contact/">Contact</a><a href="/camlsys-preview/news/">News archive</a><a href="/camlsys-preview/resources/">Articles &amp; resources</a><a href="https://github.com/camlsys">GitHub</a></div>
+  </div>
+</footer>
+
+  </body>
+</html>

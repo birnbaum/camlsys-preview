@@ -1,0 +1,3 @@
+model,size_mbytes
+ResNet18,41.96
+LSTM Based,20.34

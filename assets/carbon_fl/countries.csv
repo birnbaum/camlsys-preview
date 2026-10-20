@@ -1,0 +1,14 @@
+country_code,country_name,download,upload,kgco2_div_kwh
+Argentina,Argentina,49.28,13.63,0.391932833
+Brazil,Brazil,79.30,45.69,0.092643638
+Canada,Canada,155.70,65.50,0.179763325
+China,China,162.12,42.50,0.974625
+France,France,188.03,131.52,0.079
+Germany,Germany,113.55,26.05,0.672220452
+India,India,54.73,51.33,1.333174843
+Italy,Italy,79.62,31.41,0.410898038
+NZ,New Zealand,142,85.71,0.197695588
+SA,South Africa,38.11,25.70,1.069026617
+Spain,Spain,186.06,157.36,0.34287509
+UK,United Kingdom,82.36,23.13,0.5085019
+USA,United States,179.06,64.89,0.547096
