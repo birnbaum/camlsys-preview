@@ -3,7 +3,7 @@
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
   <link href="https://philippwiesner.org/camlsys-preview/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://philippwiesner.org/camlsys-preview/" rel="alternate" type="text/html" hreflang="en"/>
-  <updated>2026-10-22T18:58:47+00:00</updated>
+  <updated>2026-10-22T19:48:29+00:00</updated>
   <id>https://philippwiesner.org/camlsys-preview/feed.xml</id>
   <title type="html">CaMLSys | News</title>
   <subtitle>Research at the intersection of machine learning and computational systems at the University of Cambridge.</subtitle>
@@ -34,8 +34,8 @@
 ]]></summary>
   </entry>
   <entry>
-    <title type="html">Cambridge joins SOFAIR, led by David Barber at UCL in partnership with Oxford and Edinburgh. Led by…</title>
-    <link href="https://philippwiesner.org/camlsys-preview/news/2026-06-23-sofair-launch/" rel="alternate" type="text/html" title="Cambridge joins SOFAIR, led by David Barber at UCL in partnership with Oxford and Edinburgh. Led by…"/>
+    <title type="html">Cambridge joins SOFAIR, led by David Barber at UCL in partnership with Oxford and Edinburgh. Our…</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2026-06-23-sofair-launch/" rel="alternate" type="text/html" title="Cambridge joins SOFAIR, led by David Barber at UCL in partnership with Oxford and Edinburgh. Our…"/>
     <published>2026-06-23T00:00:00+00:00</published>
     <updated>2026-06-23T00:00:00+00:00</updated>
     <id>https://philippwiesner.org/camlsys-preview/news/sofair-launch</id>
@@ -43,7 +43,7 @@
     <author>
       <name/>
     </author>
-    <summary type="html"><![CDATA[<p>Cambridge joins <a href="https://www.cst.cam.ac.uk/news/joining-science-fundamental-ai-research-lab-major-national-initiative">SOFAIR</a>, led by David Barber at UCL in partnership with Oxford and Edinburgh. Led by Nicholas Lane, our contribution focuses on training frontier AI models across wide-area networks of heterogeneous compute.</p>
+    <summary type="html"><![CDATA[<p>Cambridge joins <a href="https://www.cst.cam.ac.uk/news/joining-science-fundamental-ai-research-lab-major-national-initiative">SOFAIR</a>, led by David Barber at UCL in partnership with Oxford and Edinburgh. Our contribution focuses on training frontier AI models across wide-area networks of heterogeneous compute.</p>
 ]]></summary>
   </entry>
   <entry>
