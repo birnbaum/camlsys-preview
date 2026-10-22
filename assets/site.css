@@ -302,6 +302,21 @@ figcaption {
   margin:0;
 }
 
+.news-more summary {
+  color:var(--accent);
+  cursor:pointer;
+  padding-top:12px;
+  font-size:.85rem;
+}
+
+.news-more .news-show-less,.news-more[open] .news-show-all {
+  display:none;
+}
+
+.news-more[open] .news-show-less {
+  display:inline;
+}
+
 .intro h1 {
   font-size:2rem;
   line-height:1.3;
