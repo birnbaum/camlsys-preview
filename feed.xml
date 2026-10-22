@@ -3,7 +3,7 @@
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
   <link href="https://philippwiesner.org/camlsys-preview/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://philippwiesner.org/camlsys-preview/" rel="alternate" type="text/html" hreflang="en"/>
-  <updated>2026-10-22T18:38:00+00:00</updated>
+  <updated>2026-10-22T18:39:28+00:00</updated>
   <id>https://philippwiesner.org/camlsys-preview/feed.xml</id>
   <title type="html">CaMLSys | News</title>
   <subtitle>Research at the intersection of machine learning and computational systems at the University of Cambridge.</subtitle>
@@ -17,7 +17,7 @@
     <author>
       <name/>
     </author>
-    <summary type="html"><![CDATA[<p>Our paper <a href="https://philippwiesner.org/camlsys-preview/publications/iacob2026-red-queen/">Who Evaluates the Evaluator? The Red Queen Gödel Machine</a> explores why self-improving systems need evaluations that improve alongside them.</p>
+    <summary type="html"><![CDATA[<p>Our paper <a href="https://philippwiesner.org/camlsys-preview/publications/iacob2026-red-queen/">The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators</a> explores why self-improving systems need evaluations that improve alongside them.</p>
 ]]></summary>
   </entry>
   <entry>
