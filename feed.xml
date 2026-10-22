@@ -3,13 +3,13 @@
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
   <link href="https://philippwiesner.org/camlsys-preview/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://philippwiesner.org/camlsys-preview/" rel="alternate" type="text/html" hreflang="en"/>
-  <updated>2026-10-22T18:39:28+00:00</updated>
+  <updated>2026-10-22T18:58:47+00:00</updated>
   <id>https://philippwiesner.org/camlsys-preview/feed.xml</id>
   <title type="html">CaMLSys | News</title>
   <subtitle>Research at the intersection of machine learning and computational systems at the University of Cambridge.</subtitle>
   <entry>
-    <title type="html">Who Evaluates the Evaluator?: The Red Queen Gödel Machine</title>
-    <link href="https://philippwiesner.org/camlsys-preview/news/2026-07-19-who-evaluates-the-evaluator/" rel="alternate" type="text/html" title="Who Evaluates the Evaluator?: The Red Queen Gödel Machine"/>
+    <title type="html">Our paper The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators explores why…</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2026-07-19-who-evaluates-the-evaluator/" rel="alternate" type="text/html" title="Our paper The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators explores why…"/>
     <published>2026-07-19T00:00:00+00:00</published>
     <updated>2026-07-19T00:00:00+00:00</updated>
     <id>https://philippwiesner.org/camlsys-preview/news/who-evaluates-the-evaluator</id>
@@ -21,8 +21,8 @@
 ]]></summary>
   </entry>
   <entry>
-    <title type="html">LoRDO at ICML 2026</title>
-    <link href="https://philippwiesner.org/camlsys-preview/news/2026-07-08-lordo-icml/" rel="alternate" type="text/html" title="LoRDO at ICML 2026"/>
+    <title type="html">Our paper LoRDO was presented at ICML in Seoul. It combines low-rank optimization with infrequent…</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2026-07-08-lordo-icml/" rel="alternate" type="text/html" title="Our paper LoRDO was presented at ICML in Seoul. It combines low-rank optimization with infrequent…"/>
     <published>2026-07-08T00:00:00+00:00</published>
     <updated>2026-07-08T00:00:00+00:00</updated>
     <id>https://philippwiesner.org/camlsys-preview/news/lordo-icml</id>
@@ -34,8 +34,8 @@
 ]]></summary>
   </entry>
   <entry>
-    <title type="html">Cambridge joins the SOFAIR Lab</title>
-    <link href="https://philippwiesner.org/camlsys-preview/news/2026-06-23-sofair-launch/" rel="alternate" type="text/html" title="Cambridge joins the SOFAIR Lab"/>
+    <title type="html">Cambridge joins SOFAIR, led by David Barber at UCL in partnership with Oxford and Edinburgh. Led by…</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2026-06-23-sofair-launch/" rel="alternate" type="text/html" title="Cambridge joins SOFAIR, led by David Barber at UCL in partnership with Oxford and Edinburgh. Led by…"/>
     <published>2026-06-23T00:00:00+00:00</published>
     <updated>2026-06-23T00:00:00+00:00</updated>
     <id>https://philippwiesner.org/camlsys-preview/news/sofair-launch</id>
@@ -47,8 +47,8 @@
 ]]></summary>
   </entry>
   <entry>
-    <title type="html">MT-DAO and DES-LOC at ICLR 2026</title>
-    <link href="https://philippwiesner.org/camlsys-preview/news/2026-04-23-iclr-papers/" rel="alternate" type="text/html" title="MT-DAO and DES-LOC at ICLR 2026"/>
+    <title type="html">Two papers at ICLR in Rio de Janeiro: MT-DAO and DES-LOC, advancing wide-area distributed training…</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2026-04-23-iclr-papers/" rel="alternate" type="text/html" title="Two papers at ICLR in Rio de Janeiro: MT-DAO and DES-LOC, advancing wide-area distributed training…"/>
     <published>2026-04-23T00:00:00+00:00</published>
     <updated>2026-04-23T00:00:00+00:00</updated>
     <id>https://philippwiesner.org/camlsys-preview/news/iclr-papers</id>
@@ -60,8 +60,8 @@
 ]]></summary>
   </entry>
   <entry>
-    <title type="html">CambridgeFlower Selected for SPRIND Composite Learning Challenge</title>
-    <link href="https://philippwiesner.org/camlsys-preview/news/2025/02/02/SPRIN-D.html" rel="alternate" type="text/html" title="CambridgeFlower Selected for SPRIND Composite Learning Challenge"/>
+    <title type="html">CambridgeFlower has been selected for Stage 1 of the SPRIND Composite Learning Challenge to develop…</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2025/02/02/SPRIN-D.html" rel="alternate" type="text/html" title="CambridgeFlower has been selected for Stage 1 of the SPRIND Composite Learning Challenge to develop…"/>
     <published>2025-02-02T00:00:00+00:00</published>
     <updated>2025-02-02T00:00:00+00:00</updated>
     <id>https://philippwiesner.org/camlsys-preview/news/2025/02/02/SPRIN-D</id>
@@ -73,8 +73,8 @@
 ]]></summary>
   </entry>
   <entry>
-    <title type="html">Prof. Nic Lane Awarded RAEng Chair in Emerging Technologies</title>
-    <link href="https://philippwiesner.org/camlsys-preview/news/2024/03/01/Nic-RAEng-Chair-Award.html" rel="alternate" type="text/html" title="Prof. Nic Lane Awarded RAEng Chair in Emerging Technologies"/>
+    <title type="html">Nic Lane has been awarded a £2.5M RAEng Chair in Emerging Technologies to develop decentralised,…</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2024/03/01/Nic-RAEng-Chair-Award.html" rel="alternate" type="text/html" title="Nic Lane has been awarded a £2.5M RAEng Chair in Emerging Technologies to develop decentralised,…"/>
     <published>2024-03-01T00:00:00+00:00</published>
     <updated>2024-03-01T00:00:00+00:00</updated>
     <id>https://philippwiesner.org/camlsys-preview/news/2024/03/01/Nic-RAEng-Chair-Award</id>
