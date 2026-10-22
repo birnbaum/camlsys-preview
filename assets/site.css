@@ -420,7 +420,7 @@ figcaption {
 }
 
 .people-section-compact {
-  grid-column:auto;
+  grid-column:1 / -1;
 }
 
 .people-subtitle {
