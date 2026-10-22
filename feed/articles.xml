@@ -4,7 +4,7 @@
   <id>https://philippwiesner.org/camlsys-preview/feed/articles.xml</id>
   <link href="https://philippwiesner.org/camlsys-preview/feed/articles.xml" rel="self"/>
   <link href="https://philippwiesner.org/camlsys-preview/resources/"/>
-  <updated>2026-10-22T12:49:00+01:00</updated>
+  <updated>2026-10-22T13:04:35+00:00</updated>
   <author><name>Cambridge Machine Learning Systems Group</name></author>
   
   
@@ -12,8 +12,8 @@
     <title>Who Evaluates the Evaluator?: The Red Queen Gödel Machine</title>
     <id>https://philippwiesner.org/camlsys-preview/publications/iacob2026-red-queen/</id>
     <link href="https://philippwiesner.org/camlsys-preview/publications/iacob2026-red-queen/#article"/>
-    <published>2026-07-19T00:00:00+01:00</published>
-    <updated>2026-07-19T00:00:00+01:00</updated>
+    <published>2026-07-19T00:00:00+00:00</published>
+    <updated>2026-07-19T00:00:00+00:00</updated>
     <summary>The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators</summary>
   </entry>
   
@@ -21,8 +21,8 @@
     <title>Adaptive Filters and Aggregator Fusion for Efficient Graph Convolutions</title>
     <id>https://philippwiesner.org/camlsys-preview/publications/tailor2022-egc/</id>
     <link href="https://philippwiesner.org/camlsys-preview/publications/tailor2022-egc/#article"/>
-    <published>2021-04-06T00:00:00+01:00</published>
-    <updated>2021-04-06T00:00:00+01:00</updated>
+    <published>2021-04-06T00:00:00+00:00</published>
+    <updated>2021-04-06T00:00:00+00:00</updated>
     <summary>Do We Need Anisotropic Graph Neural Networks?</summary>
   </entry>
   
