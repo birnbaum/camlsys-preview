@@ -511,23 +511,6 @@ figcaption {
   margin:0 0 20px;
 }
 
-#alumni-query {
-  box-sizing:border-box;
-  width:min(100%, 340px);
-  padding:10px 12px;
-  border:1px solid var(--line);
-  border-radius:6px;
-  background:var(--paper);
-  color:var(--ink);
-  font:inherit;
-  font-size:.9rem;
-}
-
-#alumni-query:focus-visible {
-  outline:2px solid var(--accent);
-  outline-offset:2px;
-}
-
 .alumni-filters {
   display:flex;
   flex-wrap:wrap;
@@ -585,7 +568,7 @@ figcaption {
   grid-column:2 / -1;
 }
 
-#alumni-search[hidden],.alumni-list .person[hidden],#alumni-empty[hidden] {
+#alumni-controls[hidden],.alumni-list .person[hidden],#alumni-empty[hidden] {
   display:none;
 }
 
