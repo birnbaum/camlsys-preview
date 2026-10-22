@@ -978,3 +978,18 @@ hr {
 .video-frame { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; border-radius: 8px; }
 .video figcaption { margin-top: .65rem; }
 .publication-videos { margin-top: 2rem; }
+
+.news-more summary {
+  color:var(--accent);
+  cursor:pointer;
+  padding-top:12px;
+  font-size:.85rem;
+}
+
+.news-more .news-show-less,.news-more[open] .news-show-all {
+  display:none;
+}
+
+.news-more[open] .news-show-less {
+  display:inline;
+}
