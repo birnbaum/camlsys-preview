@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://philippwiesner.org/camlsys-preview/feed.xml" rel="self" type="application/atom+xml" /><link href="https://philippwiesner.org/camlsys-preview/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-10-22T14:27:38+01:00</updated><id>https://philippwiesner.org/camlsys-preview/feed.xml</id><title type="html">CaMLSys | News</title><subtitle>Research at the intersection of machine learning and computational systems at the University of Cambridge.</subtitle><entry><title type="html">Who Evaluates the Evaluator?: The Red Queen Gödel Machine</title><link href="https://philippwiesner.org/camlsys-preview/news/2026-07-19-who-evaluates-the-evaluator/" rel="alternate" type="text/html" title="Who Evaluates the Evaluator?: The Red Queen Gödel Machine" /><published>2026-07-19T00:00:00+01:00</published><updated>2026-07-19T00:00:00+01:00</updated><id>https://philippwiesner.org/camlsys-preview/news/who-evaluates-the-evaluator</id><content type="html" xml:base="https://philippwiesner.org/camlsys-preview/news/2026-07-19-who-evaluates-the-evaluator/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[Why self-improving systems need evaluations that improve alongside them.]]></summary></entry><entry><title type="html">LoRDO at ICML 2026</title><link href="https://philippwiesner.org/camlsys-preview/news/2026-07-08-lordo-icml/" rel="alternate" type="text/html" title="LoRDO at ICML 2026" /><published>2026-07-08T00:00:00+01:00</published><updated>2026-07-08T00:00:00+01:00</updated><id>https://philippwiesner.org/camlsys-preview/news/lordo-icml</id><content type="html" xml:base="https://philippwiesner.org/camlsys-preview/news/2026-07-08-lordo-icml/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[LoRDO is presented at the International Conference on Machine Learning (ICML) in Seoul. It combines low-rank optimization with infrequent communication to make distributed model training more practical on heterogeneous compute and bandwidth-limited networks.]]></summary></entry><entry><title type="html">Cambridge joins the SOFAIR Lab</title><link href="https://philippwiesner.org/camlsys-preview/news/2026-06-23-sofair-launch/" rel="alternate" type="text/html" title="Cambridge joins the SOFAIR Lab" /><published>2026-06-23T00:00:00+01:00</published><updated>2026-06-23T00:00:00+01:00</updated><id>https://philippwiesner.org/camlsys-preview/news/sofair-launch</id><content type="html" xml:base="https://philippwiesner.org/camlsys-preview/news/2026-06-23-sofair-launch/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[The Science of Fundamental AI Research (SOFAIR) Lab has launched, led by David Barber at UCL in partnership with Cambridge, Oxford and Edinburgh. Led by Nicholas Lane, our work at Cambridge will develop scalable training methods for frontier AI models across wide-area networks of heterogeneous compute, building on Flower Labs’ open-source tools.]]></summary></entry><entry><title type="html">MT-DAO and DES-LOC at ICLR 2026</title><link href="https://philippwiesner.org/camlsys-preview/news/2026-04-23-iclr-papers/" rel="alternate" type="text/html" title="MT-DAO and DES-LOC at ICLR 2026" /><published>2026-04-23T00:00:00+01:00</published><updated>2026-04-23T00:00:00+01:00</updated><id>https://philippwiesner.org/camlsys-preview/news/iclr-papers</id><content type="html" xml:base="https://philippwiesner.org/camlsys-preview/news/2026-04-23-iclr-papers/"><![CDATA[<ul>
-  <li><a href="/camlsys-preview/publications/iacob2025mtdaomultitimescaledistributedadaptive/">MT-DAO: Multi-Timescale Distributed Adaptive Optimizers with Local Updates</a></li>
-  <li><a href="/camlsys-preview/publications/iacob2025deslocdesyncedlowcommunication/">DES-LOC: Desynced Low Communication Adaptive Optimizers for Foundation Models</a></li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[MT-DAO and DES-LOC appear at the International Conference on Learning Representations (ICLR) in Rio de Janeiro. Both advance distributed training of large models by reducing communication between workers while retaining the benefits of adaptive optimization.]]></summary></entry><entry><title type="html">CambridgeFlower Selected for SPRIND Composite Learning Challenge</title><link href="https://philippwiesner.org/camlsys-preview/news/2025/02/02/SPRIN-D.html" rel="alternate" type="text/html" title="CambridgeFlower Selected for SPRIND Composite Learning Challenge" /><published>2025-02-02T00:00:00+00:00</published><updated>2025-02-02T00:00:00+00:00</updated><id>https://philippwiesner.org/camlsys-preview/news/2025/02/02/SPRIN-D</id><content type="html" xml:base="https://philippwiesner.org/camlsys-preview/news/2025/02/02/SPRIN-D.html"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[The CambridgeFlower team has been selected for Stage 1 of the SPRIND Composite Learning Challenge to develop scalable, decentralized AI using the Flower framework.]]></summary></entry><entry><title type="html">Prof. Nic Lane Awarded RAEng Chair in Emerging Technologies</title><link href="https://philippwiesner.org/camlsys-preview/news/2024/03/01/Nic-RAEng-Chair-Award.html" rel="alternate" type="text/html" title="Prof. Nic Lane Awarded RAEng Chair in Emerging Technologies" /><published>2024-03-01T00:00:00+00:00</published><updated>2024-03-01T00:00:00+00:00</updated><id>https://philippwiesner.org/camlsys-preview/news/2024/03/01/Nic-RAEng-Chair-Award</id><content type="html" xml:base="https://philippwiesner.org/camlsys-preview/news/2024/03/01/Nic-RAEng-Chair-Award.html"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[Professor Nic Lane has been awarded a £2.5M RAEng Chair in Emerging Technologies to develop decentralised, privacy-preserving AI as part of his new project, DANTE.]]></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+  <link href="https://philippwiesner.org/camlsys-preview/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://philippwiesner.org/camlsys-preview/" rel="alternate" type="text/html" hreflang="en"/>
+  <updated>2026-10-22T19:17:17+01:00</updated>
+  <id>https://philippwiesner.org/camlsys-preview/feed.xml</id>
+  <title type="html">CaMLSys | News</title>
+  <subtitle>Research at the intersection of machine learning and computational systems at the University of Cambridge.</subtitle>
+  <entry>
+    <title type="html">Who Evaluates the Evaluator?: The Red Queen Gödel Machine</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2026-07-19-who-evaluates-the-evaluator/" rel="alternate" type="text/html" title="Who Evaluates the Evaluator?: The Red Queen Gödel Machine"/>
+    <published>2026-07-19T00:00:00+01:00</published>
+    <updated>2026-07-19T00:00:00+01:00</updated>
+    <id>https://philippwiesner.org/camlsys-preview/news/who-evaluates-the-evaluator</id>
+    <content type="html" xml:base="https://philippwiesner.org/camlsys-preview/news/2026-07-19-who-evaluates-the-evaluator/"><![CDATA[]]></content>
+    <author>
+      <name/>
+    </author>
+    <summary type="html"><![CDATA[<p>Our paper <a href="https://philippwiesner.org/camlsys-preview/publications/iacob2026-red-queen/">Who Evaluates the Evaluator? The Red Queen Gödel Machine</a> explores why self-improving systems need evaluations that improve alongside them.</p>
+]]></summary>
+  </entry>
+  <entry>
+    <title type="html">LoRDO at ICML 2026</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2026-07-08-lordo-icml/" rel="alternate" type="text/html" title="LoRDO at ICML 2026"/>
+    <published>2026-07-08T00:00:00+01:00</published>
+    <updated>2026-07-08T00:00:00+01:00</updated>
+    <id>https://philippwiesner.org/camlsys-preview/news/lordo-icml</id>
+    <content type="html" xml:base="https://philippwiesner.org/camlsys-preview/news/2026-07-08-lordo-icml/"><![CDATA[]]></content>
+    <author>
+      <name/>
+    </author>
+    <summary type="html"><![CDATA[<p>Our paper <a href="https://philippwiesner.org/camlsys-preview/publications/jovanovic2026-lordo/">LoRDO</a> was presented at ICML in Seoul. It combines low-rank optimization with infrequent communication to support wide-area distributed training.</p>
+]]></summary>
+  </entry>
+  <entry>
+    <title type="html">Cambridge joins the SOFAIR Lab</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2026-06-23-sofair-launch/" rel="alternate" type="text/html" title="Cambridge joins the SOFAIR Lab"/>
+    <published>2026-06-23T00:00:00+01:00</published>
+    <updated>2026-06-23T00:00:00+01:00</updated>
+    <id>https://philippwiesner.org/camlsys-preview/news/sofair-launch</id>
+    <content type="html" xml:base="https://philippwiesner.org/camlsys-preview/news/2026-06-23-sofair-launch/"><![CDATA[]]></content>
+    <author>
+      <name/>
+    </author>
+    <summary type="html"><![CDATA[<p>Cambridge joins <a href="https://www.cst.cam.ac.uk/news/joining-science-fundamental-ai-research-lab-major-national-initiative">SOFAIR</a>, led by David Barber at UCL in partnership with Oxford and Edinburgh. Led by Nicholas Lane, our contribution focuses on training frontier AI models across wide-area networks of heterogeneous compute.</p>
+]]></summary>
+  </entry>
+  <entry>
+    <title type="html">MT-DAO and DES-LOC at ICLR 2026</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2026-04-23-iclr-papers/" rel="alternate" type="text/html" title="MT-DAO and DES-LOC at ICLR 2026"/>
+    <published>2026-04-23T00:00:00+01:00</published>
+    <updated>2026-04-23T00:00:00+01:00</updated>
+    <id>https://philippwiesner.org/camlsys-preview/news/iclr-papers</id>
+    <content type="html" xml:base="https://philippwiesner.org/camlsys-preview/news/2026-04-23-iclr-papers/"><![CDATA[]]></content>
+    <author>
+      <name/>
+    </author>
+    <summary type="html"><![CDATA[<p>Two papers at ICLR in Rio de Janeiro: <a href="https://philippwiesner.org/camlsys-preview/publications/iacob2025mtdaomultitimescaledistributedadaptive/">MT-DAO</a> and <a href="https://philippwiesner.org/camlsys-preview/publications/iacob2025deslocdesyncedlowcommunication/">DES-LOC</a>, advancing wide-area distributed training of large models.</p>
+]]></summary>
+  </entry>
+  <entry>
+    <title type="html">CambridgeFlower Selected for SPRIND Composite Learning Challenge</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2025/02/02/SPRIN-D.html" rel="alternate" type="text/html" title="CambridgeFlower Selected for SPRIND Composite Learning Challenge"/>
+    <published>2025-02-02T00:00:00+00:00</published>
+    <updated>2025-02-02T00:00:00+00:00</updated>
+    <id>https://philippwiesner.org/camlsys-preview/news/2025/02/02/SPRIN-D</id>
+    <content type="html" xml:base="https://philippwiesner.org/camlsys-preview/news/2025/02/02/SPRIN-D.html"><![CDATA[]]></content>
+    <author>
+      <name/>
+    </author>
+    <summary type="html"><![CDATA[<p>CambridgeFlower has been selected for Stage 1 of the <a href="https://www.sprind.org/en/actions/challenges/composite-learning">SPRIND Composite Learning Challenge</a> to develop scalable, decentralised AI using Flower.</p>
+]]></summary>
+  </entry>
+  <entry>
+    <title type="html">Prof. Nic Lane Awarded RAEng Chair in Emerging Technologies</title>
+    <link href="https://philippwiesner.org/camlsys-preview/news/2024/03/01/Nic-RAEng-Chair-Award.html" rel="alternate" type="text/html" title="Prof. Nic Lane Awarded RAEng Chair in Emerging Technologies"/>
+    <published>2024-03-01T00:00:00+00:00</published>
+    <updated>2024-03-01T00:00:00+00:00</updated>
+    <id>https://philippwiesner.org/camlsys-preview/news/2024/03/01/Nic-RAEng-Chair-Award</id>
+    <content type="html" xml:base="https://philippwiesner.org/camlsys-preview/news/2024/03/01/Nic-RAEng-Chair-Award.html"><![CDATA[]]></content>
+    <author>
+      <name/>
+    </author>
+    <summary type="html"><![CDATA[<p>Nic Lane has been awarded a <a href="https://www.cst.cam.ac.uk/news/making-development-ai-more-democratic">£2.5M RAEng Chair in Emerging Technologies</a> to develop decentralised, privacy-preserving AI through his project DANTE.</p>
+]]></summary>
+  </entry>
+</feed>
