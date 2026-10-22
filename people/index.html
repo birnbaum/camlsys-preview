@@ -22,7 +22,7 @@
 {"@context":"https://schema.org","@type":"WebPage","description":"Research at the intersection of machine learning and computational systems at the University of Cambridge.","headline":"People","url":"https://philippwiesner.org/camlsys-preview/people/"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1792666556">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1792669497">
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
   <link rel="alternate" type="application/atom+xml" title="CaMLSys news" href="/camlsys-preview/feed.xml">
@@ -433,458 +433,530 @@
 
 
 
+
 <span id="former_visitors" aria-hidden="true"></span>
-<ul class="people-list">
+<form id="alumni-search" class="alumni-controls" role="search" aria-label="Search alumni" hidden="">
+  <label class="sr-only" for="alumni-query">Search alumni</label>
+  <input id="alumni-query" name="alumni-q" type="search" placeholder="Search alumni" autocomplete="off" aria-controls="alumni-list" />
+  <div class="alumni-filters" role="group" aria-label="Filter alumni">
+    <button type="button" data-filter="all" aria-pressed="true">All</button>
+    <button type="button" data-filter="phd" aria-pressed="false">PhD</button>
+    <button type="button" data-filter="students" aria-pressed="false">Master’s / Undergraduate</button>
+    <button type="button" data-filter="visitors" aria-pressed="false">Visitors</button>
+    <button type="button" data-filter="staff" aria-pressed="false">Research staff / Collaborators</button>
+    <button type="button" data-filter="review" aria-pressed="false">Needs review</button>
+  </div>
+  <p id="alumni-count" class="sr-only" role="status" aria-live="polite"></p>
+</form>
 
-  <li class="person">
+<ul class="people-list alumni-list" id="alumni-list">
+
+  <li class="person" data-category="visitors" data-review="false">
     <h3><a href="https://www.caidongqi.com/">Dongqi Cai</a></h3>
-    <p class="alumni-position">Visiting PhD Student</p>
+    <p class="alumni-role">Visiting PhD Student</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="visitors" data-review="false">
     <h3><a href="https://zexilee.github.io/about-zexili/">Zexi Li</a></h3>
-    <p class="alumni-position">Visiting PhD Student</p>
+    <p class="alumni-role">Visiting PhD Student</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="phd" data-review="false">
     <h3>De Sheng Royson Lee</h3>
-    <p class="alumni-position">PhD</p>
+    <p class="alumni-role">PhD</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="students" data-review="false">
     <h3>Grace Kim</h3>
-    <p class="alumni-position">MPhil Student</p>
+    <p class="alumni-role">MPhil Student</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="students" data-review="false">
     <h3>Luca Powell</h3>
-    <p class="alumni-position">MPhil Student</p>
+    <p class="alumni-role">MPhil Student</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="phd" data-review="false">
     <h3>Yan Gao</h3>
-    <p class="alumni-position">PhD</p>
+    <p class="alumni-role">PhD</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="students" data-review="false">
     <h3><a href="https://scylj1.github.io/">Lekang Jiang</a></h3>
-    <p class="alumni-position">MPhil Student</p>
+    <p class="alumni-role">MPhil Student</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="students" data-review="false">
     <h3><a href="https://dannymcy.github.io/">Chenyang Ma</a></h3>
-    <p class="alumni-position">MPhil Student / Research Assistant</p>
+    <p class="alumni-role">MPhil Student / Research Assistant</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="students" data-review="false">
     <h3>Andreea Zaharia</h3>
-    <p class="alumni-position">Part III Student</p>
+    <p class="alumni-role">Part III Student</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="phd" data-review="false">
     <h3><a href="https://egctong.github.io/">Catherine Tong</a></h3>
-    <p class="alumni-position">PhD <span aria-hidden="true">→</span> <span class="sr-only">First position: </span>Research Scientist, Isomorphic Labs</p>
+    <p class="alumni-role">PhD</p>
+    <p class="alumni-destination"><span aria-hidden="true">→</span> <span class="sr-only">First position: </span>Research Scientist, Isomorphic Labs</p>
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="phd" data-review="false">
     <h3><a href="https://wangchongyang.ai/">Chongyang Wang</a></h3>
-    <p class="alumni-position">PhD <span aria-hidden="true">→</span> <span class="sr-only">Now: </span>Assistant Professor (Research), West China Hospital, Sichuan University</p>
+    <p class="alumni-role">PhD</p>
+    <p class="alumni-destination"><span aria-hidden="true">→</span> <span class="sr-only">Now: </span>Assistant Professor (Research), West China Hospital, Sichuan University</p>
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="phd" data-review="false">
     <h3><a href="https://mil.ad">Milad Alizadeh</a></h3>
-    <p class="alumni-position">PhD <span aria-hidden="true">→</span> <span class="sr-only">Now: </span>Principal Engineer, Earth Species Project</p>
+    <p class="alumni-role">PhD</p>
+    <p class="alumni-destination"><span aria-hidden="true">→</span> <span class="sr-only">Now: </span>Principal Engineer, Earth Species Project</p>
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="students" data-review="false">
     <h3><a href="https://hei411.github.io/">Hei Li</a></h3>
-    <p class="alumni-position">Undergraduate Research Student</p>
+    <p class="alumni-role">Undergraduate Research Student</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="students" data-review="false">
     <h3><a href="https://gejinchen.github.io/">Jinchen Ge</a></h3>
-    <p class="alumni-position">MPhil Student</p>
+    <p class="alumni-role">MPhil Student</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="phd" data-review="false">
     <h3><a href="https://akhilmathurs.github.io/">Akhil Mathur</a></h3>
-    <p class="alumni-position">PhD <span aria-hidden="true">→</span> <span class="sr-only">Now: </span>AI Research Scientist, Meta Superintelligence Labs</p>
+    <p class="alumni-role">PhD</p>
+    <p class="alumni-destination"><span aria-hidden="true">→</span> <span class="sr-only">Now: </span>AI Research Scientist, Meta Superintelligence Labs</p>
     <p class="person-note">UCL, co-supervised with Nadia Berthouze</p>
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Aditya Bist</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="visitors" data-review="true">
     <h3>Adriano Guastella</h3>
-    <p class="alumni-position">Visiting Master’s Student</p>
+    <p class="alumni-role">Visiting Master’s Student</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Alessio Mora</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Alex Matthews</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Alexander Erben</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Amogh Vishwakarma</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Andrzej Szablewski</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Andy Zhou</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Angus Matthews</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Anna Vaughan</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Aryan Bhan</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Avani Chauhan</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Bao Nguyen</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Bofan Chen</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="visitors" data-review="true">
     <h3><a href="https://clin0212.github.io/">Chunlin Tian</a></h3>
-    <p class="alumni-position">Visiting PhD Student</p>
+    <p class="alumni-role">Visiting PhD Student</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Dylan Protiva</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Ed Brown</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="phd" data-review="true">
     <h3><a href="https://www.linkedin.com/in/eliberis/">Edgar Liberis</a></h3>
-    <p class="alumni-position">PhD</p>
+    <p class="alumni-role">PhD</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Eric Dong</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Fran Cortés Delgado</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="visitors" data-review="true">
     <h3>Gianluca Mittone</h3>
-    <p class="alumni-position">Visiting PhD Student</p>
+    <p class="alumni-role">Visiting PhD Student</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Herbert Woisetschlaeger</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Joseph Rance</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Jude Puddicombe</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Junyang (Allen) Cong</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="visitors" data-review="true">
     <h3>Lorenzo Petrosino</h3>
-    <p class="alumni-position">Visiting PhD Student</p>
+    <p class="alumni-role">Visiting PhD Student</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Maahum Nazir</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Markus Walder</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Martin Gjoreski</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="visitors" data-review="true">
     <h3>Mina Alibeigi</h3>
-    <p class="alumni-position">Visiting Researcher</p>
+    <p class="alumni-role">Visiting Researcher</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Muheeb Ridwan</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Naunidh Dua</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Pan Heng</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="staff" data-review="true">
     <h3><a href="https://www.surrey.ac.uk/people/pedro-porto-buarque-de-gusmao">Pedro Porto Buarque de Gusmão</a></h3>
-    <p class="alumni-position">Senior Research Associate <span aria-hidden="true">→</span> <span class="sr-only">Now: </span>Lecturer in Computer Science, University of Surrey</p>
+    <p class="alumni-role">Senior Research Associate</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Peixuan Song</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Qianyi Liu</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Qixuan Feng</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Rosco Hunter</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="phd" data-review="true">
     <h3><a href="https://shyamtailor.me/">Shyam Tailor</a></h3>
-    <p class="alumni-position">PhD</p>
+    <p class="alumni-role">PhD</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Vasundhara Agarwal</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
-  <li class="person">
+  <li class="person" data-category="unconfirmed" data-review="true">
     <h3>Viktor Valadi</h3>
-    <p class="alumni-position">Role to confirm</p>
+    <p class="alumni-role">Role to confirm</p>
+    
     
     
 
   </li>
 
 </ul>
+<p id="alumni-empty" hidden="">No alumni match your search or filter.</p>
 
 </section>
 
@@ -894,6 +966,8 @@
 
 
 </div>
+<script src="/camlsys-preview/assets/alumni.js?v=1792669497" defer=""></script>
+
 
   </div>
 

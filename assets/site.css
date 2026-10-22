@@ -507,6 +507,110 @@ figcaption {
   margin-top:4px;
 }
 
+.alumni-controls {
+  margin:0 0 20px;
+}
+
+#alumni-query {
+  box-sizing:border-box;
+  width:min(100%, 340px);
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  background:var(--paper);
+  color:var(--ink);
+  font:inherit;
+  font-size:.9rem;
+}
+
+#alumni-query:focus-visible {
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+}
+
+.alumni-filters {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:12px;
+}
+
+.alumni-filters button {
+  padding:6px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--paper);
+  color:var(--muted);
+  font:inherit;
+  font-size:.8rem;
+  cursor:pointer;
+}
+
+.alumni-filters button:hover {
+  border-color:var(--accent-soft);
+  color:var(--ink);
+}
+
+.alumni-filters button[aria-pressed="true"] {
+  background:var(--accent);
+  border-color:var(--accent);
+  color:var(--paper);
+}
+
+.alumni-list .person {
+  display:grid;
+  grid-template-columns:minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1.6fr);
+  align-items:baseline;
+  gap:4px 24px;
+  padding:12px 0;
+  overflow-wrap:anywhere;
+}
+
+.alumni-list .person h3 {
+  margin:0;
+}
+
+.alumni-list .alumni-role {
+  grid-column:2;
+}
+
+.alumni-list .alumni-destination {
+  grid-column:3;
+  color:var(--ink);
+  display:flex;
+  gap:8px;
+}
+
+.alumni-list .person-note,.alumni-list .person-review {
+  grid-column:2 / -1;
+}
+
+#alumni-search[hidden],.alumni-list .person[hidden],#alumni-empty[hidden] {
+  display:none;
+}
+
+@media (max-width:650px) {
+  .alumni-list .person {
+    grid-template-columns:minmax(0, 1fr) minmax(0, 2fr);
+    gap:4px 12px;
+  }
+  .alumni-list .person h3 {
+    grid-column:1 / -1;
+  }
+  .alumni-list .alumni-role {
+    grid-column:1;
+  }
+  .alumni-list .alumni-destination {
+    grid-column:2;
+  }
+  .alumni-list .person-note,.alumni-list .person-review {
+    grid-column:1 / -1;
+  }
+  .alumni-list .person:not(:has(.alumni-destination)) .alumni-role {
+    grid-column:1 / -1;
+  }
+}
+
 .person-review {
   margin-top:8px;
   padding:8px 10px;
