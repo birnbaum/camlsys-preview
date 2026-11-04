@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/aleksandrov2025-abbie/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,11 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>AbbIE: Autoregressive Block-Based Iterative Encoder for Efficient Sequence Modeling</h1>
-  <p class="authors">Preslav Aleksandrov, Meghdad Kurmanji, Fernando Garcia Redondo, David O&#39;Shea, William Shen, Alex Iacob, Lorenzo Sani, Xinchi Qiu, Nicola Cancedda, and Nicholas D. Lane</p>
-  <p class="meta"><span class="publication-badge">Preprint</span> <span class="publication-venue">arXiv</span></p>
-  <div class="publication-links"><a href="https://arxiv.org/abs/2507.08567">Paper</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>AbbIE: Autoregressive Block-Based Iterative Encoder for Efficient Sequence Modeling</h1>
+      <p class="authors publication-authors"><span class="publication-author"><a href="https://preslavaleksandrov.com/"><img src="/camlsys-preview/assets/preslav.png" alt="" width="28" height="28" loading="lazy"><span>Preslav Aleksandrov</span></a></span>, <span class="publication-author"><a href="https://meghdadk.github.io/"><img src="/camlsys-preview/assets/meghdad.jpg" alt="" width="28" height="28" loading="lazy"><span>Meghdad Kurmanji</span></a></span>, <span class="publication-author"><span>Fernando Garcia Redondo</span></span>, <span class="publication-author"><span>David O&#39;Shea</span></span>, <span class="publication-author"><span>William Shen</span></span>, <span class="publication-author"><a href="https://iacob-alexandru-andrei.github.io/"><img src="/camlsys-preview/assets/people/alexandru-andrei-iacob.jpg" alt="" width="28" height="28" loading="lazy"><span>Alex Iacob</span></a></span>, <span class="publication-author"><a href="https://relogu.github.io/"><img src="/camlsys-preview/assets/lorenzo.jpeg" alt="" width="28" height="28" loading="lazy"><span>Lorenzo Sani</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="28" height="28" loading="lazy"><span>Xinchi Qiu</span></a></span>, <span class="publication-author"><span>Nicola Cancedda</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <p class="meta venue"><span class="publication-badge">Preprint</span> <span class="publication-venue">arXiv</span>, <span class="publication-date">2025</span></p>
+      
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/2507.08567">PDF<span class="sr-only">: AbbIE: Autoregressive Block-Based Iterative Encoder for Efficient Sequence Modeling</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: AbbIE: Autoregressive Block-Based Iterative Encoder for Efficient Sequence Modeling</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>We introduce the Autoregressive Block-Based Iterative Encoder (AbbIE), a novel recursive generalization of the encoder-only Transformer architecture, which achieves better perplexity than a standard Transformer and allows for the dynamic scaling of compute resources at test time. This simple, recursive approach is a complement to scaling large language model (LLM) performance through parameter and token counts. AbbIE performs its iterations in latent space, but unlike latent reasoning models, does not require a specialized dataset or training protocol. We show that AbbIE upward generalizes (ability to generalize to arbitrary iteration lengths) at test time by only using 2 iterations during train time, far outperforming alternative iterative methods. AbbIE’s ability to scale its computational expenditure based on the complexity of the task gives it an up to \textbf{12\%} improvement in zero-shot in-context learning tasks versus other iterative and standard methods and up to 5\% improvement in language perplexity. The results from this study open a new avenue to Transformer performance scaling. We perform all of our evaluations on model sizes up to 350M parameters.</p>
 </section>
@@ -81,6 +90,7 @@
   date = {2025-07-11},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

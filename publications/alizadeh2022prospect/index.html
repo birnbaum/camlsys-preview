@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/alizadeh2022prospect/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,11 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>Prospect Pruning: Finding Trainable Weights at Initialization using Meta-Gradients</h1>
-  <p class="authors">Milad Alizadeh, Shyam A. Tailor, Luisa M Zintgraf, Joost van Amersfoort, Sebastian Farquhar, Nicholas Donald Lane, and Yarin Gal</p>
-  <p class="meta"><span class="publication-venue">International Conference on Learning Representations (ICLR)</span></p>
-  <div class="publication-links"><a href="https://arxiv.org/abs/2202.08132">Paper</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>Prospect Pruning: Finding Trainable Weights at Initialization using Meta-Gradients</h1>
+      <p class="authors publication-authors"><span class="publication-author"><a href="https://mil.ad"><img src="/camlsys-preview/assets/milad.jpg" alt="" width="28" height="28" loading="lazy"><span>Milad Alizadeh</span></a></span>, <span class="publication-author"><a href="https://shyamtailor.me/"><img src="/camlsys-preview/assets/shyam.jpg" alt="" width="28" height="28" loading="lazy"><span>Shyam A. Tailor</span></a></span>, <span class="publication-author"><span>Luisa M Zintgraf</span></span>, <span class="publication-author"><span>Joost van Amersfoort</span></span>, <span class="publication-author"><span>Sebastian Farquhar</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas Donald Lane</span></a></span>, <span class="publication-author"><span>Yarin Gal</span></span></p>
+      <p class="meta venue"><span class="publication-venue">International Conference on Learning Representations (ICLR)</span>, <span class="publication-date">2022</span></p>
+      
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/2202.08132">PDF<span class="sr-only">: Prospect Pruning: Finding Trainable Weights at Initialization using Meta-Gradients</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Prospect Pruning: Finding Trainable Weights at Initialization using Meta-Gradients</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>Pruning neural networks at initialization would enable us to find sparse models that retain the accuracy of the original network while consuming fewer computational resources for training and inference. However, current methods are insufficient to enable this optimization and lead to a large degradation in model performance. In this paper, we identify a fundamental limitation in the formulation of current methods, namely that their saliency criteria look at a single step at the start of training without taking into account the trainability of the network. While pruning iteratively and gradually has been shown to improve pruning performance, explicit consideration of the training stage that will immediately follow pruning has so far been absent from the computation of the saliency criterion. To overcome the short-sightedness of existing methods, we propose Prospect Pruning (ProsPr), which uses meta-gradients through the first few steps of optimization to determine which weights to prune. ProsPr combines an estimate of the higher-order effects of pruning on the loss and the optimization trajectory to identify the trainable sub-network. Our method achieves state-of-the-art pruning performance on a variety of vision classification tasks, with less data and in a single shot compared to existing pruning-at-initialization methods.</p>
 </section>
@@ -81,6 +90,7 @@
   date = {2022-04-25},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

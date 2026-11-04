@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/qiu2024split/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,11 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>Evaluating Privacy Leakage in Split Learning</h1>
-  <p class="authors">Xinchi Qiu, Ilias Leontiadis, Luca Melis, Alex Sablayrolles, and Pierre Stock</p>
-  <p class="meta"><span class="publication-venue">Workshop on Privacy-Preserving Artificial Intelligence (PPAI) at AAAI</span></p>
-  <div class="publication-links"><a href="https://arxiv.org/abs/2305.12997">Paper</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>Evaluating Privacy Leakage in Split Learning</h1>
+      <p class="authors publication-authors"><span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="28" height="28" loading="lazy"><span>Xinchi Qiu</span></a></span>, <span class="publication-author"><span>Ilias Leontiadis</span></span>, <span class="publication-author"><span>Luca Melis</span></span>, <span class="publication-author"><span>Alex Sablayrolles</span></span>, <span class="publication-author"><span>Pierre Stock</span></span></p>
+      <p class="meta venue"><span class="publication-venue">Workshop on Privacy-Preserving Artificial Intelligence (PPAI) at AAAI</span>, <span class="publication-date">2024</span></p>
+      
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/2305.12997">PDF<span class="sr-only">: Evaluating Privacy Leakage in Split Learning</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Evaluating Privacy Leakage in Split Learning</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>Privacy-Preserving machine learning (PPML) can help us train and deploy models that utilize private information. In particular, on-device machine learning allows us to avoid sharing raw data with a third-party server during inference. On-device models are typically less accurate when compared to their server counterparts due to the fact that (1) they typically only rely on a small set of on-device features and (2) they need to be small enough to run efficiently on end-user devices. Split Learning (SL) is a promising approach that can overcome these limitations. In SL, a large machine learning model is divided into two parts, with the bigger part residing on the server side and a smaller part executing on-device, aiming to incorporate the private features. However, end-to-end training of such models requires exchanging gradients at the cut layer, which might encode private features or labels. In this paper, we provide insights into potential privacy risks associated with SL. Furthermore, we also investigate the effectiveness of various mitigation strategies. Our results indicate that the gradients significantly improve the attackers’ effectiveness in all tested datasets reaching almost perfect reconstruction accuracy for some features. However, a small amount of differential privacy (DP) can effectively mitigate this risk without causing significant training degradation.</p>
 </section>
@@ -81,6 +90,7 @@
   date = {2024-02-26},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

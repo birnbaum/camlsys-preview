@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/sani2026-fomoe/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,11 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>FoMoE: Breaking the Full-Replica Barrier with a Federation of MoEs</h1>
-  <p class="authors">Lorenzo Sani, Zeyu Cao, Meghdad Kurmanji, Alex Iacob, Andrej Jovanovic, Yan Gao, Wanru Zhao, and Nicholas D. Lane</p>
-  <p class="meta"><span class="publication-badge">Preprint</span> <span class="publication-venue">arXiv</span></p>
-  <div class="publication-links"><a href="https://arxiv.org/abs/2606.19025">Paper</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>FoMoE: Breaking the Full-Replica Barrier with a Federation of MoEs</h1>
+      <p class="authors publication-authors"><span class="publication-author"><a href="https://relogu.github.io/"><img src="/camlsys-preview/assets/lorenzo.jpeg" alt="" width="28" height="28" loading="lazy"><span>Lorenzo Sani</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/zc317"><span>Zeyu Cao</span></a></span>, <span class="publication-author"><a href="https://meghdadk.github.io/"><img src="/camlsys-preview/assets/meghdad.jpg" alt="" width="28" height="28" loading="lazy"><span>Meghdad Kurmanji</span></a></span>, <span class="publication-author"><a href="https://iacob-alexandru-andrei.github.io/"><img src="/camlsys-preview/assets/people/alexandru-andrei-iacob.jpg" alt="" width="28" height="28" loading="lazy"><span>Alex Iacob</span></a></span>, <span class="publication-author"><a href="https://andrej.jovanovic.co.za/"><img src="/camlsys-preview/assets/andrej.jpg" alt="" width="28" height="28" loading="lazy"><span>Andrej Jovanovic</span></a></span>, <span class="publication-author"><img src="/camlsys-preview/assets/yan.jpg" alt="" width="28" height="28" loading="lazy"><span>Yan Gao</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/wz341"><img src="/camlsys-preview/assets/wanru-zhao.jpg" alt="" width="28" height="28" loading="lazy"><span>Wanru Zhao</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <p class="meta venue"><span class="publication-badge">Preprint</span> <span class="publication-venue">arXiv</span>, <span class="publication-date">2026</span></p>
+      
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/2606.19025">PDF<span class="sr-only">: FoMoE: Breaking the Full-Replica Barrier with a Federation of MoEs</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: FoMoE: Breaking the Full-Replica Barrier with a Federation of MoEs</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>Pre-training Large Language Models (LLMs) typically demands large-scale infrastructure with tightly coupled hardware accelerators. Mixture-of-Experts (MoEs) architectures partially decouple model capacity from per-token compute. This efficiency alone does not make MoE training feasible over ordinary Internet links or loosely connected commodity hardware since active expert routing still assumes high-speed datacenter fabrics. Low-communication methods such as DiLoCo and Photon reduce synchronization frequency across distributed sites, mitigating bandwidth constraints, yet still require full model replicas at every site. This creates a mismatch: modern MoEs have sparse data paths, but their distributed training infrastructure remains communication-dense and memory-inefficient, limiting attempts to pool geographically distributed compute. In this work, we introduce FoMoE, a system that breaks the full-replica paradigm by partitioning expert layers across workers and skipping non-resident experts during local training. We demonstrate that FoMoE: (I) reduces communication costs by up to 1.42x over efficient baselines and 45.44x over Distributed Data Parallelism (DDP) via partial expert replication in controlled regimes; (II) achieves empirical throughput speedups of up to 1.4x through the skip-token mechanism; and (III) shows stable routing in the trained regimes and projects the communication/memory benefits to 100B-scale configurations through system modeling.</p>
 </section>
@@ -81,6 +90,7 @@
   date = {2026-06-17},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

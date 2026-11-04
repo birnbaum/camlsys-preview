@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/shen2025lunar/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,12 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>LLM Unlearning via Neural Activation Redirection</h1>
-  <p class="authors">William Shen, Xinchi Qiu, Meghdad Kurmanji, Alexandru-Andrei Iacob, Lorenzo Sani, Yihong Chen, Nicola Cancedda, and Nicholas D. Lane</p>
-  <p class="meta"><span class="publication-venue">Conference on Neural Information Processing Systems (NeurIPS)</span></p>
-  <div class="publication-links"><a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/3ed6a903be20e1478aa6793f14938091-Abstract-Conference.html">Paper</a>
-  <a href="https://github.com/facebookresearch/LUNAR">Code</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>LLM Unlearning via Neural Activation Redirection</h1>
+      <p class="authors publication-authors"><span class="publication-author"><span>William Shen</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="28" height="28" loading="lazy"><span>Xinchi Qiu</span></a></span>, <span class="publication-author"><a href="https://meghdadk.github.io/"><img src="/camlsys-preview/assets/meghdad.jpg" alt="" width="28" height="28" loading="lazy"><span>Meghdad Kurmanji</span></a></span>, <span class="publication-author"><a href="https://iacob-alexandru-andrei.github.io/"><img src="/camlsys-preview/assets/people/alexandru-andrei-iacob.jpg" alt="" width="28" height="28" loading="lazy"><span>Alexandru-Andrei Iacob</span></a></span>, <span class="publication-author"><a href="https://relogu.github.io/"><img src="/camlsys-preview/assets/lorenzo.jpeg" alt="" width="28" height="28" loading="lazy"><span>Lorenzo Sani</span></a></span>, <span class="publication-author"><span>Yihong Chen</span></span>, <span class="publication-author"><span>Nicola Cancedda</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <p class="meta venue"><span class="publication-venue">Conference on Neural Information Processing Systems (NeurIPS)</span>, <span class="publication-date">2025</span></p>
+      <div class="publication-links"><a href="https://github.com/facebookresearch/LUNAR">Code</a></div>
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/2502.07218">PDF<span class="sr-only">: LLM Unlearning via Neural Activation Redirection</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: LLM Unlearning via Neural Activation Redirection</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>The ability to selectively remove knowledge from LLMs is highly desirable. However, existing methods often struggle with balancing unlearning efficacy and retain model utility, and lack controllability at inference time to emulate base model behavior as if it had never seen the unlearned data. In this paper, we propose LUNAR, a novel unlearning method grounded in the Linear Representation Hypothesis and operates by redirecting the representations of unlearned data to activation regions that expresses its inability to answer. We show that contrastive features are not a prerequisite for effective activation redirection, and LUNAR achieves state-of-the-art unlearning performance and superior controllability. Specifically, LUNAR achieves between 2.9x and 11.7x improvement in the combined unlearning efficacy and model utility score (Deviation Score) across various base models and generates coherent, contextually appropriate responses post-unlearning. Moreover, LUNAR effectively reduces parameter updates to a single down-projection matrix, a novel design that significantly enhances efficiency by 20x and robustness. Finally, we demonstrate that LUNAR is robust to white-box adversarial attacks and versatile in real-world scenarios, including handling sequential unlearning requests.</p>
 </section>
@@ -86,6 +94,7 @@
   date = {2025-12-02},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

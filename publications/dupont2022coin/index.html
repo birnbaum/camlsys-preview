@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/dupont2022coin/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,11 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>COIN++: Neural Compression Across Modalities</h1>
-  <p class="authors">Emilien Dupont, Hrushikesh Loya, Milad Alizadeh, Adam Goliński, Yee Whye Teh, and Arnaud Doucet</p>
-  <p class="meta"><span class="publication-venue">Transactions on Machine Learning Research (TMLR)</span></p>
-  <div class="publication-links"><a href="https://openreview.net/forum?id=NXB0rEM2Tq">Paper</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>COIN++: Neural Compression Across Modalities</h1>
+      <p class="authors publication-authors"><span class="publication-author"><span>Emilien Dupont</span></span>, <span class="publication-author"><span>Hrushikesh Loya</span></span>, <span class="publication-author"><a href="https://mil.ad"><img src="/camlsys-preview/assets/milad.jpg" alt="" width="28" height="28" loading="lazy"><span>Milad Alizadeh</span></a></span>, <span class="publication-author"><span>Adam Goliński</span></span>, <span class="publication-author"><span>Yee Whye Teh</span></span>, <span class="publication-author"><span>Arnaud Doucet</span></span></p>
+      <p class="meta venue"><span class="publication-venue">Transactions on Machine Learning Research (TMLR)</span>, <span class="publication-date">2022</span></p>
+      
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://openreview.net/pdf?id=NXB0rEM2Tq">PDF<span class="sr-only">: COIN++: Neural Compression Across Modalities</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: COIN++: Neural Compression Across Modalities</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>Neural compression algorithms are typically based on autoencoders that require specialized encoder and decoder architectures for different data modalities. In this paper, we propose COIN++, a neural compression framework that seamlessly handles a wide range of data modalities. Our approach is based on converting data to implicit neural representations, i.e. neural functions that map coordinates (such as pixel locations) to features (such as RGB values). Then, instead of storing the weights of the implicit neural representation directly, we store modulations applied to a meta-learned base network as a compressed code for the data. We further quantize and entropy code these modulations, leading to large compression gains while reducing encoding time by two orders of magnitude compared to baselines. We empirically demonstrate the feasibility of our method by compressing various data modalities, from images and audio to medical and climate data.</p>
 </section>
@@ -81,6 +90,7 @@
   primaryclass = {cs.LG},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/tastan2026-response-conditioned-orchestration/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,11 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>Response-Conditioned Parallel-to-Sequential Orchestration for Multi-Agent Systems</h1>
-  <p class="authors">Nurbek Tastan, Alex Iacob, Lorenzo Sani, Meghdad Kurmanji, Nicholas D. Lane, Samuel Horvath, and Karthik Nandakumar</p>
-  <p class="meta"><span class="publication-badge">Preprint</span> <span class="publication-venue">arXiv</span></p>
-  <div class="publication-links"><a href="https://arxiv.org/abs/2605.15573">Paper</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>Response-Conditioned Parallel-to-Sequential Orchestration for Multi-Agent Systems</h1>
+      <p class="authors publication-authors"><span class="publication-author"><span>Nurbek Tastan</span></span>, <span class="publication-author"><a href="https://iacob-alexandru-andrei.github.io/"><img src="/camlsys-preview/assets/people/alexandru-andrei-iacob.jpg" alt="" width="28" height="28" loading="lazy"><span>Alex Iacob</span></a></span>, <span class="publication-author"><a href="https://relogu.github.io/"><img src="/camlsys-preview/assets/lorenzo.jpeg" alt="" width="28" height="28" loading="lazy"><span>Lorenzo Sani</span></a></span>, <span class="publication-author"><a href="https://meghdadk.github.io/"><img src="/camlsys-preview/assets/meghdad.jpg" alt="" width="28" height="28" loading="lazy"><span>Meghdad Kurmanji</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span>, <span class="publication-author"><span>Samuel Horvath</span></span>, <span class="publication-author"><span>Karthik Nandakumar</span></span></p>
+      <p class="meta venue"><span class="publication-badge">Preprint</span> <span class="publication-venue">arXiv</span>, <span class="publication-date">2026</span></p>
+      
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/2605.15573">PDF<span class="sr-only">: Response-Conditioned Parallel-to-Sequential Orchestration for Multi-Agent Systems</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Response-Conditioned Parallel-to-Sequential Orchestration for Multi-Agent Systems</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>Multi-agent systems can solve complex tasks through collaboration between multiple Large Language Model agents. Existing collaboration frameworks typically operate in either a parallel or a sequential mode. In the parallel mode, agents respond independently to queries followed by aggregation of responses. In contrast, sequential systems allow agents to communicate via a directed topology and refine one another step by step. However, both modes are inadequate for achieving the desired objectives of minimizing communication and latency while simultaneously maximizing the accuracy of the final response. In this work, we introduce a hybrid paradigm called Nexa, a trainable response-conditioned policy that bridges the gap between the two modes. Nexa begins with a parallel execution stage, embeds the resulting responses into a shared semantic space, and then predicts a sparse directed acyclic communication graph. If the graph is empty, the system remains purely parallel; if it is non-empty, the system performs one sequential message propagation. The policy is a lightweight transformer model, and the method avoids the need for external LLM judges or reward models, as well as hand-crafted test-time topology search. We formalize this hybrid execution problem, show that the resulting graph is acyclic by construction, and that the framework strictly subsumes pure parallel execution, and present a training procedure based on policy-gradient optimization. Results demonstrate that the response-conditioned policy learned by Nexa under one setting can be reused when the number of agents, the task, or the underlying agent changes, thus emphasizing the generalizability of the learned communication policy.</p>
 </section>
@@ -81,6 +90,7 @@
   date = {2026-05-15},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

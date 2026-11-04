@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/lee2019mobisr/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,11 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>MobiSR: Efficient On-Device Super-Resolution through Heterogeneous Mobile Processors</h1>
-  <p class="authors">Royson Lee, Stylianos I. Venieris, Lukasz Dudziak, Sourav Bhattacharya, and Nicholas D. Lane</p>
-  <p class="meta"><span class="publication-venue">ACM International Conference on Mobile Computing and Networking (MobiCom)</span></p>
-  <div class="publication-links"><a href="https://doi.org/10.1145/3300061.3345455">Paper</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>MobiSR: Efficient On-Device Super-Resolution through Heterogeneous Mobile Processors</h1>
+      <p class="authors publication-authors"><span class="publication-author"><img src="/camlsys-preview/assets/royson.jpeg" alt="" width="28" height="28" loading="lazy"><span>Royson Lee</span></span>, <span class="publication-author"><span>Stylianos I. Venieris</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ld539"><img src="/camlsys-preview/assets/people/lukasz-dudziak.jpg" alt="" width="28" height="28" loading="lazy"><span>Lukasz Dudziak</span></a></span>, <span class="publication-author"><span>Sourav Bhattacharya</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <p class="meta venue"><span class="publication-venue">ACM International Conference on Mobile Computing and Networking (MobiCom)</span>, <span class="publication-date">2019</span></p>
+      
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/1908.07985">PDF<span class="sr-only">: MobiSR: Efficient On-Device Super-Resolution through Heterogeneous Mobile Processors</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: MobiSR: Efficient On-Device Super-Resolution through Heterogeneous Mobile Processors</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>In recent years, convolutional networks have demonstrated unprecedented performance in the image restoration task of super-resolution (SR). SR entails the upscaling of a single low-resolution image in order to meet application-specific image quality demands and plays a key role in mobile devices. To comply with privacy regulations and reduce the overhead of cloud computing, executing SR models locally on-device constitutes a key alternative approach. Nevertheless, the excessive compute and memory requirements of SR workloads pose a challenge in mapping SR networks on resource-constrained mobile platforms. This work presents MobiSR, a novel framework for performing efficient super-resolution on-device. Given a target mobile platform, the proposed framework considers popular model compression techniques and traverses the design space to reach the highest performing trade-off between image quality and processing speed. At run time, a novel scheduler dispatches incoming image patches to the appropriate model-engine pair based on the patch’s estimated upscaling difficulty in order to meet the required image quality with minimum processing latency. Quantitative evaluation shows that the proposed framework yields on-device SR designs that achieve an average speedup of 2.13x over highly-optimized parallel difficulty-unaware mappings and 4.79x over highly-optimized single compute engine implementations.</p>
 </section>
@@ -84,6 +93,7 @@
   date = {2019-10-11},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

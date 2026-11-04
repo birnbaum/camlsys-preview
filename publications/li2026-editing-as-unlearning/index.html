@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/li2026-editing-as-unlearning/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,11 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>Editing as Unlearning: Are Knowledge Editing Methods Strong Baselines for Large Language Model Unlearning?</h1>
-  <p class="authors">Zexi Li, Xiangzhu Wang, William F. Shen, Meghdad Kurmanji, Xinchi Qiu, Dongqi Cai, Chao Wu, and Nicholas D. Lane</p>
-  <p class="meta"><span class="publication-venue">AAAI Conference on Artificial Intelligence</span> · AI Alignment Track</p>
-  <div class="publication-links"><a href="https://arxiv.org/abs/2505.19855">Paper</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>Editing as Unlearning: Are Knowledge Editing Methods Strong Baselines for Large Language Model Unlearning?</h1>
+      <p class="authors publication-authors"><span class="publication-author"><a href="https://zexilee.github.io/about-zexili/"><img src="/camlsys-preview/assets/zexi_li.jpg" alt="" width="28" height="28" loading="lazy"><span>Zexi Li</span></a></span>, <span class="publication-author"><span>Xiangzhu Wang</span></span>, <span class="publication-author"><span>William F. Shen</span></span>, <span class="publication-author"><a href="https://meghdadk.github.io/"><img src="/camlsys-preview/assets/meghdad.jpg" alt="" width="28" height="28" loading="lazy"><span>Meghdad Kurmanji</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="28" height="28" loading="lazy"><span>Xinchi Qiu</span></a></span>, <span class="publication-author"><a href="https://www.caidongqi.com/"><img src="/camlsys-preview/assets/cdq-cambridge.jpeg" alt="" width="28" height="28" loading="lazy"><span>Dongqi Cai</span></a></span>, <span class="publication-author"><span>Chao Wu</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <p class="meta venue"><span class="publication-venue">AAAI Conference on Artificial Intelligence</span>, <span class="publication-date">2026</span> · AI Alignment Track</p>
+      
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/2505.19855">PDF<span class="sr-only">: Editing as Unlearning: Are Knowledge Editing Methods Strong Baselines for Large Language Model Unlearning?</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Editing as Unlearning: Are Knowledge Editing Methods Strong Baselines for Large Language Model Unlearning?</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>Large language Model (LLM) unlearning, i.e., selectively removing information from LLMs, is vital for responsible model deployment. Differently, LLM knowledge editing aims to modify LLM knowledge instead of removing it. Though editing and unlearning seem to be two distinct tasks, we find there is a tight connection between them. In this paper, we conceptualize unlearning as a special case of editing where information is modified to a refusal or “empty set” $\emptyset$ response, signifying its removal. This paper thus investigates if knowledge editing techniques are strong baselines for LLM unlearning. We evaluate state-of-the-art (SOTA) editing methods (e.g., ROME, MEMIT, GRACE, WISE, and AlphaEdit) against existing unlearning approaches on pretrained and finetuned knowledge. Results show certain editing methods, notably WISE and AlphaEdit, are effective unlearning baselines, especially for pretrained knowledge, and excel in generating human-aligned refusal answers. To better adapt editing methods for unlearning applications, we propose practical recipes including self-improvement and query merging. The former leverages the LLM’s own in-context learning ability to craft a more human-aligned unlearning target, and the latter enables ROME and MEMIT to perform well in unlearning longer sample sequences. We advocate for the unlearning community to adopt SOTA editing methods as baselines and explore unlearning from an editing perspective for more holistic LLM memory control.</p>
 </section>
@@ -82,6 +91,7 @@
   date = {2026-01-20},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/dupont2021coin/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,12 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>COIN: COmpression with Implicit Neural representations</h1>
-  <p class="authors">Emilien Dupont, Adam Goliński, Milad Alizadeh, Yee Whye Teh, and Arnaud Doucet</p>
-  <p class="meta"><span class="publication-venue">Neural Compression Workshop at ICLR</span></p>
-  <div class="publication-links"><a href="https://arxiv.org/abs/2103.03123">Paper</a>
-  <a href="https://github.com/EmilienDupont/coin">Code</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>COIN: COmpression with Implicit Neural representations</h1>
+      <p class="authors publication-authors"><span class="publication-author"><span>Emilien Dupont</span></span>, <span class="publication-author"><span>Adam Goliński</span></span>, <span class="publication-author"><a href="https://mil.ad"><img src="/camlsys-preview/assets/milad.jpg" alt="" width="28" height="28" loading="lazy"><span>Milad Alizadeh</span></a></span>, <span class="publication-author"><span>Yee Whye Teh</span></span>, <span class="publication-author"><span>Arnaud Doucet</span></span></p>
+      <p class="meta venue"><span class="publication-venue">Neural Compression Workshop at ICLR</span>, <span class="publication-date">2021</span></p>
+      <div class="publication-links"><a href="https://github.com/EmilienDupont/coin">Code</a></div>
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/2103.03123">PDF<span class="sr-only">: COIN: COmpression with Implicit Neural representations</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: COIN: COmpression with Implicit Neural representations</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>We propose a new simple approach for image compression: instead of storing the RGB values for each pixel of an image, we store the weights of a neural network overfitted to the image. Specifically, to encode an image, we fit it with an MLP which maps pixel locations to RGB values. We then quantize and store the weights of this MLP as a code for the image. To decode the image, we simply evaluate the MLP at every pixel location. We found that this simple approach outperforms JPEG at low bit-rates, even without entropy coding or learning a distribution over weights. While our framework is not yet competitive with state of the art compression methods, we show that it has various attractive properties which could make it a viable alternative to other neural data compression approaches.</p>
 </section>
@@ -83,6 +91,7 @@
   date = {2021-05-07},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

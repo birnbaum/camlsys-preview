@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/iacob2026-red-queen/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -60,14 +60,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators</h1>
-  <p class="authors">Alex Iacob, Andrej Jovanović, William F. Shen, Daniel Burkhardt, Meghdad Kurmanji, Nurbek Tastan, Lorenzo Sani, Niccolò Alberto Elia Venanzi, Jiayi Nie, Ambroise Odonnat, Zeyu Cao, Bill Marino, Xinchi Qiu, Rika Antonova, and Nicholas D. Lane</p>
-  <p class="meta"><span class="publication-badge">Preprint</span> <span class="publication-venue">arXiv</span></p>
-  <div class="publication-links"><a href="https://arxiv.org/abs/2606.26294">Paper</a>
-  
-  
-  <a href="/camlsys-preview/publications/iacob2026-red-queen/#article">Article</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators</h1>
+      <p class="authors publication-authors"><span class="publication-author"><a href="https://iacob-alexandru-andrei.github.io/"><img src="/camlsys-preview/assets/people/alexandru-andrei-iacob.jpg" alt="" width="28" height="28" loading="lazy"><span>Alex Iacob</span></a></span>, <span class="publication-author"><a href="https://andrej.jovanovic.co.za/"><img src="/camlsys-preview/assets/andrej.jpg" alt="" width="28" height="28" loading="lazy"><span>Andrej Jovanović</span></a></span>, <span class="publication-author"><span>William F. Shen</span></span>, <span class="publication-author"><span>Daniel Burkhardt</span></span>, <span class="publication-author"><a href="https://meghdadk.github.io/"><img src="/camlsys-preview/assets/meghdad.jpg" alt="" width="28" height="28" loading="lazy"><span>Meghdad Kurmanji</span></a></span>, <span class="publication-author"><span>Nurbek Tastan</span></span>, <span class="publication-author"><a href="https://relogu.github.io/"><img src="/camlsys-preview/assets/lorenzo.jpeg" alt="" width="28" height="28" loading="lazy"><span>Lorenzo Sani</span></a></span>, <span class="publication-author"><span>Niccolò Alberto Elia Venanzi</span></span>, <span class="publication-author"><span>Jiayi Nie</span></span>, <span class="publication-author"><span>Ambroise Odonnat</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/zc317"><span>Zeyu Cao</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/wlm27"><img src="/camlsys-preview/assets/billM.jpeg" alt="" width="28" height="28" loading="lazy"><span>Bill Marino</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="28" height="28" loading="lazy"><span>Xinchi Qiu</span></a></span>, <span class="publication-author"><span>Rika Antonova</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <p class="meta venue"><span class="publication-badge">Preprint</span> <span class="publication-venue">arXiv</span>, <span class="publication-date">2026</span></p>
+      <div class="publication-links"><a href="/camlsys-preview/publications/iacob2026-red-queen/#article">Article</a></div>
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/2606.26294">PDF<span class="sr-only">: The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>Self-improving agents are state-of-the-art on agentic coding benchmarks, yet their search methods assume a stationary evaluation criterion. This ignores a central feature of evolution: species adapt as their environments change with them. We introduce the Red Queen G"odel Machine (RQGM), an evolutionary framework for recursive self-improvement under non-stationary utilities. This allows learned evaluators to improve alongside the agents they guide. On DeepSWE, the RQGM improves over its fixed-evaluator baseline by adding a complementary agent-as-a-judge code-review signal: a co-evolved reviewer grades coder patches to guide search. At low reasoning effort, the RQGM coder passes 82.1% of held-out tasks against the baseline’s 75.0%, and nearly matches the GPT-6 Astra model at high effort. In scientific paper writing and reviewing, and Olympiad-level proof writing and grading, co-evolved evaluators provide an evaluation criterion. Anchored to human IMO grades, a co-evolved grader writes its own milestone rubric and exceeds static baselines at a 3x lower search cost, driving the prover to the best mean score. Since the RQGM can modify the search objective across epochs, it can regularize the search. For example, the RQGM reduces self-preference bias via an additional adversarial objective to discover reviewers equally stringent on AI and human work. Guided by these calibrated reviewers, co-evolved writers reach 1.78x-1.86x higher acceptance rates than the baseline under an agent-as-a-judge panel. The RQGM enables self-improving systems where agents and evaluators recursively bootstrap each other beyond static evaluation.</p>
 </section>
@@ -305,6 +311,7 @@
   date = {2026-06-24},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

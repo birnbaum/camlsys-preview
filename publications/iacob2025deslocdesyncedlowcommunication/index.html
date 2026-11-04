@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/iacob2025deslocdesyncedlowcommunication/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,11 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>DES-LOC: Desynced Low Communication Adaptive Optimizers for Foundation Models</h1>
-  <p class="authors">Alex Iacob, Lorenzo Sani, Mher Safaryan, Paris Giampouras, Samuel Horváth, Andrej Jovanovic, Meghdad Kurmanji, Preslav Aleksandrov, William Shen, Xinchi Qiu, and Nic Lane</p>
-  <p class="meta"><span class="publication-venue">International Conference on Learning Representations (ICLR)</span></p>
-  <div class="publication-links"><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/46a64917ae77556266a5fb4cbc99a201-Abstract-Conference.html">Paper</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>DES-LOC: Desynced Low Communication Adaptive Optimizers for Foundation Models</h1>
+      <p class="authors publication-authors"><span class="publication-author"><a href="https://iacob-alexandru-andrei.github.io/"><img src="/camlsys-preview/assets/people/alexandru-andrei-iacob.jpg" alt="" width="28" height="28" loading="lazy"><span>Alex Iacob</span></a></span>, <span class="publication-author"><a href="https://relogu.github.io/"><img src="/camlsys-preview/assets/lorenzo.jpeg" alt="" width="28" height="28" loading="lazy"><span>Lorenzo Sani</span></a></span>, <span class="publication-author"><span>Mher Safaryan</span></span>, <span class="publication-author"><span>Paris Giampouras</span></span>, <span class="publication-author"><span>Samuel Horváth</span></span>, <span class="publication-author"><a href="https://andrej.jovanovic.co.za/"><img src="/camlsys-preview/assets/andrej.jpg" alt="" width="28" height="28" loading="lazy"><span>Andrej Jovanovic</span></a></span>, <span class="publication-author"><a href="https://meghdadk.github.io/"><img src="/camlsys-preview/assets/meghdad.jpg" alt="" width="28" height="28" loading="lazy"><span>Meghdad Kurmanji</span></a></span>, <span class="publication-author"><a href="https://preslavaleksandrov.com/"><img src="/camlsys-preview/assets/preslav.png" alt="" width="28" height="28" loading="lazy"><span>Preslav Aleksandrov</span></a></span>, <span class="publication-author"><span>William Shen</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="28" height="28" loading="lazy"><span>Xinchi Qiu</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nic Lane</span></a></span></p>
+      <p class="meta venue"><span class="publication-venue">International Conference on Learning Representations (ICLR)</span>, <span class="publication-date">2026</span></p>
+      
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/2505.22549">PDF<span class="sr-only">: DES-LOC: Desynced Low Communication Adaptive Optimizers for Foundation Models</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: DES-LOC: Desynced Low Communication Adaptive Optimizers for Foundation Models</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>Scaling foundation model training with Distributed Data Parallel~(DDP) methods is bandwidth-limited. Existing infrequent communication methods like Local SGD were designed to synchronize model parameters only and cannot be trivially applied to adaptive optimizers due to additional optimizer states. Heuristic approaches that keep states local or reset them lack guarantees and can be unstable in compute‑efficient batch regimes; conversely, Local Adam synchronizes all states uniformly and is provably convergent but triples communication costs. We propose Desynced Low Communication Adaptive Optimizers (DES-LOC), a family of optimizers assigning independent synchronization periods to parameters and momenta, enabling lower communication costs while preserving convergence. Our theoretical analysis shows that while parameter synchronization dominates the asymptotic rate in-expectation, high-probability convergence guarantees require at least infrequent synchronization of the second momentum. Furthermore, we prove that more frequent momentum sync permits larger stable step sizes. Experiments on language models of up to 1.7B show that DES-LOC can communicate 170x less than DDP and 2x less than the previous state-of-the-art Local Adam, enabling 1.3x–2.1x wall‑clock speedups over DDP for 1-13B models on 100Gb/s links. Furthermore, unlike previous heuristic methods, DES-LOC is robust to worker failures offering a scalable, efficient, and fault-tolerant solution for foundation model training.</p>
 </section>
@@ -82,6 +91,7 @@
   date = {2026-04-23},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

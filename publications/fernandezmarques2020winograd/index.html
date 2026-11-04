@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/fernandezmarques2020winograd/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,11 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>Searching for Winograd-aware Quantized Networks</h1>
-  <p class="authors">Javier Fernandez-Marques, Paul N. Whatmough, Andrew Mundy, and Matthew Mattina</p>
-  <p class="meta"><span class="publication-venue">Conference on Machine Learning and Systems (MLSys)</span></p>
-  <div class="publication-links"><a href="https://arxiv.org/abs/2002.10711">Paper</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>Searching for Winograd-aware Quantized Networks</h1>
+      <p class="authors publication-authors"><span class="publication-author"><a href="https://jafermarq.com/"><img src="/camlsys-preview/assets/javier.png" alt="" width="28" height="28" loading="lazy"><span>Javier Fernandez-Marques</span></a></span>, <span class="publication-author"><span>Paul N. Whatmough</span></span>, <span class="publication-author"><span>Andrew Mundy</span></span>, <span class="publication-author"><span>Matthew Mattina</span></span></p>
+      <p class="meta venue"><span class="publication-venue">Conference on Machine Learning and Systems (MLSys)</span>, <span class="publication-date">2020</span></p>
+      
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/2002.10711">PDF<span class="sr-only">: Searching for Winograd-aware Quantized Networks</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Searching for Winograd-aware Quantized Networks</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>Lightweight architectural designs of Convolutional Neural Networks (CNNs) together with quantization have paved the way for the deployment of demanding computer vision applications on mobile devices. Parallel to this, alternative formulations to the convolution operation such as FFT, Strassen and Winograd, have been adapted for use in CNNs offering further speedups. Winograd convolutions are the fastest known algorithm for spatially small convolutions, but exploiting their full potential comes with the burden of numerical error, rendering them unusable in quantized contexts. In this work we propose a Winograd-aware formulation of convolution layers which exposes the numerical inaccuracies introduced by the Winograd transformations to the learning of the model parameters, enabling the design of competitive quantized models without impacting model size. We also address the source of the numerical error and propose a relaxation on the form of the transformation matrices, resulting in up to 10% higher classification accuracy on CIFAR-10. Finally, we propose wiNAS, a neural architecture search (NAS) framework that jointly optimizes a given macro-architecture for accuracy and latency leveraging Winograd-aware layers. A Winograd-aware ResNet-18 optimized with wiNAS for CIFAR-10 results in 2.66x speedup compared to im2row, one of the most widely used optimized convolution implementations, with no loss in accuracy.</p>
 </section>
@@ -81,6 +90,7 @@
   date = {2020-03-02},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

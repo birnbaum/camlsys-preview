@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/qiu2022zerofl/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,11 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>ZeroFL: Efficient On-Device Training for Federated Learning with Local Sparsity</h1>
-  <p class="authors">Xinchi Qiu, Javier Fernandez-Marques, Pedro PB Gusmao, Yan Gao, Titouan Parcollet, and Nicholas Donald Lane</p>
-  <p class="meta"><span class="publication-venue">International Conference on Learning Representations (ICLR)</span> · Xinchi Qiu and Javier Fernandez-Marques contributed equally</p>
-  <div class="publication-links"><a href="https://arxiv.org/abs/2208.02507">Paper</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>ZeroFL: Efficient On-Device Training for Federated Learning with Local Sparsity</h1>
+      <p class="authors publication-authors"><span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="28" height="28" loading="lazy"><span>Xinchi Qiu</span></a></span>, <span class="publication-author"><a href="https://jafermarq.com/"><img src="/camlsys-preview/assets/javier.png" alt="" width="28" height="28" loading="lazy"><span>Javier Fernandez-Marques</span></a></span>, <span class="publication-author"><a href="https://www.surrey.ac.uk/people/pedro-porto-buarque-de-gusmao"><img src="/camlsys-preview/assets/pedro.png" alt="" width="28" height="28" loading="lazy"><span>Pedro PB Gusmao</span></a></span>, <span class="publication-author"><img src="/camlsys-preview/assets/yan.jpg" alt="" width="28" height="28" loading="lazy"><span>Yan Gao</span></span>, <span class="publication-author"><a href="https://www.darnault-parcollet.fr/Parcollet/"><img src="/camlsys-preview/assets/titouan.jpeg" alt="" width="28" height="28" loading="lazy"><span>Titouan Parcollet</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas Donald Lane</span></a></span></p>
+      <p class="meta venue"><span class="publication-venue">International Conference on Learning Representations (ICLR)</span>, <span class="publication-date">2022</span> · Xinchi Qiu and Javier Fernandez-Marques contributed equally</p>
+      
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://arxiv.org/pdf/2208.02507">PDF<span class="sr-only">: ZeroFL: Efficient On-Device Training for Federated Learning with Local Sparsity</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: ZeroFL: Efficient On-Device Training for Federated Learning with Local Sparsity</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>When the available hardware cannot meet the memory and compute requirements to efficiently train high performing machine learning models, a compromise in either the training quality or the model complexity is needed. In Federated Learning (FL), nodes are orders of magnitude more constrained than traditional server-grade hardware and are often battery powered, severely limiting the sophistication of models that can be trained under this paradigm. While most research has focused on designing better aggregation strategies to improve convergence rates and in alleviating the communication costs of FL, fewer efforts have been devoted to accelerating on-device training. Such stage, which repeats hundreds of times (i.e. every round) and can involve thousands of devices, accounts for the majority of the time required to train federated models and, the totality of the energy consumption at the client side. In this work, we present the first study on the unique aspects that arise when introducing sparsity at training time in FL workloads. We then propose ZeroFL, a framework that relies on highly sparse operations to accelerate on-device training. Models trained with ZeroFL and 95% sparsity achieve up to 2.3% higher accuracy compared to competitive baselines obtained from adapting a state-of-the-art sparse training framework to the FL setting.</p>
 </section>
@@ -82,6 +91,7 @@
   date = {2022-04-25},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">

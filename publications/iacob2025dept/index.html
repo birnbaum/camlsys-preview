@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/iacob2025dept/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793784000">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793811364">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,11 +58,20 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <h1>DEPT: Decoupled Embeddings for Pre-training Language Models</h1>
-  <p class="authors">Alex Iacob, Lorenzo Sani, Meghdad Kurmanji, William F. Shen, Xinchi Qiu, Dongqi Cai, Yan Gao, and Nicholas D. Lane</p>
-  <p class="meta"><span class="publication-venue">International Conference on Learning Representations (ICLR)</span> · Oral</p>
-  <div class="publication-links"><a href="https://openreview.net/forum?id=vf5aUZT0Fz">Paper</a></div>
+  <div class="publication-heading">
+    <div class="publication-details">
+      <h1>DEPT: Decoupled Embeddings for Pre-training Language Models</h1>
+      <p class="authors publication-authors"><span class="publication-author"><a href="https://iacob-alexandru-andrei.github.io/"><img src="/camlsys-preview/assets/people/alexandru-andrei-iacob.jpg" alt="" width="28" height="28" loading="lazy"><span>Alex Iacob</span></a></span>, <span class="publication-author"><a href="https://relogu.github.io/"><img src="/camlsys-preview/assets/lorenzo.jpeg" alt="" width="28" height="28" loading="lazy"><span>Lorenzo Sani</span></a></span>, <span class="publication-author"><a href="https://meghdadk.github.io/"><img src="/camlsys-preview/assets/meghdad.jpg" alt="" width="28" height="28" loading="lazy"><span>Meghdad Kurmanji</span></a></span>, <span class="publication-author"><span>William F. Shen</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="28" height="28" loading="lazy"><span>Xinchi Qiu</span></a></span>, <span class="publication-author"><a href="https://www.caidongqi.com/"><img src="/camlsys-preview/assets/cdq-cambridge.jpeg" alt="" width="28" height="28" loading="lazy"><span>Dongqi Cai</span></a></span>, <span class="publication-author"><img src="/camlsys-preview/assets/yan.jpg" alt="" width="28" height="28" loading="lazy"><span>Yan Gao</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <p class="meta venue"><span class="publication-venue">International Conference on Learning Representations (ICLR)</span>, <span class="publication-date">2025</span> · Oral</p>
+      
 
+    </div>
+    <div class="publication-actions">
+  <a class="publication-download" href="https://openreview.net/pdf?id=vf5aUZT0Fz">PDF<span class="sr-only">: DEPT: Decoupled Embeddings for Pre-training Language Models</span></a>
+  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: DEPT: Decoupled Embeddings for Pre-training Language Models</span></a>
+</div>
+
+  </div>
   
   <section class="abstract"><h2>Abstract</h2><p>Language Model pre-training uses broad data mixtures to enhance performance across domains and languages. However, training on such heterogeneous text corpora requires extensive and expensive efforts. Since these data sources vary significantly in lexical, syntactic, and semantic aspects, they cause negative interference or the ``curse of multilinguality’’. To address these challenges we propose a communication-efficient pre-training framework, DEPT. Our method decouples embeddings from the transformer body while simultaneously training the latter on multiple data sources without requiring a shared vocabulary. DEPT can: (1) train robustly and effectively under significant data heterogeneity, (2) minimize token embedding parameters to only what the data source vocabulary requires, while cutting communication costs in direct proportion to both the communication frequency and the reduction in parameters, (3) enhance transformer body plasticity and generalization, improving both average perplexity (up to 20%) and downstream task performance, and (4) enable training with custom optimized vocabularies per data source. We demonstrate DEPT’s potential via the first vocabulary-agnostic federated pre-training of billion-scale models, reducing communication costs by orders of magnitude and embedding memory by 4-5x.</p>
 </section>
@@ -82,6 +91,7 @@
   date = {2025-04-24},
 }</code></pre></details>
 </article>
+<script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
     <footer class="site-footer">
   <div class="wrapper footer-inner">
