@@ -9,7 +9,7 @@
   <script>
     const target = new URL("/camlsys-preview/contact/#joining-us", window.location.origin);
     target.search = window.location.search;
-    if (window.location.hash) target.hash = window.location.hash;
+    if (window.location.hash && !target.hash) target.hash = window.location.hash;
     window.location.replace(target.href);
   </script>
   <noscript><meta http-equiv="refresh" content="0; url=/camlsys-preview/contact/#joining-us"></noscript>

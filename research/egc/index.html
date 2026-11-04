@@ -9,7 +9,7 @@
   <script>
     const target = new URL("/camlsys-preview/publications/tailor2022-egc/", window.location.origin);
     target.search = window.location.search;
-    if (window.location.hash) target.hash = window.location.hash;
+    if (window.location.hash && !target.hash) target.hash = window.location.hash;
     window.location.replace(target.href);
   </script>
   <noscript><meta http-equiv="refresh" content="0; url=/camlsys-preview/publications/tailor2022-egc/"></noscript>
