@@ -8,7 +8,7 @@
   
   <title>Photon: Federated LLM Pre-Training | CaMLSys</title>
   <meta name="description" content="Scaling large language models (LLMs) demands extensive data and computing resources, which are traditionally constrained to data centers by the high-bandwidth requirements of distributed training. Low-bandwidth methods like federated learning (FL) could enable collaborative training of larger models across weakly connected GPUs or weakly connected clusters of GPUs if they can effectively be used for pre-training. Building robust low-bandwidth training systems can: (a) significantly reduce communication infrastructure costs, (b) minimize the impact of hardware failures, (c) widen the pool of usable GPUs, (d) enable collaborative training over the internet, and (e) allow dynamic compute sourcing based on factors like electricity prices. Such advancements would lessen the dependence on specialized data centers, making large-scale AI training more accessible, cost-effective, and adaptable to real-time demands. To achieve this, we introduce Photon, the first complete system for federated end-to-end LLM training, leveraging cross-silo FL for global-scale training with minimal communication overheads. Using Photon, we train the first federated family of decoder-only LLMs from scratch.
-We show that: (1) Photon can train model sizes up to $7$B in a federated fashion while reaching an even better perplexity than centralized pre-training; (2) Photon model training time decreases with available compute, achieving a similar compute-time trade-off to centralized; and (3) Photon outperforms the wall-time of baseline distributed training methods by $35\%$ via communicating $64\times$–$512\times$ less. Our proposal is robust to data heterogeneity and converges twice as fast as previous methods like DiLoCo. This surprising data efficiency stems from a unique approach combining small client batch sizes with extremely high learning rates, enabled by federated averaging&#39;s robustness to hyperparameters. Photon thus represents the first economical system for global internet-wide LLM pre-training.
+We show that: (1) Photon can train model sizes up to 7B in a federated fashion while reaching an even better perplexity than centralized pre-training; (2) Photon model training time decreases with available compute, achieving a similar compute-time trade-off to centralized; and (3) Photon outperforms the wall-time of baseline distributed training methods by 35% via communicating 64×–512× less. Our proposal is robust to data heterogeneity and converges twice as fast as previous methods like DiLoCo. This surprising data efficiency stems from a unique approach combining small client batch sizes with extremely high learning rates, enabled by federated averaging&#39;s robustness to hyperparameters. Photon thus represents the first economical system for global internet-wide LLM pre-training.
 ">
   <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/sani2025-photon/">
   <meta property="og:title" content="Photon: Federated LLM Pre-Training">
@@ -16,7 +16,7 @@ We show that: (1) Photon can train model sizes up to $7$B in a federated fashion
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/sani2025-photon/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793818052">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793819353">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -59,23 +59,17 @@ We show that: (1) Photon can train model sizes up to $7$B in a federated fashion
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <div class="publication-heading">
-    <div class="publication-details">
+  <div class="publication-layout">
+    <div class="publication-main">
+    <header class="publication-heading">
       <h1>Photon: Federated LLM Pre-Training</h1>
-      <p class="authors publication-authors"><span class="publication-author"><a href="https://relogu.github.io/"><img src="/camlsys-preview/assets/lorenzo.jpeg" alt="" width="28" height="28" loading="lazy"><span>Lorenzo Sani</span></a></span>, <span class="publication-author"><a href="https://iacob-alexandru-andrei.github.io/"><img src="/camlsys-preview/assets/people/alexandru-andrei-iacob.jpg" alt="" width="28" height="28" loading="lazy"><span>Alex Iacob</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/zc317"><span>Zeyu Cao</span></a></span>, <span class="publication-author"><img src="/camlsys-preview/assets/royson.jpeg" alt="" width="28" height="28" loading="lazy"><span>Royson Lee</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/wlm27"><img src="/camlsys-preview/assets/billM.jpeg" alt="" width="28" height="28" loading="lazy"><span>Bill Marino</span></a></span>, <span class="publication-author"><img src="/camlsys-preview/assets/yan.jpg" alt="" width="28" height="28" loading="lazy"><span>Yan Gao</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/wz341"><img src="/camlsys-preview/assets/wanru-zhao.jpg" alt="" width="28" height="28" loading="lazy"><span>Wanru Zhao</span></a></span>, <span class="publication-author"><a href="https://www.caidongqi.com/"><img src="/camlsys-preview/assets/cdq-cambridge.jpeg" alt="" width="28" height="28" loading="lazy"><span>Dongqi Cai</span></a></span>, <span class="publication-author"><a href="https://zexilee.github.io/about-zexili/"><img src="/camlsys-preview/assets/zexi_li.jpg" alt="" width="28" height="28" loading="lazy"><span>Zexi Li</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="28" height="28" loading="lazy"><span>Xinchi Qiu</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <ul class="publication-authors" aria-label="Authors"><li class="publication-author"><a href="https://relogu.github.io/"><img src="/camlsys-preview/assets/lorenzo.jpeg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Lorenzo Sani</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span><span class="publication-author-institution-line">Flower Labs</span></span></span></a></li><li class="publication-author"><a href="https://iacob-alexandru-andrei.github.io/"><img src="/camlsys-preview/assets/people/alexandru-andrei-iacob.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Alex Iacob</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span><span class="publication-author-institution-line">Flower Labs</span></span></span></a></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/zc317"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Zeyu Cao</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><span class="publication-author-profile"><img src="/camlsys-preview/assets/royson.jpeg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Royson Lee</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></span></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/wlm27"><img src="/camlsys-preview/assets/billM.jpeg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Bill Marino</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><span class="publication-author-profile"><img src="/camlsys-preview/assets/yan.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Yan Gao</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span><span class="publication-author-institution-line">Flower Labs</span></span></span></span></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/wz341"><img src="/camlsys-preview/assets/wanru-zhao.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Wanru Zhao</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><a href="https://www.caidongqi.com/"><img src="/camlsys-preview/assets/cdq-cambridge.jpeg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Dongqi Cai</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span><span class="publication-author-institution-line">Beijing University of Posts and Telecommunications</span></span></span></a></li><li class="publication-author"><a href="https://zexilee.github.io/about-zexili/"><img src="/camlsys-preview/assets/zexi_li.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Zexi Li</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span><span class="publication-author-institution-line">Zhejiang University</span></span></span></a></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Xinchi Qiu</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Nicholas D. Lane</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span><span class="publication-author-institution-line">Flower Labs</span></span></span></a></li></ul>
+
       <p class="meta venue"><span class="publication-venue">Conference on Machine Learning and Systems (MLSys)</span>, <span class="publication-date">2025</span></p>
-      <div class="publication-links"><a href="/camlsys-preview/publications/sani2025-photon/#videos">Video</a></div>
-
-    </div>
-    <div class="publication-actions">
-  <a class="publication-download" href="https://arxiv.org/pdf/2411.02908">PDF<span class="sr-only">: Photon: Federated LLM Pre-Training</span></a>
-  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Photon: Federated LLM Pre-Training</span></a>
-</div>
-
-  </div>
+    </header>
   
   <section class="abstract"><h2>Abstract</h2><p>Scaling large language models (LLMs) demands extensive data and computing resources, which are traditionally constrained to data centers by the high-bandwidth requirements of distributed training. Low-bandwidth methods like federated learning (FL) could enable collaborative training of larger models across weakly connected GPUs or weakly connected clusters of GPUs if they can effectively be used for pre-training. Building robust low-bandwidth training systems can: (a) significantly reduce communication infrastructure costs, (b) minimize the impact of hardware failures, (c) widen the pool of usable GPUs, (d) enable collaborative training over the internet, and (e) allow dynamic compute sourcing based on factors like electricity prices. Such advancements would lessen the dependence on specialized data centers, making large-scale AI training more accessible, cost-effective, and adaptable to real-time demands. To achieve this, we introduce Photon, the first complete system for federated end-to-end LLM training, leveraging cross-silo FL for global-scale training with minimal communication overheads. Using Photon, we train the first federated family of decoder-only LLMs from scratch.
-We show that: (1) Photon can train model sizes up to $7$B in a federated fashion while reaching an even better perplexity than centralized pre-training; (2) Photon model training time decreases with available compute, achieving a similar compute-time trade-off to centralized; and (3) Photon outperforms the wall-time of baseline distributed training methods by $35\%$ via communicating $64\times$–$512\times$ less. Our proposal is robust to data heterogeneity and converges twice as fast as previous methods like DiLoCo. This surprising data efficiency stems from a unique approach combining small client batch sizes with extremely high learning rates, enabled by federated averaging’s robustness to hyperparameters. Photon thus represents the first economical system for global internet-wide LLM pre-training.</p>
+We show that: (1) Photon can train model sizes up to 7B in a federated fashion while reaching an even better perplexity than centralized pre-training; (2) Photon model training time decreases with available compute, achieving a similar compute-time trade-off to centralized; and (3) Photon outperforms the wall-time of baseline distributed training methods by 35% via communicating 64×–512× less. Our proposal is robust to data heterogeneity and converges twice as fast as previous methods like DiLoCo. This surprising data efficiency stems from a unique approach combining small client batch sizes with extremely high learning rates, enabled by federated averaging’s robustness to hyperparameters. Photon thus represents the first economical system for global internet-wide LLM pre-training.</p>
 </section>
   
   <div class="post-content">
@@ -95,18 +89,38 @@ We show that: (1) Photon can train model sizes up to $7$B in a federated fashion
 
   </section>
   
-  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{sani2025photon,
+    </div>
+    <aside class="publication-sidebar" aria-label="Paper resources">
+      <h2>Materials</h2>
+      <ul class="publication-materials">
+  <li><a class="publication-download" href="https://arxiv.org/pdf/2411.02908"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h6"/></svg>
+PDF</a></li>
+  
+  
+  
+  <li><a href="#videos"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m10 8 6 4-6 4z"/></svg>
+Talk</a></li>
+  
+</ul>
+
+      <div class="publication-citation">
+        <button class="citation-copy" type="button" aria-label="Copy BibTeX" title="Copy BibTeX" hidden>
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="copied-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+        </button>
+        <details id="bibtex" open><summary>BibTeX</summary><pre><code>@inproceedings{sani2025photon,
   title = {{Photon: Federated LLM Pre-Training}},
   author = {Sani, Lorenzo and Iacob, Alex and Cao, Zeyu and Lee, Royson and Marino, Bill and Gao, Yan and Zhao, Wanru and Cai, Dongqi and Li, Zexi and Qiu, Xinchi and Lane, Nicholas D.},
   year = {2025},
   booktitle = {Conference on Machine Learning and Systems (MLSys)},
-  url = {https://proceedings.mlsys.org/paper_files/paper/2025/hash/185087ea328b4f03ea8fd0c8aa96f747-Abstract-Conference.html},
-  archiveprefix = {arXiv},
-  eprint = {2411.02908},
   volume = {7},
   publisher = {MLSys},
-  date = {2025-05-12},
+  url = {https://proceedings.mlsys.org/paper_files/paper/2025/hash/185087ea328b4f03ea8fd0c8aa96f747-Abstract-Conference.html}
 }</code></pre></details>
+        <span class="citation-copy-status sr-only" role="status"></span>
+      </div>
+    </aside>
+  </div>
 </article>
 <script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>

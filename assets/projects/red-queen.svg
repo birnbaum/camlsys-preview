@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" fill="none">
+  <rect width="240" height="160" fill="#fbf4f3"/>
+  <g stroke="#a34d57" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M77 49c23-25 63-25 86 0m-1-12 3 14-14-2M163 111c-23 25-63 25-86 0m1 12-3-14 14 2"/>
+    <rect x="38" y="54" width="64" height="54" rx="9" fill="#fff"/>
+    <path d="M60 71h1m18 0h1M61 81h17M70 54v-2" stroke-width="3"/>
+    <circle cx="70" cy="49" r="3" fill="#a34d57" stroke="none"/>
+    <rect x="138" y="54" width="64" height="54" rx="9" fill="#fff"/>
+    <path d="m158 72 8 8 16-17"/>
+  </g>
+  <g fill="#86404a" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">
+    <text x="70" y="99">AGENT</text>
+    <text x="170" y="99">EVALUATOR</text>
+  </g>
+</svg>

@@ -7,7 +7,7 @@
   <script src="/camlsys-preview/assets/theme.js"></script>
   
   <title>Journey Towards Tiny Perceptual Super-Resolution | CaMLSys</title>
-  <meta name="description" content="Recent works in single-image perceptual super-resolution (SR) have demonstrated unprecedented performance in generating realistic textures by means of deep convolutional networks. However, these convolutional models are excessively large and expensive, hindering their effective deployment to end devices. In this work, we propose a neural architecture search (NAS) approach that integrates NAS and generative adversarial networks (GANs) with recent advances in perceptual SR and pushes the efficiency of small perceptual SR models to facilitate on-device execution. Specifically, we search over the architectures of both the generator and the discriminator sequentially, highlighting the unique challenges and key observations of searching for an SR-optimized discriminator and comparing them with existing discriminator architectures in the literature. Our tiny perceptual SR (TPSR) models outperform SRGAN and EnhanceNet on both full-reference perceptual metric (LPIPS) and distortion metric (PSNR) while being up to 26.4$\times$ more memory efficient and 33.6$\times$ more compute efficient respectively.
+  <meta name="description" content="Recent works in single-image perceptual super-resolution (SR) have demonstrated unprecedented performance in generating realistic textures by means of deep convolutional networks. However, these convolutional models are excessively large and expensive, hindering their effective deployment to end devices. In this work, we propose a neural architecture search (NAS) approach that integrates NAS and generative adversarial networks (GANs) with recent advances in perceptual SR and pushes the efficiency of small perceptual SR models to facilitate on-device execution. Specifically, we search over the architectures of both the generator and the discriminator sequentially, highlighting the unique challenges and key observations of searching for an SR-optimized discriminator and comparing them with existing discriminator architectures in the literature. Our tiny perceptual SR (TPSR) models outperform SRGAN and EnhanceNet on both full-reference perceptual metric (LPIPS) and distortion metric (PSNR) while being up to 26.4× more memory efficient and 33.6× more compute efficient respectively.
 ">
   <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/lee2020journey/">
   <meta property="og:title" content="Journey Towards Tiny Perceptual Super-Resolution">
@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/lee2020journey/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793818052">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793819353">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,40 +58,53 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <div class="publication-heading">
-    <div class="publication-details">
+  <div class="publication-layout">
+    <div class="publication-main">
+    <header class="publication-heading">
       <h1>Journey Towards Tiny Perceptual Super-Resolution</h1>
-      <p class="authors publication-authors"><span class="publication-author"><img src="/camlsys-preview/assets/royson.jpeg" alt="" width="28" height="28" loading="lazy"><span>Royson Lee</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ld539"><img src="/camlsys-preview/assets/people/lukasz-dudziak.jpg" alt="" width="28" height="28" loading="lazy"><span>Łukasz Dudziak</span></a></span>, <span class="publication-author"><span>Mohamed Abdelfattah</span></span>, <span class="publication-author"><span>Stylianos I. Venieris</span></span>, <span class="publication-author"><span>Hyeji Kim</span></span>, <span class="publication-author"><span>Hongkai Wen</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <ul class="publication-authors" aria-label="Authors"><li class="publication-author"><span class="publication-author-profile"><img src="/camlsys-preview/assets/royson.jpeg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Royson Lee</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></span></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ld539"><img src="/camlsys-preview/assets/people/lukasz-dudziak.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Łukasz Dudziak</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></a></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Mohamed Abdelfattah</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></span></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Stylianos I. Venieris</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></span></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Hyeji Kim</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></span></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Hongkai Wen</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span><span class="publication-author-institution-line">University of Warwick</span></span></span></span></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Nicholas D. Lane</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li></ul>
+
       <p class="meta venue"><span class="publication-venue">European Conference on Computer Vision (ECCV)</span>, <span class="publication-date">2020</span></p>
-      
-
-    </div>
-    <div class="publication-actions">
-  <a class="publication-download" href="https://arxiv.org/pdf/2007.04356">PDF<span class="sr-only">: Journey Towards Tiny Perceptual Super-Resolution</span></a>
-  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Journey Towards Tiny Perceptual Super-Resolution</span></a>
-</div>
-
-  </div>
+    </header>
   
-  <section class="abstract"><h2>Abstract</h2><p>Recent works in single-image perceptual super-resolution (SR) have demonstrated unprecedented performance in generating realistic textures by means of deep convolutional networks. However, these convolutional models are excessively large and expensive, hindering their effective deployment to end devices. In this work, we propose a neural architecture search (NAS) approach that integrates NAS and generative adversarial networks (GANs) with recent advances in perceptual SR and pushes the efficiency of small perceptual SR models to facilitate on-device execution. Specifically, we search over the architectures of both the generator and the discriminator sequentially, highlighting the unique challenges and key observations of searching for an SR-optimized discriminator and comparing them with existing discriminator architectures in the literature. Our tiny perceptual SR (TPSR) models outperform SRGAN and EnhanceNet on both full-reference perceptual metric (LPIPS) and distortion metric (PSNR) while being up to 26.4$\times$ more memory efficient and 33.6$\times$ more compute efficient respectively.</p>
+  <section class="abstract"><h2>Abstract</h2><p>Recent works in single-image perceptual super-resolution (SR) have demonstrated unprecedented performance in generating realistic textures by means of deep convolutional networks. However, these convolutional models are excessively large and expensive, hindering their effective deployment to end devices. In this work, we propose a neural architecture search (NAS) approach that integrates NAS and generative adversarial networks (GANs) with recent advances in perceptual SR and pushes the efficiency of small perceptual SR models to facilitate on-device execution. Specifically, we search over the architectures of both the generator and the discriminator sequentially, highlighting the unique challenges and key observations of searching for an SR-optimized discriminator and comparing them with existing discriminator architectures in the literature. Our tiny perceptual SR (TPSR) models outperform SRGAN and EnhanceNet on both full-reference perceptual metric (LPIPS) and distortion metric (PSNR) while being up to 26.4× more memory efficient and 33.6× more compute efficient respectively.</p>
 </section>
   
   <div class="post-content">
 </div>
   
-  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{lee2020journey,
+    </div>
+    <aside class="publication-sidebar" aria-label="Paper resources">
+      <h2>Materials</h2>
+      <ul class="publication-materials">
+  <li><a class="publication-download" href="https://arxiv.org/pdf/2007.04356"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h6"/></svg>
+PDF</a></li>
+  
+  
+  
+  
+  
+</ul>
+
+      <div class="publication-citation">
+        <button class="citation-copy" type="button" aria-label="Copy BibTeX" title="Copy BibTeX" hidden>
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="copied-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+        </button>
+        <details id="bibtex" open><summary>BibTeX</summary><pre><code>@inproceedings{lee2020journey,
   title = {{Journey Towards Tiny Perceptual Super-Resolution}},
   author = {Lee, Royson and Dudziak, Łukasz and Abdelfattah, Mohamed and Venieris, Stylianos I. and Kim, Hyeji and Wen, Hongkai and Lane, Nicholas D.},
   year = {2020},
   booktitle = {European Conference on Computer Vision (ECCV)},
-  url = {https://doi.org/10.1007/978-3-030-58574-7_6},
-  archiveprefix = {arXiv},
-  eprint = {2007.04356},
-  doi = {10.1007/978-3-030-58574-7_6},
-  pages = {85-102},
+  pages = {85--102},
   publisher = {Springer International Publishing},
-  date = {2020-08-23},
+  doi = {10.1007/978-3-030-58574-7_6},
+  url = {https://doi.org/10.1007/978-3-030-58574-7_6}
 }</code></pre></details>
+        <span class="citation-copy-status sr-only" role="status"></span>
+      </div>
+    </aside>
+  </div>
 </article>
 <script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>

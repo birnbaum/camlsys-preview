@@ -7,7 +7,7 @@
   <script src="/camlsys-preview/assets/theme.js"></script>
   
   <title>Breaking Physical and Linguistic Borders: Multilingual Federated Prompt Tuning for Low-Resource Languages | CaMLSys</title>
-  <meta name="description" content="Pre-trained large language models (LLMs) have become a cornerstone of modern natural language processing, with their capabilities extending across a wide range of applications and languages. However, the fine-tuning of multilingual LLMs, especially for low-resource languages, faces significant challenges arising from data-sharing restrictions (the physical border) and inherent linguistic differences (the linguistic border). These barriers hinder users of various languages, particularly those in low-resource regions, from fully benefiting from the advantages of LLMs. To address these challenges, we propose the Federated Prompt Tuning Paradigm for multilingual scenarios, which utilizes parameter-efficient fine-tuning while adhering to data sharing restrictions. We design a comprehensive set of experiments and analyze them using a novel notion of language distance to highlight the strengths of our paradigm: Even under computational constraints, our method not only improves data efficiency but also facilitates mutual enhancements across languages, particularly benefiting low-resource ones. Compared to traditional local cross-lingual transfer tuning methods, our approach achieves 6.9\% higher accuracy with improved data efficiency, and demonstrates greater stability and generalization. These findings underscore the potential of our approach to promote social equality and champion linguistic diversity, ensuring that no language is left behind.
+  <meta name="description" content="Pre-trained large language models (LLMs) have become a cornerstone of modern natural language processing, with their capabilities extending across a wide range of applications and languages. However, the fine-tuning of multilingual LLMs, especially for low-resource languages, faces significant challenges arising from data-sharing restrictions (the physical border) and inherent linguistic differences (the linguistic border). These barriers hinder users of various languages, particularly those in low-resource regions, from fully benefiting from the advantages of LLMs. To address these challenges, we propose the Federated Prompt Tuning Paradigm for multilingual scenarios, which utilizes parameter-efficient fine-tuning while adhering to data sharing restrictions. We design a comprehensive set of experiments and analyze them using a novel notion of language distance to highlight the strengths of our paradigm: Even under computational constraints, our method not only improves data efficiency but also facilitates mutual enhancements across languages, particularly benefiting low-resource ones. Compared to traditional local cross-lingual transfer tuning methods, our approach achieves 6.9% higher accuracy with improved data efficiency, and demonstrates greater stability and generalization. These findings underscore the potential of our approach to promote social equality and champion linguistic diversity, ensuring that no language is left behind.
 ">
   <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/zhao2024breaking/">
   <meta property="og:title" content="Breaking Physical and Linguistic Borders: Multilingual Federated Prompt Tuning for Low-Resource Languages">
@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/zhao2024breaking/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793818052">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793819353">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,37 +58,50 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <div class="publication-heading">
-    <div class="publication-details">
+  <div class="publication-layout">
+    <div class="publication-main">
+    <header class="publication-heading">
       <h1>Breaking Physical and Linguistic Borders: Multilingual Federated Prompt Tuning for Low-Resource Languages</h1>
-      <p class="authors publication-authors"><span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/wz341"><img src="/camlsys-preview/assets/wanru-zhao.jpg" alt="" width="28" height="28" loading="lazy"><span>Wanru Zhao</span></a></span>, <span class="publication-author"><span>Yihong Chen</span></span>, <span class="publication-author"><img src="/camlsys-preview/assets/royson.jpeg" alt="" width="28" height="28" loading="lazy"><span>Royson Lee</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="28" height="28" loading="lazy"><span>Xinchi Qiu</span></a></span>, <span class="publication-author"><img src="/camlsys-preview/assets/yan.jpg" alt="" width="28" height="28" loading="lazy"><span>Yan Gao</span></span>, <span class="publication-author"><a href="https://os-hxfan.github.io/"><img src="/camlsys-preview/assets/hongxiang.jpg" alt="" width="28" height="28" loading="lazy"><span>Hongxiang Fan</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <ul class="publication-authors" aria-label="Authors"><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/wz341"><img src="/camlsys-preview/assets/wanru-zhao.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Wanru Zhao</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Yihong Chen</span><span class="publication-author-institution"><span class="publication-author-institution-line">University College London</span></span></span></span></li><li class="publication-author"><span class="publication-author-profile"><img src="/camlsys-preview/assets/royson.jpeg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Royson Lee</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span><span class="publication-author-institution-line">Samsung AI Center</span></span></span></span></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Xinchi Qiu</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><span class="publication-author-profile"><img src="/camlsys-preview/assets/yan.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Yan Gao</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span><span class="publication-author-institution-line">Flower Labs</span></span></span></span></li><li class="publication-author"><a href="https://os-hxfan.github.io/"><img src="/camlsys-preview/assets/hongxiang.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Hongxiang Fan</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span><span class="publication-author-institution-line">Samsung AI Center</span></span></span></a></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Nicholas D. Lane</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span><span class="publication-author-institution-line">Flower Labs</span></span></span></a></li></ul>
+
       <p class="meta venue"><span class="publication-venue">International Conference on Learning Representations (ICLR)</span>, <span class="publication-date">2024</span></p>
-      
-
-    </div>
-    <div class="publication-actions">
-  <a class="publication-download" href="https://openreview.net/pdf?id=HyRwexERAo">PDF<span class="sr-only">: Breaking Physical and Linguistic Borders: Multilingual Federated Prompt Tuning for Low-Resource Languages</span></a>
-  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Breaking Physical and Linguistic Borders: Multilingual Federated Prompt Tuning for Low-Resource Languages</span></a>
-</div>
-
-  </div>
+    </header>
   
-  <section class="abstract"><h2>Abstract</h2><p>Pre-trained large language models (LLMs) have become a cornerstone of modern natural language processing, with their capabilities extending across a wide range of applications and languages. However, the fine-tuning of multilingual LLMs, especially for low-resource languages, faces significant challenges arising from data-sharing restrictions (the physical border) and inherent linguistic differences (the linguistic border). These barriers hinder users of various languages, particularly those in low-resource regions, from fully benefiting from the advantages of LLMs. To address these challenges, we propose the Federated Prompt Tuning Paradigm for multilingual scenarios, which utilizes parameter-efficient fine-tuning while adhering to data sharing restrictions. We design a comprehensive set of experiments and analyze them using a novel notion of language distance to highlight the strengths of our paradigm: Even under computational constraints, our method not only improves data efficiency but also facilitates mutual enhancements across languages, particularly benefiting low-resource ones. Compared to traditional local cross-lingual transfer tuning methods, our approach achieves 6.9\% higher accuracy with improved data efficiency, and demonstrates greater stability and generalization. These findings underscore the potential of our approach to promote social equality and champion linguistic diversity, ensuring that no language is left behind.</p>
+  <section class="abstract"><h2>Abstract</h2><p>Pre-trained large language models (LLMs) have become a cornerstone of modern natural language processing, with their capabilities extending across a wide range of applications and languages. However, the fine-tuning of multilingual LLMs, especially for low-resource languages, faces significant challenges arising from data-sharing restrictions (the physical border) and inherent linguistic differences (the linguistic border). These barriers hinder users of various languages, particularly those in low-resource regions, from fully benefiting from the advantages of LLMs. To address these challenges, we propose the Federated Prompt Tuning Paradigm for multilingual scenarios, which utilizes parameter-efficient fine-tuning while adhering to data sharing restrictions. We design a comprehensive set of experiments and analyze them using a novel notion of language distance to highlight the strengths of our paradigm: Even under computational constraints, our method not only improves data efficiency but also facilitates mutual enhancements across languages, particularly benefiting low-resource ones. Compared to traditional local cross-lingual transfer tuning methods, our approach achieves 6.9% higher accuracy with improved data efficiency, and demonstrates greater stability and generalization. These findings underscore the potential of our approach to promote social equality and champion linguistic diversity, ensuring that no language is left behind.</p>
 </section>
   
   <div class="post-content">
 </div>
   
-  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{zhao2024breaking,
+    </div>
+    <aside class="publication-sidebar" aria-label="Paper resources">
+      <h2>Materials</h2>
+      <ul class="publication-materials">
+  <li><a class="publication-download" href="https://openreview.net/pdf?id=HyRwexERAo"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h6"/></svg>
+PDF</a></li>
+  
+  
+  
+  
+  
+</ul>
+
+      <div class="publication-citation">
+        <button class="citation-copy" type="button" aria-label="Copy BibTeX" title="Copy BibTeX" hidden>
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="copied-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+        </button>
+        <details id="bibtex" open><summary>BibTeX</summary><pre><code>@inproceedings{zhao2024breaking,
   title = {{Breaking Physical and Linguistic Borders: Multilingual Federated Prompt Tuning for Low-Resource Languages}},
   author = {Zhao, Wanru and Chen, Yihong and Lee, Royson and Qiu, Xinchi and Gao, Yan and Fan, Hongxiang and Lane, Nicholas D.},
   year = {2024},
   booktitle = {International Conference on Learning Representations (ICLR)},
-  url = {https://openreview.net/forum?id=HyRwexERAo},
-  archiveprefix = {arXiv},
-  eprint = {2507.03003},
-  date = {2024-05-07},
+  url = {https://openreview.net/forum?id=HyRwexERAo}
 }</code></pre></details>
+        <span class="citation-copy-status sr-only" role="status"></span>
+      </div>
+    </aside>
+  </div>
 </article>
 <script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>

@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/almeida2019embench/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793818052">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793819353">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,20 +58,14 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <div class="publication-heading">
-    <div class="publication-details">
+  <div class="publication-layout">
+    <div class="publication-main">
+    <header class="publication-heading">
       <h1>EmBench: Quantifying Performance Variations of Deep Neural Networks across Modern Commodity Devices</h1>
-      <p class="authors publication-authors"><span class="publication-author"><span>Mario Almeida</span></span>, <span class="publication-author"><span>Stefanos Laskaridis</span></span>, <span class="publication-author"><span>Ilias Leontiadis</span></span>, <span class="publication-author"><span>Stylianos I. Venieris</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <ul class="publication-authors" aria-label="Authors"><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Mario Almeida</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></span></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Stefanos Laskaridis</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></span></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Ilias Leontiadis</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></span></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Stylianos I. Venieris</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></span></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Nicholas D. Lane</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span><span class="publication-author-institution-line">University of Oxford</span></span></span></a></li></ul>
+
       <p class="meta venue"><span class="publication-venue">International Workshop on Deep Learning for Mobile Systems and Applications (EMDL)</span>, <span class="publication-date">2019</span></p>
-      
-
-    </div>
-    <div class="publication-actions">
-  <a class="publication-download" href="https://arxiv.org/pdf/1905.07346">PDF<span class="sr-only">: EmBench: Quantifying Performance Variations of Deep Neural Networks across Modern Commodity Devices</span></a>
-  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: EmBench: Quantifying Performance Variations of Deep Neural Networks across Modern Commodity Devices</span></a>
-</div>
-
-  </div>
+    </header>
   
   <section class="abstract"><h2>Abstract</h2><p>In recent years, advances in deep learning have resulted in unprecedented leaps in diverse tasks spanning from speech and object recognition to context awareness and health monitoring. As a result, an increasing number of AI-enabled applications are being developed targeting ubiquitous and mobile devices. While deep neural networks (DNNs) are getting bigger and more complex, they also impose a heavy computational and energy burden on the host devices, which has led to the integration of various specialized processors in commodity devices. Given the broad range of competing DNN architectures and the heterogeneity of the target hardware, there is an emerging need to understand the compatibility between DNN-platform pairs and the expected performance benefits on each platform. This work attempts to demystify this landscape by systematically evaluating a collection of state-of-the-art DNNs on a wide variety of commodity devices. In this respect, we identify potential bottlenecks in each architecture and provide important guidelines that can assist the community in the co-design of more efficient DNNs and accelerators.</p>
 </section>
@@ -79,19 +73,38 @@
   <div class="post-content">
 </div>
   
-  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{almeida2019embench,
+    </div>
+    <aside class="publication-sidebar" aria-label="Paper resources">
+      <h2>Materials</h2>
+      <ul class="publication-materials">
+  <li><a class="publication-download" href="https://arxiv.org/pdf/1905.07346"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h6"/></svg>
+PDF</a></li>
+  
+  
+  
+  
+  
+</ul>
+
+      <div class="publication-citation">
+        <button class="citation-copy" type="button" aria-label="Copy BibTeX" title="Copy BibTeX" hidden>
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="copied-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+        </button>
+        <details id="bibtex" open><summary>BibTeX</summary><pre><code>@inproceedings{almeida2019embench,
   title = {{EmBench: Quantifying Performance Variations of Deep Neural Networks across Modern Commodity Devices}},
   author = {Almeida, Mario and Laskaridis, Stefanos and Leontiadis, Ilias and Venieris, Stylianos I. and Lane, Nicholas D.},
   year = {2019},
   booktitle = {International Workshop on Deep Learning for Mobile Systems and Applications (EMDL)},
-  url = {https://doi.org/10.1145/3325413.3329793},
-  pages = {1-6},
-  archiveprefix = {arXiv},
-  eprint = {1905.07346},
-  doi = {10.1145/3325413.3329793},
+  pages = {1--6},
   publisher = {ACM},
-  date = {2019-06-13},
+  doi = {10.1145/3325413.3329793},
+  url = {https://doi.org/10.1145/3325413.3329793}
 }</code></pre></details>
+        <span class="citation-copy-status sr-only" role="status"></span>
+      </div>
+    </aside>
+  </div>
 </article>
 <script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>

@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/gao2020distilling/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793818052">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793819353">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,20 +58,14 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <div class="publication-heading">
-    <div class="publication-details">
+  <div class="publication-layout">
+    <div class="publication-main">
+    <header class="publication-heading">
       <h1>Distilling Knowledge from Ensembles of Acoustic Models for Joint CTC-Attention End-to-End Speech Recognition</h1>
-      <p class="authors publication-authors"><span class="publication-author"><img src="/camlsys-preview/assets/yan.jpg" alt="" width="28" height="28" loading="lazy"><span>Yan Gao</span></span>, <span class="publication-author"><a href="https://www.darnault-parcollet.fr/Parcollet/"><img src="/camlsys-preview/assets/titouan.jpeg" alt="" width="28" height="28" loading="lazy"><span>Titouan Parcollet</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <ul class="publication-authors" aria-label="Authors"><li class="publication-author"><span class="publication-author-profile"><img src="/camlsys-preview/assets/yan.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Yan Gao</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></span></li><li class="publication-author"><a href="https://www.darnault-parcollet.fr/Parcollet/"><img src="/camlsys-preview/assets/titouan.jpeg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Titouan Parcollet</span><span class="publication-author-institution"><span class="publication-author-institution-line">Avignon University</span></span></span></a></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Nicholas D. Lane</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li></ul>
+
       <p class="meta venue"><span class="publication-venue">IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)</span>, <span class="publication-date">2021</span></p>
-      
-
-    </div>
-    <div class="publication-actions">
-  <a class="publication-download" href="https://arxiv.org/pdf/2005.09310">PDF<span class="sr-only">: Distilling Knowledge from Ensembles of Acoustic Models for Joint CTC-Attention End-to-End Speech Recognition</span></a>
-  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Distilling Knowledge from Ensembles of Acoustic Models for Joint CTC-Attention End-to-End Speech Recognition</span></a>
-</div>
-
-  </div>
+    </header>
   
   <section class="abstract"><h2>Abstract</h2><p>Knowledge distillation has been widely used to compress existing deep learning models while preserving the performance on a wide range of applications. In the specific context of Automatic Speech Recognition (ASR), distillation from ensembles of acoustic models has recently shown promising results in increasing recognition performance. In this paper, we propose an extension of multi-teacher distillation methods to joint CTC-attention end-to-end ASR systems. We also introduce three novel distillation strategies. The core intuition behind them is to integrate the error rate metric to the teacher selection rather than solely focusing on the observed losses. In this way, we directly distill and optimize the student toward the relevant metric for speech recognition. We evaluate these strategies under a selection of training procedures on different datasets (TIMIT, Librispeech, Common Voice) and various languages (English, French, Italian). In particular, state-of-the-art error rates are reported on the Common Voice French, Italian and TIMIT datasets.</p>
 </section>
@@ -79,19 +73,38 @@
   <div class="post-content">
 </div>
   
-  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{gao2020distilling,
+    </div>
+    <aside class="publication-sidebar" aria-label="Paper resources">
+      <h2>Materials</h2>
+      <ul class="publication-materials">
+  <li><a class="publication-download" href="https://arxiv.org/pdf/2005.09310"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h6"/></svg>
+PDF</a></li>
+  
+  
+  
+  
+  
+</ul>
+
+      <div class="publication-citation">
+        <button class="citation-copy" type="button" aria-label="Copy BibTeX" title="Copy BibTeX" hidden>
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="copied-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+        </button>
+        <details id="bibtex" open><summary>BibTeX</summary><pre><code>@inproceedings{gao2020distilling,
   title = {{Distilling Knowledge from Ensembles of Acoustic Models for Joint CTC-Attention End-to-End Speech Recognition}},
   author = {Gao, Yan and Parcollet, Titouan and Lane, Nicholas D.},
   year = {2021},
   booktitle = {IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
-  url = {https://doi.org/10.1109/asru51503.2021.9688302},
-  archiveprefix = {arXiv},
-  eprint = {2005.09310},
-  doi = {10.1109/asru51503.2021.9688302},
-  pages = {138-145},
+  pages = {138--145},
   publisher = {IEEE},
-  date = {2021-12-13},
+  doi = {10.1109/asru51503.2021.9688302},
+  url = {https://doi.org/10.1109/asru51503.2021.9688302}
 }</code></pre></details>
+        <span class="citation-copy-status sr-only" role="status"></span>
+      </div>
+    </aside>
+  </div>
 </article>
 <script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>

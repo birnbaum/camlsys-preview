@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/tong2019tracking/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793818052">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793819353">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,20 +58,14 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <div class="publication-heading">
-    <div class="publication-details">
+  <div class="publication-layout">
+    <div class="publication-main">
+    <header class="publication-heading">
       <h1>Tracking Fatigue and Health State in Multiple Sclerosis Patients Using Connnected Wellness Devices</h1>
-      <p class="authors publication-authors"><span class="publication-author"><a href="https://egctong.github.io/"><img src="/camlsys-preview/assets/catherine.jpg" alt="" width="28" height="28" loading="lazy"><span>Catherine Tong</span></a></span>, <span class="publication-author"><span>Matthew Craner</span></span>, <span class="publication-author"><span>Matthieu Vegreville</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <ul class="publication-authors" aria-label="Authors"><li class="publication-author"><a href="https://egctong.github.io/"><img src="/camlsys-preview/assets/catherine.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Catherine Tong</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Oxford</span></span></span></a></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Matthew Craner</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Oxford</span></span></span></span></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Matthieu Vegreville</span><span class="publication-author-institution"><span class="publication-author-institution-line">Withings</span></span></span></span></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Nicholas D. Lane</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Oxford</span></span></span></a></li></ul>
+
       <p class="meta venue"><span class="publication-venue">Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT)</span>, <span class="publication-date">2019</span></p>
-      
-
-    </div>
-    <div class="publication-actions">
-  <a class="publication-download" href="https://doi.org/10.1145/3351264">Paper<span class="sr-only">: Tracking Fatigue and Health State in Multiple Sclerosis Patients Using Connnected Wellness Devices</span></a>
-  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Tracking Fatigue and Health State in Multiple Sclerosis Patients Using Connnected Wellness Devices</span></a>
-</div>
-
-  </div>
+    </header>
   
   <section class="abstract"><h2>Abstract</h2><p>Multiple Sclerosis requires long-term disease management, but tracking patients through the use of clinical surveys is hindered by high costs and patient burden. In this work, we investigate the feasibility of using data from ubiquitous sensing to predict MS patients’ fatigue and health status, as measured by the Fatigue Severity Scale (FSS) and EQ-5D index. We collected data from 198 MS patients who are given connected wellness devices for over 6 months. We examine how accurately can the collected data predict reported FSS and EQ-5D scores per patient using an ensemble of regressors. In predicting for both FSS and EQ-5D, we are able to achieve errors aligning with the instrument’ standard measurement error (SEM), as well as strong and significant correlations between predicted and ground truth values. We also show a simple adaptation method that greatly reduces prediction errors through the use of just 1 user-supplied ground truth datapoint. For FSS (SEM 0.7), the universal model predicts weekly scores with MAE 1.00, while an adapted model predicts with MAE 0.58. For EQ-5D (SEM 0.093), the universal model predicts weekly scores with MAE 0.097, while an adapted model predicts with MAE 0.065. Our study represents the first sets of results showing that fatigue and health state of MS patients can be measured using data from connected wellness devices and a small number of background features, with promising prediction performance with errors within the accepted range of error in the widely used clinically-validated questionnaires. Future extensions and potential applications of our results can positively impact MS patient disease management and support clinical research.</p>
 </section>
@@ -79,19 +73,40 @@
   <div class="post-content">
 </div>
   
-  <details id="bibtex"><summary>BibTeX</summary><pre><code>@article{tong2019tracking,
+    </div>
+    <aside class="publication-sidebar" aria-label="Paper resources">
+      <h2>Materials</h2>
+      <ul class="publication-materials">
+  <li><a class="publication-download" href="https://doi.org/10.1145/3351264"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7m0-7L10 14M10 5H3v16h16v-7"/></svg>
+Publisher</a></li>
+  
+  
+  
+  
+  
+</ul>
+
+      <div class="publication-citation">
+        <button class="citation-copy" type="button" aria-label="Copy BibTeX" title="Copy BibTeX" hidden>
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="copied-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+        </button>
+        <details id="bibtex" open><summary>BibTeX</summary><pre><code>@article{tong2019tracking,
   title = {{Tracking Fatigue and Health State in Multiple Sclerosis Patients Using Connnected Wellness Devices}},
   author = {Tong, Catherine and Craner, Matthew and Vegreville, Matthieu and Lane, Nicholas D.},
   year = {2019},
   journal = {Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT)},
-  url = {https://doi.org/10.1145/3351264},
   volume = {3},
   number = {3},
-  pages = {1-19},
+  pages = {1--19},
   publisher = {Association for Computing Machinery (ACM)},
   doi = {10.1145/3351264},
-  date = {2019-09-09},
+  url = {https://doi.org/10.1145/3351264}
 }</code></pre></details>
+        <span class="citation-copy-status sr-only" role="status"></span>
+      </div>
+    </aside>
+  </div>
 </article>
 <script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>

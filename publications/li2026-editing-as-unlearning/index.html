@@ -7,7 +7,7 @@
   <script src="/camlsys-preview/assets/theme.js"></script>
   
   <title>Editing as Unlearning: Are Knowledge Editing Methods Strong Baselines for Large Language Model Unlearning? | CaMLSys</title>
-  <meta name="description" content="Large language Model (LLM) unlearning, i.e., selectively removing information from LLMs, is vital for responsible model deployment. Differently, LLM knowledge editing aims to modify LLM knowledge instead of removing it. Though editing and unlearning seem to be two distinct tasks, we find there is a tight connection between them. In this paper, we conceptualize unlearning as a special case of editing where information is modified to a refusal or &quot;empty set&quot; $\emptyset$ response, signifying its removal. This paper thus investigates if knowledge editing techniques are strong baselines for LLM unlearning. We evaluate state-of-the-art (SOTA) editing methods (e.g., ROME, MEMIT, GRACE, WISE, and AlphaEdit) against existing unlearning approaches on pretrained and finetuned knowledge. Results show certain editing methods, notably WISE and AlphaEdit, are effective unlearning baselines, especially for pretrained knowledge, and excel in generating human-aligned refusal answers. To better adapt editing methods for unlearning applications, we propose practical recipes including self-improvement and query merging. The former leverages the LLM&#39;s own in-context learning ability to craft a more human-aligned unlearning target, and the latter enables ROME and MEMIT to perform well in unlearning longer sample sequences. We advocate for the unlearning community to adopt SOTA editing methods as baselines and explore unlearning from an editing perspective for more holistic LLM memory control.
+  <meta name="description" content="Large language Model (LLM) unlearning, i.e., selectively removing information from LLMs, is vital for responsible model deployment. Differently, LLM knowledge editing aims to modify LLM knowledge instead of removing it. Though editing and unlearning seem to be two distinct tasks, we find there is a tight connection between them. In this paper, we conceptualize unlearning as a special case of editing where information is modified to a refusal or &quot;empty set&quot; response, signifying its removal. This paper thus investigates if knowledge editing techniques are strong baselines for LLM unlearning. We evaluate state-of-the-art (SOTA) editing methods (e.g., ROME, MEMIT, GRACE, WISE, and AlphaEdit) against existing unlearning approaches on pretrained and finetuned knowledge. Results show certain editing methods, notably WISE and AlphaEdit, are effective unlearning baselines, especially for pretrained knowledge, and excel in generating human-aligned refusal answers. To better adapt editing methods for unlearning applications, we propose practical recipes including self-improvement and query merging. The former leverages the LLM&#39;s own in-context learning ability to craft a more human-aligned unlearning target, and the latter enables ROME and MEMIT to perform well in unlearning longer sample sequences. We advocate for the unlearning community to adopt SOTA editing methods as baselines and explore unlearning from an editing perspective for more holistic LLM memory control.
 ">
   <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/li2026-editing-as-unlearning/">
   <meta property="og:title" content="Editing as Unlearning: Are Knowledge Editing Methods Strong Baselines for Large Language Model Unlearning?">
@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/li2026-editing-as-unlearning/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793818052">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793819353">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,38 +58,49 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <div class="publication-heading">
-    <div class="publication-details">
+  <div class="publication-layout">
+    <div class="publication-main">
+    <header class="publication-heading">
       <h1>Editing as Unlearning: Are Knowledge Editing Methods Strong Baselines for Large Language Model Unlearning?</h1>
-      <p class="authors publication-authors"><span class="publication-author"><a href="https://zexilee.github.io/about-zexili/"><img src="/camlsys-preview/assets/zexi_li.jpg" alt="" width="28" height="28" loading="lazy"><span>Zexi Li</span></a></span>, <span class="publication-author"><span>Xiangzhu Wang</span></span>, <span class="publication-author"><span>William F. Shen</span></span>, <span class="publication-author"><a href="https://meghdadk.github.io/"><img src="/camlsys-preview/assets/meghdad.jpg" alt="" width="28" height="28" loading="lazy"><span>Meghdad Kurmanji</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="28" height="28" loading="lazy"><span>Xinchi Qiu</span></a></span>, <span class="publication-author"><a href="https://www.caidongqi.com/"><img src="/camlsys-preview/assets/cdq-cambridge.jpeg" alt="" width="28" height="28" loading="lazy"><span>Dongqi Cai</span></a></span>, <span class="publication-author"><span>Chao Wu</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <ul class="publication-authors" aria-label="Authors"><li class="publication-author"><a href="https://zexilee.github.io/about-zexili/"><img src="/camlsys-preview/assets/zexi_li.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Zexi Li</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span><span class="publication-author-institution-line">Zhejiang University</span></span></span></a></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Xiangzhu Wang</span><span class="publication-author-institution"><span class="publication-author-institution-line">Zhejiang University</span></span></span></span></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/fs604"><img src="/camlsys-preview/assets/people/fangzheng-bill-shen.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">William F. Shen</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><a href="https://meghdadk.github.io/"><img src="/camlsys-preview/assets/meghdad.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Meghdad Kurmanji</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Xinchi Qiu</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><a href="https://www.caidongqi.com/"><img src="/camlsys-preview/assets/cdq-cambridge.jpeg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Dongqi Cai</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Chao Wu</span><span class="publication-author-institution"><span class="publication-author-institution-line">Zhejiang University</span></span></span></span></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Nicholas D. Lane</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li></ul>
+
       <p class="meta venue"><span class="publication-venue">AAAI Conference on Artificial Intelligence</span>, <span class="publication-date">2026</span> · AI Alignment Track</p>
-      
-
-    </div>
-    <div class="publication-actions">
-  <a class="publication-download" href="https://arxiv.org/pdf/2505.19855">PDF<span class="sr-only">: Editing as Unlearning: Are Knowledge Editing Methods Strong Baselines for Large Language Model Unlearning?</span></a>
-  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Editing as Unlearning: Are Knowledge Editing Methods Strong Baselines for Large Language Model Unlearning?</span></a>
-</div>
-
-  </div>
+    </header>
   
-  <section class="abstract"><h2>Abstract</h2><p>Large language Model (LLM) unlearning, i.e., selectively removing information from LLMs, is vital for responsible model deployment. Differently, LLM knowledge editing aims to modify LLM knowledge instead of removing it. Though editing and unlearning seem to be two distinct tasks, we find there is a tight connection between them. In this paper, we conceptualize unlearning as a special case of editing where information is modified to a refusal or “empty set” $\emptyset$ response, signifying its removal. This paper thus investigates if knowledge editing techniques are strong baselines for LLM unlearning. We evaluate state-of-the-art (SOTA) editing methods (e.g., ROME, MEMIT, GRACE, WISE, and AlphaEdit) against existing unlearning approaches on pretrained and finetuned knowledge. Results show certain editing methods, notably WISE and AlphaEdit, are effective unlearning baselines, especially for pretrained knowledge, and excel in generating human-aligned refusal answers. To better adapt editing methods for unlearning applications, we propose practical recipes including self-improvement and query merging. The former leverages the LLM’s own in-context learning ability to craft a more human-aligned unlearning target, and the latter enables ROME and MEMIT to perform well in unlearning longer sample sequences. We advocate for the unlearning community to adopt SOTA editing methods as baselines and explore unlearning from an editing perspective for more holistic LLM memory control.</p>
+  <section class="abstract"><h2>Abstract</h2><p>Large language Model (LLM) unlearning, i.e., selectively removing information from LLMs, is vital for responsible model deployment. Differently, LLM knowledge editing aims to modify LLM knowledge instead of removing it. Though editing and unlearning seem to be two distinct tasks, we find there is a tight connection between them. In this paper, we conceptualize unlearning as a special case of editing where information is modified to a refusal or “empty set” response, signifying its removal. This paper thus investigates if knowledge editing techniques are strong baselines for LLM unlearning. We evaluate state-of-the-art (SOTA) editing methods (e.g., ROME, MEMIT, GRACE, WISE, and AlphaEdit) against existing unlearning approaches on pretrained and finetuned knowledge. Results show certain editing methods, notably WISE and AlphaEdit, are effective unlearning baselines, especially for pretrained knowledge, and excel in generating human-aligned refusal answers. To better adapt editing methods for unlearning applications, we propose practical recipes including self-improvement and query merging. The former leverages the LLM’s own in-context learning ability to craft a more human-aligned unlearning target, and the latter enables ROME and MEMIT to perform well in unlearning longer sample sequences. We advocate for the unlearning community to adopt SOTA editing methods as baselines and explore unlearning from an editing perspective for more holistic LLM memory control.</p>
 </section>
   
   <div class="post-content">
 </div>
   
-  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{li2026editingasunlearning,
+    </div>
+    <aside class="publication-sidebar" aria-label="Paper resources">
+      <h2>Materials</h2>
+      <ul class="publication-materials">
+  <li><a class="publication-download" href="https://arxiv.org/pdf/2505.19855"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h6"/></svg>
+PDF</a></li>
+  
+  
+  
+  
+  
+</ul>
+
+      <div class="publication-citation">
+        <button class="citation-copy" type="button" aria-label="Copy BibTeX" title="Copy BibTeX" hidden>
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="copied-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+        </button>
+        <details id="bibtex" open><summary>BibTeX</summary><pre><code>@inproceedings{li2026editingasunlearning,
   title = {{Editing as Unlearning: Are Knowledge Editing Methods Strong Baselines for Large Language Model Unlearning?}},
   author = {Li, Zexi and Wang, Xiangzhu and Shen, William F. and Kurmanji, Meghdad and Qiu, Xinchi and Cai, Dongqi and Wu, Chao and Lane, Nicholas D.},
   year = {2026},
-  booktitle = {AAAI Conference on Artificial Intelligence},
-  url = {https://arxiv.org/abs/2505.19855},
-  archiveprefix = {arXiv},
-  eprint = {2505.19855},
-  note = {AI Alignment Track},
-  date = {2026-01-20},
+  booktitle = {AAAI Conference on Artificial Intelligence}
 }</code></pre></details>
+        <span class="citation-copy-status sr-only" role="status"></span>
+      </div>
+    </aside>
+  </div>
 </article>
 <script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>

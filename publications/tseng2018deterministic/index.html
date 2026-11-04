@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/tseng2018deterministic/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793818052">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793819353">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,20 +58,14 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <div class="publication-heading">
-    <div class="publication-details">
+  <div class="publication-layout">
+    <div class="publication-main">
+    <header class="publication-heading">
       <h1>Deterministic Binary Filters for Convolutional Neural Networks</h1>
-      <p class="authors publication-authors"><span class="publication-author"><span>Vincent W.-S. Tseng</span></span>, <span class="publication-author"><span>Sourav Bhattacharya</span></span>, <span class="publication-author"><a href="https://jafermarq.com/"><img src="/camlsys-preview/assets/javier.png" alt="" width="28" height="28" loading="lazy"><span>Javier Fernández Marqués</span></a></span>, <span class="publication-author"><a href="https://mil.ad"><img src="/camlsys-preview/assets/milad.jpg" alt="" width="28" height="28" loading="lazy"><span>Milad Alizadeh</span></a></span>, <span class="publication-author"><a href="https://egctong.github.io/"><img src="/camlsys-preview/assets/catherine.jpg" alt="" width="28" height="28" loading="lazy"><span>Catherine Tong</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <ul class="publication-authors" aria-label="Authors"><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Vincent W.-S. Tseng</span><span class="publication-author-institution"><span class="publication-author-institution-line">Cornell University</span></span></span></span></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Sourav Bhattacharya</span><span class="publication-author-institution"><span class="publication-author-institution-line">Nokia Bell Labs</span></span></span></span></li><li class="publication-author"><a href="https://jafermarq.com/"><img src="/camlsys-preview/assets/javier.png" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Javier Fernández Marqués</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Oxford</span></span></span></a></li><li class="publication-author"><a href="https://mil.ad"><img src="/camlsys-preview/assets/milad.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Milad Alizadeh</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Oxford</span></span></span></a></li><li class="publication-author"><a href="https://egctong.github.io/"><img src="/camlsys-preview/assets/catherine.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Catherine Tong</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Oxford</span></span></span></a></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Nicholas D. Lane</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Oxford</span><span class="publication-author-institution-line">Nokia Bell Labs</span></span></span></a></li></ul>
+
       <p class="meta venue"><span class="publication-venue">International Joint Conference on Artificial Intelligence (IJCAI)</span>, <span class="publication-date">2018</span></p>
-      
-
-    </div>
-    <div class="publication-actions">
-  <a class="publication-download" href="https://www.ijcai.org/proceedings/2018/380">Paper<span class="sr-only">: Deterministic Binary Filters for Convolutional Neural Networks</span></a>
-  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Deterministic Binary Filters for Convolutional Neural Networks</span></a>
-</div>
-
-  </div>
+    </header>
   
   <section class="abstract"><h2>Abstract</h2><p>We propose Deterministic Binary Filters, an approach to Convolutional Neural Networks that learns weighting coefficients of predefined orthogonal binary basis instead of the conventional approach of learning directly the convolutional filters. This approach results in model architectures with significantly fewer parameters (4x to 16x) and smaller model sizes (32x due to the use of binary rather than floating point precision). We show our deterministic filter design can be integrated into well-known network architectures (such as ResNet and SqueezeNet) with as little as 2% loss of accuracy (under datasets like CIFAR-10). Under ImageNet, they result in 3x model size reduction compared to sub-megabyte binary networks while reaching comparable accuracy levels.</p>
 </section>
@@ -79,17 +73,37 @@
   <div class="post-content">
 </div>
   
-  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{tseng2018deterministic,
+    </div>
+    <aside class="publication-sidebar" aria-label="Paper resources">
+      <h2>Materials</h2>
+      <ul class="publication-materials">
+  <li><a class="publication-download" href="https://www.ijcai.org/proceedings/2018/380"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7m0-7L10 14M10 5H3v16h16v-7"/></svg>
+Publisher</a></li>
+  
+  
+  
+  
+  
+</ul>
+
+      <div class="publication-citation">
+        <button class="citation-copy" type="button" aria-label="Copy BibTeX" title="Copy BibTeX" hidden>
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="copied-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+        </button>
+        <details id="bibtex" open><summary>BibTeX</summary><pre><code>@inproceedings{tseng2018deterministic,
   title = {{Deterministic Binary Filters for Convolutional Neural Networks}},
   author = {Tseng, Vincent W.-S. and Bhattacharya, Sourav and Fernández Marqués, Javier and Alizadeh, Milad and Tong, Catherine and Lane, Nicholas D.},
   year = {2018},
   booktitle = {International Joint Conference on Artificial Intelligence (IJCAI)},
-  url = {https://www.ijcai.org/proceedings/2018/380},
   pages = {2739--2747},
-  organization = {AAAI Press},
   doi = {10.24963/ijcai.2018/380},
-  date = {2018-07},
+  url = {https://www.ijcai.org/proceedings/2018/380}
 }</code></pre></details>
+        <span class="citation-copy-status sr-only" role="status"></span>
+      </div>
+    </aside>
+  </div>
 </article>
 <script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>

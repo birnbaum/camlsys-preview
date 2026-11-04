@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/abdelfattah2020best/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793818052">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793819353">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,20 +58,14 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <div class="publication-heading">
-    <div class="publication-details">
+  <div class="publication-layout">
+    <div class="publication-main">
+    <header class="publication-heading">
       <h1>Best of Both Worlds: AutoML Codesign of a CNN and its Hardware Accelerator</h1>
-      <p class="authors publication-authors"><span class="publication-author"><span>Mohamed S. Abdelfattah</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ld539"><img src="/camlsys-preview/assets/people/lukasz-dudziak.jpg" alt="" width="28" height="28" loading="lazy"><span>Lukasz Dudziak</span></a></span>, <span class="publication-author"><span>Thomas Chau</span></span>, <span class="publication-author"><img src="/camlsys-preview/assets/royson.jpeg" alt="" width="28" height="28" loading="lazy"><span>Royson Lee</span></span>, <span class="publication-author"><span>Hyeji Kim</span></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <ul class="publication-authors" aria-label="Authors"><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Mohamed S. Abdelfattah</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></span></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ld539"><img src="/camlsys-preview/assets/people/lukasz-dudziak.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Lukasz Dudziak</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></a></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Thomas Chau</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></span></li><li class="publication-author"><span class="publication-author-profile"><img src="/camlsys-preview/assets/royson.jpeg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Royson Lee</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></span></li><li class="publication-author"><span class="publication-author-profile"><span class="publication-author-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="13" r="4"/><circle cx="21" cy="13" r="4"/><path d="M15 13h2M6 12l-2-1m22 1 2-1M11 21q5 5 10 0"/></svg></span><span class="publication-author-text"><span class="publication-author-name">Hyeji Kim</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span></span></span></span></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Nicholas D. Lane</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI Center, Cambridge</span><span class="publication-author-institution-line">University of Oxford</span></span></span></a></li></ul>
+
       <p class="meta venue"><span class="publication-venue">ACM/IEEE Design Automation Conference (DAC)</span>, <span class="publication-date">2020</span></p>
-      
-
-    </div>
-    <div class="publication-actions">
-  <a class="publication-download" href="https://arxiv.org/pdf/2002.05022">PDF<span class="sr-only">: Best of Both Worlds: AutoML Codesign of a CNN and its Hardware Accelerator</span></a>
-  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Best of Both Worlds: AutoML Codesign of a CNN and its Hardware Accelerator</span></a>
-</div>
-
-  </div>
+    </header>
   
   <section class="abstract"><h2>Abstract</h2><p>Neural architecture search (NAS) has been very successful at outperforming human-designed convolutional neural networks (CNN) in accuracy, and when hardware information is present, latency as well. However, NAS-designed CNNs typically have a complicated topology, therefore, it may be difficult to design a custom hardware (HW) accelerator for such CNNs. We automate HW-CNN codesign using NAS by including parameters from both the CNN model and the HW accelerator, and we jointly search for the best model-accelerator pair that boosts accuracy and efficiency. We call this Codesign-NAS. In this paper we focus on defining the Codesign-NAS multiobjective optimization problem, demonstrating its effectiveness, and exploring different ways of navigating the codesign search space. For CIFAR-10 image classification, we enumerate close to 4 billion model-accelerator pairs, and find the Pareto frontier within that large search space. This allows us to evaluate three different reinforcement-learning-based search strategies. Finally, compared to ResNet on its most optimal HW accelerator from within our HW design space, we improve on CIFAR-100 classification accuracy by 1.3% while simultaneously increasing performance/area by 41% in just~1000 GPU-hours of running Codesign-NAS.</p>
 </section>
@@ -79,19 +73,38 @@
   <div class="post-content">
 </div>
   
-  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{abdelfattah2020best,
+    </div>
+    <aside class="publication-sidebar" aria-label="Paper resources">
+      <h2>Materials</h2>
+      <ul class="publication-materials">
+  <li><a class="publication-download" href="https://arxiv.org/pdf/2002.05022"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h6"/></svg>
+PDF</a></li>
+  
+  
+  
+  
+  
+</ul>
+
+      <div class="publication-citation">
+        <button class="citation-copy" type="button" aria-label="Copy BibTeX" title="Copy BibTeX" hidden>
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="copied-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+        </button>
+        <details id="bibtex" open><summary>BibTeX</summary><pre><code>@inproceedings{abdelfattah2020best,
   title = {{Best of Both Worlds: AutoML Codesign of a CNN and its Hardware Accelerator}},
   author = {Abdelfattah, Mohamed S. and Dudziak, Lukasz and Chau, Thomas and Lee, Royson and Kim, Hyeji and Lane, Nicholas D.},
   year = {2020},
   booktitle = {ACM/IEEE Design Automation Conference (DAC)},
-  url = {https://doi.org/10.1109/dac18072.2020.9218596},
-  archiveprefix = {arXiv},
-  eprint = {2002.05022},
-  doi = {10.1109/dac18072.2020.9218596},
-  pages = {1-6},
+  pages = {1--6},
   publisher = {IEEE},
-  date = {2020-07},
+  doi = {10.1109/dac18072.2020.9218596},
+  url = {https://doi.org/10.1109/dac18072.2020.9218596}
 }</code></pre></details>
+        <span class="citation-copy-status sr-only" role="status"></span>
+      </div>
+    </aside>
+  </div>
 </article>
 <script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>

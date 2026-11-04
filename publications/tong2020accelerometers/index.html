@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/tong2020accelerometers/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793818052">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793819353">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,20 +58,14 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <div class="publication-heading">
-    <div class="publication-details">
+  <div class="publication-layout">
+    <div class="publication-main">
+    <header class="publication-heading">
       <h1>Are Accelerometers for Activity Recognition a Dead-end?</h1>
-      <p class="authors publication-authors"><span class="publication-author"><a href="https://egctong.github.io/"><img src="/camlsys-preview/assets/catherine.jpg" alt="" width="28" height="28" loading="lazy"><span>Catherine Tong</span></a></span>, <span class="publication-author"><a href="https://shyamtailor.me/"><img src="/camlsys-preview/assets/shyam.jpg" alt="" width="28" height="28" loading="lazy"><span>Shyam A. Tailor</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <ul class="publication-authors" aria-label="Authors"><li class="publication-author"><a href="https://egctong.github.io/"><img src="/camlsys-preview/assets/catherine.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Catherine Tong</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Oxford</span></span></span></a></li><li class="publication-author"><a href="https://shyamtailor.me/"><img src="/camlsys-preview/assets/shyam.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Shyam A. Tailor</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Oxford</span></span></span></a></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Nicholas D. Lane</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Oxford</span><span class="publication-author-institution-line">Samsung AI</span></span></span></a></li></ul>
+
       <p class="meta venue"><span class="publication-venue">International Workshop on Mobile Computing Systems and Applications (HotMobile)</span>, <span class="publication-date">2020</span></p>
-      <div class="publication-links"><a href="/camlsys-preview/publications/tong2020accelerometers/#videos">Video</a></div>
-
-    </div>
-    <div class="publication-actions">
-  <a class="publication-download" href="https://arxiv.org/pdf/2001.08111">PDF<span class="sr-only">: Are Accelerometers for Activity Recognition a Dead-end?</span></a>
-  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Are Accelerometers for Activity Recognition a Dead-end?</span></a>
-</div>
-
-  </div>
+    </header>
   
   <section class="abstract"><h2>Abstract</h2><p>Accelerometer-based (and by extension other inertial sensors) research for Human Activity Recognition (HAR) is a dead-end. This sensor does not offer enough information for us to progress in the core domain of HAR - to recognize everyday activities from sensor data. Despite continued and prolonged efforts in improving feature engineering and machine learning models, the activities that we can recognize reliably have only expanded slightly and many of the same flaws of early models are still present today. Instead of relying on acceleration data, we should instead consider modalities with much richer information - a logical choice are images. With the rapid advance in image sensing hardware and modelling techniques, we believe that a widespread adoption of image sensors will open many opportunities for accurate and robust inference across a wide spectrum of human activities. In this paper, we make the case for imagers in place of accelerometers as the default sensor for human activity recognition. Our review of past works has led to the observation that progress in HAR had stalled, caused by our reliance on accelerometers. We further argue for the suitability of images for activity recognition by illustrating their richness of information and the marked progress in computer vision. Through a feasibility analysis, we find that deploying imagers and CNNs on device poses no substantial burden on modern mobile hardware. Overall, our work highlights the need to move away from accelerometers and calls for further exploration of using imagers for activity recognition.</p>
 </section>
@@ -93,19 +87,39 @@
 
   </section>
   
-  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{tong2020accelerometers,
+    </div>
+    <aside class="publication-sidebar" aria-label="Paper resources">
+      <h2>Materials</h2>
+      <ul class="publication-materials">
+  <li><a class="publication-download" href="https://arxiv.org/pdf/2001.08111"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h6"/></svg>
+PDF</a></li>
+  
+  
+  
+  <li><a href="#videos"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m10 8 6 4-6 4z"/></svg>
+Talk</a></li>
+  
+</ul>
+
+      <div class="publication-citation">
+        <button class="citation-copy" type="button" aria-label="Copy BibTeX" title="Copy BibTeX" hidden>
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="copied-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+        </button>
+        <details id="bibtex" open><summary>BibTeX</summary><pre><code>@inproceedings{tong2020accelerometers,
   title = {{Are Accelerometers for Activity Recognition a Dead-end?}},
   author = {Tong, Catherine and Tailor, Shyam A. and Lane, Nicholas D.},
   year = {2020},
   booktitle = {International Workshop on Mobile Computing Systems and Applications (HotMobile)},
-  url = {https://doi.org/10.1145/3376897.3377867},
-  pages = {39-44},
-  archiveprefix = {arXiv},
-  eprint = {2001.08111},
-  doi = {10.1145/3376897.3377867},
+  pages = {39--44},
   publisher = {ACM},
-  date = {2020-03-03},
+  doi = {10.1145/3376897.3377867},
+  url = {https://doi.org/10.1145/3376897.3377867}
 }</code></pre></details>
+        <span class="citation-copy-status sr-only" role="status"></span>
+      </div>
+    </aside>
+  </div>
 </article>
 <script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>

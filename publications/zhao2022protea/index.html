@@ -7,7 +7,7 @@
   <script src="/camlsys-preview/assets/theme.js"></script>
   
   <title>Protea: Client Profiling within Federated Systems using Flower | CaMLSys</title>
-  <meta name="description" content="Federated Learning (FL) has emerged as a prospective solution that facilitates the training of a high-performing centralised model without compromising the privacy of users. While successful, research is currently limited by the possibility of establishing a realistic large-scale FL system at the early stages of experimentation. Simulation can help accelerate this process. To facilitate efficient scalable FL simulation of heterogeneous clients, we design and implement Protea, a flexible and lightweight client profiling component within federated systems using the FL framework Flower. It allows automatically collecting system-level statistics and estimating the resources needed for each client, thus running the simulation in a resource-aware fashion. The results show that our design successfully increases parallelism for 1.66 $\times$ faster wall-clock time and 2.6$\times$ better GPU utilisation, which enables large-scale experiments on heterogeneous clients.
+  <meta name="description" content="Federated Learning (FL) has emerged as a prospective solution that facilitates the training of a high-performing centralised model without compromising the privacy of users. While successful, research is currently limited by the possibility of establishing a realistic large-scale FL system at the early stages of experimentation. Simulation can help accelerate this process. To facilitate efficient scalable FL simulation of heterogeneous clients, we design and implement Protea, a flexible and lightweight client profiling component within federated systems using the FL framework Flower. It allows automatically collecting system-level statistics and estimating the resources needed for each client, thus running the simulation in a resource-aware fashion. The results show that our design successfully increases parallelism for 1.66× faster wall-clock time and 2.6× better GPU utilisation, which enables large-scale experiments on heterogeneous clients.
 ">
   <link rel="canonical" href="https://philippwiesner.org/camlsys-preview/publications/zhao2022protea/">
   <meta property="og:title" content="Protea: Client Profiling within Federated Systems using Flower">
@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://philippwiesner.org/camlsys-preview/publications/zhao2022protea/">
   
   
-  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793818052">
+  <link rel="stylesheet" href="/camlsys-preview/assets/site.css?v=1793819353">
   
   
   <link rel="icon" href="/camlsys-preview/favicon.ico">
@@ -58,38 +58,50 @@
 
     <main id="main-content" class="wrapper page-content" tabindex="-1"><article class="publication-page">
   <p class="back-link"><a href="/camlsys-preview/publications/">← All publications</a></p>
-  <div class="publication-heading">
-    <div class="publication-details">
+  <div class="publication-layout">
+    <div class="publication-main">
+    <header class="publication-heading">
       <h1>Protea: Client Profiling within Federated Systems using Flower</h1>
-      <p class="authors publication-authors"><span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/wz341"><img src="/camlsys-preview/assets/wanru-zhao.jpg" alt="" width="28" height="28" loading="lazy"><span>Wanru Zhao</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="28" height="28" loading="lazy"><span>Xinchi Qiu</span></a></span>, <span class="publication-author"><a href="https://jafermarq.com/"><img src="/camlsys-preview/assets/javier.png" alt="" width="28" height="28" loading="lazy"><span>Javier Fernandez-Marques</span></a></span>, <span class="publication-author"><a href="https://www.surrey.ac.uk/people/pedro-porto-buarque-de-gusmao"><img src="/camlsys-preview/assets/pedro.png" alt="" width="28" height="28" loading="lazy"><span>Pedro P. B. de Gusmão</span></a></span>, <span class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="28" height="28" loading="lazy"><span>Nicholas D. Lane</span></a></span></p>
+      <ul class="publication-authors" aria-label="Authors"><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/wz341"><img src="/camlsys-preview/assets/wanru-zhao.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Wanru Zhao</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/xq227"><img src="/camlsys-preview/assets/xinchi.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Xinchi Qiu</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><a href="https://jafermarq.com/"><img src="/camlsys-preview/assets/javier.png" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Javier Fernandez-Marques</span><span class="publication-author-institution"><span class="publication-author-institution-line">Samsung AI</span></span></span></a></li><li class="publication-author"><a href="https://www.surrey.ac.uk/people/pedro-porto-buarque-de-gusmao"><img src="/camlsys-preview/assets/pedro.png" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Pedro P. B. de Gusmão</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li><li class="publication-author"><a href="https://www.cst.cam.ac.uk/people/ndl32"><img src="/camlsys-preview/assets/nic.jpg" alt="" width="36" height="36" loading="lazy"><span class="publication-author-text"><span class="publication-author-name">Nicholas D. Lane</span><span class="publication-author-institution"><span class="publication-author-institution-line">University of Cambridge</span></span></span></a></li></ul>
+
       <p class="meta venue"><span class="publication-venue">ACM Workshop on Data Privacy and Federated Learning Technologies for Mobile Edge Network (FedEdge) at MobiCom</span>, <span class="publication-date">2022</span></p>
-      
-
-    </div>
-    <div class="publication-actions">
-  <a class="publication-download" href="https://arxiv.org/pdf/2207.01053">PDF<span class="sr-only">: Protea: Client Profiling within Federated Systems using Flower</span></a>
-  <a class="publication-bibtex-link" href="#bibtex">BibTeX<span class="sr-only">: Protea: Client Profiling within Federated Systems using Flower</span></a>
-</div>
-
-  </div>
+    </header>
   
-  <section class="abstract"><h2>Abstract</h2><p>Federated Learning (FL) has emerged as a prospective solution that facilitates the training of a high-performing centralised model without compromising the privacy of users. While successful, research is currently limited by the possibility of establishing a realistic large-scale FL system at the early stages of experimentation. Simulation can help accelerate this process. To facilitate efficient scalable FL simulation of heterogeneous clients, we design and implement Protea, a flexible and lightweight client profiling component within federated systems using the FL framework Flower. It allows automatically collecting system-level statistics and estimating the resources needed for each client, thus running the simulation in a resource-aware fashion. The results show that our design successfully increases parallelism for 1.66 $\times$ faster wall-clock time and 2.6$\times$ better GPU utilisation, which enables large-scale experiments on heterogeneous clients.</p>
+  <section class="abstract"><h2>Abstract</h2><p>Federated Learning (FL) has emerged as a prospective solution that facilitates the training of a high-performing centralised model without compromising the privacy of users. While successful, research is currently limited by the possibility of establishing a realistic large-scale FL system at the early stages of experimentation. Simulation can help accelerate this process. To facilitate efficient scalable FL simulation of heterogeneous clients, we design and implement Protea, a flexible and lightweight client profiling component within federated systems using the FL framework Flower. It allows automatically collecting system-level statistics and estimating the resources needed for each client, thus running the simulation in a resource-aware fashion. The results show that our design successfully increases parallelism for 1.66× faster wall-clock time and 2.6× better GPU utilisation, which enables large-scale experiments on heterogeneous clients.</p>
 </section>
   
   <div class="post-content">
 </div>
   
-  <details id="bibtex"><summary>BibTeX</summary><pre><code>@inproceedings{zhao2022protea,
+    </div>
+    <aside class="publication-sidebar" aria-label="Paper resources">
+      <h2>Materials</h2>
+      <ul class="publication-materials">
+  <li><a class="publication-download" href="https://arxiv.org/pdf/2207.01053"><svg class="publication-resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h6"/></svg>
+PDF</a></li>
+  
+  
+  
+  
+  
+</ul>
+
+      <div class="publication-citation">
+        <button class="citation-copy" type="button" aria-label="Copy BibTeX" title="Copy BibTeX" hidden>
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="copied-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+        </button>
+        <details id="bibtex" open><summary>BibTeX</summary><pre><code>@inproceedings{zhao2022protea,
   title = {{Protea: Client Profiling within Federated Systems using Flower}},
   author = {Zhao, Wanru and Qiu, Xinchi and Fernandez-Marques, Javier and de Gusmão, Pedro P. B. and Lane, Nicholas D.},
   year = {2022},
   booktitle = {ACM Workshop on Data Privacy and Federated Learning Technologies for Mobile Edge Network (FedEdge) at MobiCom},
-  url = {https://arxiv.org/abs/2207.01053},
-  archiveprefix = {arXiv},
-  eprint = {2207.01053},
-  doi = {10.1145/3556557.3557950},
-  date = {2022-10-17},
+  doi = {10.1145/3556557.3557950}
 }</code></pre></details>
+        <span class="citation-copy-status sr-only" role="status"></span>
+      </div>
+    </aside>
+  </div>
 </article>
 <script src="/camlsys-preview/assets/publication.js" defer></script>
 </main>
