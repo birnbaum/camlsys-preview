@@ -5,15 +5,14 @@
   const buttons = [...controls.querySelectorAll('[data-filter]')];
   const entries = [...document.querySelectorAll('#alumni-list .person')].map(element => ({
     element,
-    category: element.dataset.category,
-    review: element.dataset.review === 'true'
+    category: element.dataset.category
   }));
   let selected = 'all';
 
   function filter(syncURL = true) {
     let count = 0;
     entries.forEach(entry => {
-      const match = selected === 'all' || (selected === 'review' ? entry.review : entry.category === selected);
+      const match = selected === 'all' || entry.category === selected;
       entry.element.hidden = !match;
       if (match) count += 1;
     });
