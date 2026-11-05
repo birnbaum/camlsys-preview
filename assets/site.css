@@ -1101,7 +1101,7 @@ details pre {
   overflow:hidden;
   border:1px solid var(--line);
   border-radius:6px;
-  background:#f6f8fb;
+  background:#fff;
 }
 
 .project-visual img {
@@ -1114,6 +1114,10 @@ details pre {
 .project-visual-logo {
   background:#fff;
   padding:18px;
+}
+
+.project[aria-labelledby="project-dante"] .project-visual {
+  padding-inline:12px;
 }
 
 .project-links {
